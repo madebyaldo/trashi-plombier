@@ -3,6 +3,7 @@ import Image from "next/image";
 import SchemaLocalBusiness from "@/components/SchemaLocalBusiness";
 import PlomberieSection from "@/components/PlomberieSection";
 import ChauffageSection from "@/components/ChauffageSection";
+import HeroCarousel from "@/components/HeroCarousel";
 import {
   BUSINESS,
   URGENCE_PAGES,
@@ -14,118 +15,7 @@ export default function HomePage() {
       <SchemaLocalBusiness />
 
       {/* ═══════════════ HERO ═══════════════ */}
-      <section className="relative bg-brand-950 text-white overflow-hidden">
-        {/* Background image */}
-        <Image
-          src="/images/hero-bg.jpg"
-          alt=""
-          fill
-          priority
-          className="object-cover object-center"
-          sizes="100vw"
-          quality={85}
-        />
-        {/* Dark overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-950 via-brand-950/90 to-brand-950/75" />
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="grid lg:grid-cols-[1fr_480px] gap-8 lg:gap-12 items-center">
-            {/* ── Left: Content ── */}
-            <div className="py-16 md:py-24 lg:py-28">
-              <div className="inline-flex items-center gap-2 bg-copper-500/15 border border-copper-500/25 rounded-full px-4 py-1.5 mb-7">
-                <span className="w-2 h-2 rounded-full bg-copper-400 animate-pulse" />
-                <span className="text-[13px] font-semibold text-copper-300 tracking-wide">
-                  Urgence 24h/24 · 7j/7
-                </span>
-              </div>
-
-              <h1 className="font-heading text-4xl md:text-5xl xl:text-[3.5rem] font-extrabold leading-[1.1] mb-6 tracking-tight">
-                Votre plombier &amp;{" "}
-                <span className="text-copper-400">chauffagiste</span>
-                <br className="hidden md:block" />
-                de confiance à Metz
-              </h1>
-
-              <p className="text-lg md:text-xl text-brand-200/70 mb-10 leading-relaxed max-w-xl">
-                Dépannage rapide, installation et entretien de plomberie et
-                chauffage. Intervention en moins de 30 minutes à Metz et dans
-                toute la Moselle.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3.5 mb-12">
-                <a
-                  href={`tel:${BUSINESS.phoneClean}`}
-                  className="inline-flex items-center justify-center gap-2.5 bg-copper-500 hover:bg-copper-600 text-white font-bold text-[16px] px-7 py-4 rounded-xl transition-colors shadow-lg shadow-copper-500/20"
-                >
-                  <PhoneIcon />
-                  Appeler maintenant
-                </a>
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center bg-white/[0.07] hover:bg-white/[0.12] text-white font-semibold text-[16px] px-7 py-4 rounded-xl transition-colors border border-white/10"
-                >
-                  Devis gratuit
-                </Link>
-              </div>
-
-              {/* Trust row */}
-              <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-[13.5px]">
-                {[
-                  { icon: "clock", text: "Intervention < 30 min" },
-                  { icon: "shield", text: "Artisans certifiés" },
-                  { icon: "star", text: "4.9/5 — 120+ avis" },
-                ].map((item) => (
-                  <span key={item.text} className="flex items-center gap-2 text-brand-200/60">
-                    <TrustIcon type={item.icon} />
-                    {item.text}
-                  </span>
-                ))}
-              </div>
-            </div>
-
-            {/* ── Right: Scrolling image columns ── */}
-            <div className="hidden lg:flex gap-4 h-[600px] relative" aria-hidden="true">
-              {/* Gradient masks */}
-              <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-brand-950/80 to-transparent z-10 pointer-events-none" />
-              <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-brand-950/80 to-transparent z-10 pointer-events-none" />
-
-              {/* Column 1 — scrolls up */}
-              <div className="flex-1 overflow-hidden">
-                <div className="animate-hero-up flex flex-col gap-4">
-                  {[...HERO_CARDS_COL1, ...HERO_CARDS_COL1].map((card, i) => (
-                    <HeroCard key={i} {...card} />
-                  ))}
-                </div>
-              </div>
-
-              {/* Column 2 — scrolls down */}
-              <div className="flex-1 overflow-hidden">
-                <div className="animate-hero-down flex flex-col gap-4">
-                  {[...HERO_CARDS_COL2, ...HERO_CARDS_COL2].map((card, i) => (
-                    <HeroCard key={i} {...card} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile trust strip */}
-        <div className="relative lg:hidden border-t border-white/[0.06]">
-          <div className="max-w-7xl mx-auto px-4 py-5 grid grid-cols-3 gap-3 text-center">
-            {[
-              { value: "24h/24", label: "Disponibilité" },
-              { value: "< 30min", label: "Intervention" },
-              { value: "10+ ans", label: "Expérience" },
-            ].map((s) => (
-              <div key={s.label}>
-                <div className="font-heading text-lg font-bold text-copper-400">{s.value}</div>
-                <div className="text-[12px] text-brand-200/40 mt-0.5">{s.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <HeroCarousel />
 
       {/* ═══════════════ SERVICES URGENCE ═══════════════ */}
       <section id="urgence" className="py-16 md:py-20 bg-white">
@@ -181,8 +71,8 @@ export default function HomePage() {
                       key={page.slug}
                       href={`/${page.slug}`}
                       className="group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[3/4] transition-all hover:shadow-2xl hover:-translate-y-1 duration-300"
-        >
-          <Image
+                    >
+                      <Image
                         src={images[i]}
                         alt={page.h1.split("–")[0].trim()}
                         fill
@@ -211,8 +101,8 @@ export default function HomePage() {
                       key={page.slug}
                       href={`/${page.slug}`}
                       className="group relative rounded-2xl overflow-hidden h-[140px] md:h-[160px] transition-all hover:shadow-2xl hover:-translate-y-1 duration-300"
-        >
-          <Image
+                    >
+                      <Image
                         src={bottomImages[i]}
                         alt={page.h1.split("–")[0].trim()}
                         fill
@@ -605,6 +495,19 @@ export default function HomePage() {
   );
 }
 
+const MARQUEE_IMAGES = [
+  { src: "/images/urgence-plombier.jpg",      label: "Plombier urgence",          tag: "Urgence"    },
+  { src: "/images/plomberie-salle-de-bain.jpg", label: "Rénovation salle de bain", tag: "Plomberie"  },
+  { src: "/images/chauffage-installation.jpg", label: "Installation chaudière",    tag: "Chauffage"  },
+  { src: "/images/urgence-fuite.jpg",          label: "Fuite d'eau urgente",       tag: "Urgence"    },
+  { src: "/images/plomberie-douche.jpg",       label: "Pose de douche",            tag: "Plomberie"  },
+  { src: "/images/chauffage-entretien.jpg",    label: "Entretien chaudière",       tag: "Chauffage"  },
+  { src: "/images/urgence-debouchage.jpg",     label: "Débouchage canalisation",   tag: "Urgence"    },
+  { src: "/images/plomberie-robinetterie.jpg", label: "Remplacement robinetterie", tag: "Plomberie"  },
+  { src: "/images/chauffage-chauffe-eau.jpg",  label: "Pose chauffe-eau",          tag: "Chauffage"  },
+  { src: "/images/urgence-chaudiere.jpg",      label: "Dépannage chaudière",       tag: "Urgence"    },
+];
+
 const FAQ_ITEMS = [
   {
     question: "Quel est le délai d'intervention pour une urgence plomberie à Metz ?",
@@ -632,61 +535,6 @@ const FAQ_ITEMS = [
   },
 ];
 
-/* ═══════════════════════════════════════════
-   HERO SCROLLING CARDS
-   ═══════════════════════════════════════════ */
-
-const HERO_CARDS_COL1 = [
-  { label: "Rénovation salle de bain", tag: "Plomberie", bg: "from-brand-700 to-brand-900" },
-  { label: "Installation chaudière gaz", tag: "Chauffage", bg: "from-copper-600 to-copper-800" },
-  { label: "Dépannage fuite urgente", tag: "Urgence", bg: "from-brand-800 to-brand-950" },
-  { label: "Débouchage canalisation", tag: "Plomberie", bg: "from-brand-600 to-brand-800" },
-  { label: "Pose chauffe-eau", tag: "Chauffage", bg: "from-copper-500 to-copper-700" },
-];
-
-const HERO_CARDS_COL2 = [
-  { label: "Recherche de fuite", tag: "Urgence", bg: "from-copper-700 to-brand-900" },
-  { label: "Entretien chaudière", tag: "Chauffage", bg: "from-brand-700 to-brand-800" },
-  { label: "Installation plomberie", tag: "Plomberie", bg: "from-copper-600 to-brand-800" },
-  { label: "Chauffage au sol", tag: "Chauffage", bg: "from-copper-500 to-copper-800" },
-  { label: "Remplacement robinetterie", tag: "Plomberie", bg: "from-brand-800 to-brand-900" },
-];
-
-function HeroCard({ label, tag, bg }: { label: string; tag: string; bg: string }) {
-  return (
-    <div className={`relative rounded-2xl overflow-hidden bg-gradient-to-br ${bg} aspect-[4/3]`}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,rgba(255,255,255,0.08),transparent_60%)]" />
-      <div className="absolute inset-0 flex flex-col justify-end p-5">
-        <span className="inline-block self-start text-[10px] font-bold uppercase tracking-widest text-white/50 bg-white/10 rounded-full px-2.5 py-1 mb-2">
-          {tag}
-        </span>
-        <span className="font-heading text-[15px] font-bold text-white leading-snug">
-          {label}
-        </span>
-      </div>
-    </div>
-  );
-}
-
-function TrustIcon({ type }: { type: string }) {
-  if (type === "clock")
-    return (
-      <svg className="w-4 h-4 text-copper-400/80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" />
-      </svg>
-    );
-  if (type === "shield")
-    return (
-      <svg className="w-4 h-4 text-copper-400/80 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-      </svg>
-    );
-  return (
-    <svg className="w-4 h-4 text-copper-400/80 shrink-0" fill="currentColor" viewBox="0 0 20 20">
-      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-    </svg>
-  );
-}
 
 function FAQSchema({ items }: { items: { question: string; answer: string }[] }) {
   const schema = {
@@ -708,8 +556,3 @@ function PhoneIcon() {
     </svg>
   );
 }
-
-
-
-
-
