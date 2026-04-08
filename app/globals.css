@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+
+  body {
+    font-feature-settings: "cv11", "ss01";
+    letter-spacing: -0.011em;
+  }
+}
+
+@keyframes hero-scroll-up {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+
+@keyframes hero-scroll-down {
+  0% { transform: translateY(-50%); }
+  100% { transform: translateY(0); }
+}
+
+.animate-hero-up {
+  animation: hero-scroll-up 25s linear infinite;
+}
+
+.animate-hero-down {
+  animation: hero-scroll-down 25s linear infinite;
+}
