@@ -1,426 +1,383 @@
 import Link from "next/link";
 import Image from "next/image";
 import SchemaLocalBusiness from "@/components/SchemaLocalBusiness";
-import PlomberieSection from "@/components/PlomberieSection";
-import ChauffageSection from "@/components/ChauffageSection";
-import HeroCarousel from "@/components/HeroCarousel";
-import {
-  BUSINESS,
-  URGENCE_PAGES,
-} from "@/lib/seo-data";
+import { BUSINESS } from "@/lib/seo-data";
 
 export default function HomePage() {
   return (
     <>
       <SchemaLocalBusiness />
 
-      {/* ═══════════════ HERO ═══════════════ */}
-      <HeroCarousel />
+      {/* ════════════════════════════════════════════
+          1. HERO — contained image with side margins
+          ════════════════════════════════════════════ */}
+      <section className="bg-white py-3">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+          {/* Hero image wrapper */}
+          <div className="relative overflow-hidden rounded-lg" style={{ height: "82vh", minHeight: 520 }}>
+            {/* Background image */}
+            <Image
+              src="https://cdn.prod.website-files.com/68c289dbb142c4c56784b9c0/68e626815f30d3be0255ce1f_IMG_4224.avif"
+              alt="Trashi Plombier Metz"
+              fill priority
+              className="object-cover object-center"
+              sizes="(max-width:1200px) 100vw, 1200px"
+              quality={90}
+            />
 
-      {/* ═══════════════ SERVICES URGENCE ═══════════════ */}
-      <section id="urgence" className="py-16 md:py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-copper-500 animate-pulse" />
-                <span className="text-copper-600 text-[13px] font-bold tracking-wide uppercase">
-                  Urgence 24h/24
-                </span>
+            {/* Dark overlay */}
+            <div className="absolute inset-0" style={{ background: "rgba(8,14,24,0.55)" }} />
+            {/* Extra left-side gradient for text legibility */}
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,14,24,0.5) 0%, transparent 65%)" }} />
+
+            {/* ── Content — pinned to bottom-left ── */}
+            <div className="relative z-10 h-full flex flex-col justify-end pb-12 px-8 lg:px-14 max-w-[680px]">
+              {/* Eyebrow */}
+              <span
+                className="inline-block text-[11px] font-bold uppercase tracking-[0.22em] mb-4"
+                style={{ color: "#d4ea00" }}
+              >
+                Disponible 24h/24 – Expert certifié
+              </span>
+
+              {/* Heading */}
+              <h1
+                className="font-heading font-black text-white uppercase leading-[0.95] tracking-tight mb-7"
+                style={{ fontSize: "clamp(2rem, 3.8vw, 3.8rem)" }}
+              >
+                Votre Plombier<br />Simple, Rapide<br />&amp; Fiable
+              </h1>
+
+              {/* CTA */}
+              <div className="mb-10">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-sm transition-opacity hover:opacity-90"
+                  style={{ background: "#d4ea00", color: "#14200a" }}
+                >
+                  Découvrir nos services
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </Link>
               </div>
-              <h2 className="font-heading text-2xl md:text-3xl font-extrabold text-ink-900 tracking-tight">
-                Intervention immédiate à Metz
-              </h2>
+
+              {/* Slider arrows */}
+              <div className="flex items-center gap-3">
+                <button
+                  aria-label="Précédent"
+                  className="w-11 h-11 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5M12 19l-7-7 7-7"/>
+                  </svg>
+                </button>
+                <button
+                  aria-label="Suivant"
+                  className="w-11 h-11 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </button>
+              </div>
             </div>
-            <a
-              href={`tel:${BUSINESS.phoneClean}`}
-              className="group inline-flex items-center gap-4 bg-copper-500 hover:bg-copper-600 pl-5 pr-7 py-3 rounded-2xl transition-all duration-200 shadow-lg shadow-copper-500/20 hover:shadow-xl hover:shadow-copper-500/30 self-start sm:self-auto"
-            >
-              <span className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center shrink-0">
-                <PhoneIcon />
-              </span>
-              <span>
-                <span className="block text-[11px] text-white/70 font-medium uppercase tracking-wider leading-none">
-                  Appel urgence
-                </span>
-                <span className="block font-heading font-extrabold text-lg text-white tracking-tight mt-0.5">
-                  {BUSINESS.phone}
-                </span>
-              </span>
-            </a>
           </div>
-
-          {/* Image grid: 4 main + 3 bottom */}
-          {(() => {
-            const images = [
-              "/images/urgence-plombier.jpg",
-              "/images/urgence-depannage.jpg",
-              "/images/urgence-fuite.jpg",
-              "/images/urgence-chauffagiste.jpg",
-            ];
-            const bottomImages = [
-              "/images/urgence-chaudiere.jpg",
-              "/images/urgence-chauffe-eau.jpg",
-              "/images/urgence-debouchage.jpg",
-            ];
-            return (
-              <>
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
-                  {URGENCE_PAGES.slice(0, 4).map((page, i) => (
-                    <Link
-                      key={page.slug}
-                      href={`/${page.slug}`}
-                      className="group relative rounded-2xl overflow-hidden aspect-[4/5] md:aspect-[3/4] transition-all hover:shadow-2xl hover:-translate-y-1 duration-300"
-                    >
-                      <Image
-                        src={images[i]}
-                        alt={page.h1.split("–")[0].trim()}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 50vw, 25vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                        <h3 className="font-heading text-[15px] md:text-[17px] font-bold text-white leading-snug drop-shadow-sm">
-                          {page.h1.split("–")[0].split("à")[0].trim()}
-                        </h3>
-                        <div className="flex items-center gap-1.5 text-white/60 text-[12px] font-semibold mt-2 group-hover:text-copper-300 group-hover:gap-2.5 transition-all">
-                          En savoir plus
-                          <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                          </svg>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-
-                <div className="grid md:grid-cols-3 gap-3 md:gap-4 mt-3 md:mt-4">
-                  {URGENCE_PAGES.slice(4).map((page, i) => (
-                    <Link
-                      key={page.slug}
-                      href={`/${page.slug}`}
-                      className="group relative rounded-2xl overflow-hidden h-[140px] md:h-[160px] transition-all hover:shadow-2xl hover:-translate-y-1 duration-300"
-                    >
-                      <Image
-                        src={bottomImages[i]}
-                        alt={page.h1.split("–")[0].trim()}
-                        fill
-                        className="object-cover transition-transform duration-500 group-hover:scale-105"
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
-                      <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
-                        <h3 className="font-heading text-[14px] md:text-[15px] font-bold text-white leading-snug drop-shadow-sm">
-                          {page.h1.split("–")[0].split("à")[0].trim()}
-                        </h3>
-                        <p className="text-[12px] text-white/50 mt-1 line-clamp-1">
-                          {page.metaDescription.slice(0, 60)}…
-                        </p>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </>
-            );
-          })()}
         </div>
       </section>
 
-      {/* ═══════════════ SERVICES PLOMBERIE ═══════════════ */}
-      <PlomberieSection />
+      {/* ════════════════════════════════════════════
+          2. QUI SOMMES-NOUS
+      */}
+      <section className="py-20 md:py-28 bg-white">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
 
-      {/* ═══════════════ SERVICES CHAUFFAGE ═══════════════ */}
-      <ChauffageSection />
-
-      {/* ═══════════════ WHY CHOOSE US ═══════════════ */}
-      <section className="py-20 md:py-28 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Top: heading left + stats right */}
-          <div className="grid lg:grid-cols-2 gap-10 lg:gap-20 items-end mb-16 md:mb-20">
+            {/* ── Left: image + stats ── */}
             <div>
-              <span className="inline-block text-[12px] font-bold uppercase tracking-widest text-copper-500 mb-3">
-                Pourquoi nous
-              </span>
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-ink-900 leading-[1.1] tracking-tight">
-                Pourquoi choisir<br />Trashi Plombier ?
-              </h2>
+              <div className="relative">
+                <div
+                  className="absolute top-0 left-0 z-10 flex items-center gap-3 px-7 py-6 rounded-2xl"
+                  style={{ background: "#d4ea00" }}
+                >
+                  <span className="font-heading font-black text-ink-900 leading-none" style={{ fontSize: "3rem" }}>10+</span>
+                  <span className="font-semibold text-ink-800 text-[14px] leading-snug">Ans<br />d&apos;expérience</span>
+                </div>
+                <div className="relative overflow-hidden rounded-2xl ml-20 mt-10" style={{ aspectRatio: "3/4" }}>
+                  <Image
+                    src="/images/chauffage-installation.jpg"
+                    alt="Artisan Trashi Plombier"
+                    fill className="object-cover"
+                    sizes="(max-width:1024px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-3 gap-4 mt-8">
+                {[
+                  { value: "120+",   label: "Clients satisfaits" },
+                  { value: "98%",    label: "Taux de satisfaction" },
+                  { value: "30 min", label: "Délai intervention" },
+                ].map((s) => (
+                  <div key={s.label} className="bg-sand-50 rounded-xl px-4 py-5 text-center">
+                    <p className="font-heading font-black text-ink-900 text-[2rem] leading-none mb-1">{s.value}</p>
+                    <p className="text-ink-400 text-[12px] leading-snug">{s.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <p className="text-ink-400 text-[16px] md:text-lg leading-relaxed max-w-lg lg:ml-auto">
-              Depuis plus de 15 ans, nous offrons un service de plomberie et chauffage d&apos;excellence à Metz et dans toute la Moselle. Chaque intervention est une promesse de qualité.
+
+            {/* ── Right: text ── */}
+            <div className="lg:pt-8">
+              <div className="flex items-center gap-3 mb-6">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+                <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Qui sommes-nous</span>
+              </div>
+
+              <h2
+                className="font-heading font-black text-ink-900 leading-[1.05] tracking-tight mb-5"
+                style={{ fontSize: "clamp(1.8rem, 3.2vw, 3rem)" }}
+              >
+                L&apos;équipe derrière<br />Trashi Plombier
+              </h2>
+
+              <p className="text-ink-500 text-[15px] leading-relaxed mb-8">
+                Trashi Plombier, c&apos;est une équipe d&apos;artisans qualifiés basée à Metz. Nous intervenons rapidement pour tous vos travaux de plomberie et chauffage, avec sérieux, transparence et respect de votre domicile.
+              </p>
+
+              <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10">
+                {[
+                  "Entreprise locale & certifiée",
+                  "Professionnels qualifiés",
+                  "Disponible 24h/24 – 7j/7",
+                  "Devis gratuit & sans engagement",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+                      <svg className="w-3 h-3 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.8}>
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
+                      </svg>
+                    </div>
+                    <span className="text-[14px] text-ink-700 font-medium">{item}</span>
+                  </div>
+                ))}
+              </div>
+
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-full transition-opacity hover:opacity-90"
+                style={{ background: "#d4ea00", color: "#14200a" }}
+              >
+                Obtenir de l&apos;aide
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
+
+              <div className="relative mt-8 rounded-2xl overflow-hidden w-full" style={{ aspectRatio: "16/9" }}>
+                <Image
+                  src="/images/chauffage-installation.jpg"
+                  alt="Trashi Plombier en intervention"
+                  fill className="object-cover"
+                  sizes="(max-width:1024px) 100vw, 40vw"
+                />
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════
+          3. SERVICES PLOMBERIE
+      */}
+      <section className="py-20 md:py-28 bg-white border-t border-sand-100">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="block text-[11px] font-bold uppercase tracking-[0.22em] text-ink-400 mb-3">Services</span>
+            <h2 className="font-heading font-black text-ink-900 uppercase leading-[0.9] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
+              Plomberie
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-[1fr_360px] gap-10 lg:gap-16 items-start">
+            <div className="border-t border-sand-200">
+              {SERVICES_PLOMBERIE.map((svc, i) => (
+                <details key={svc.title} className="group border-b border-sand-200" name="plomberie-home">
+                  <summary className="flex items-center gap-5 py-5 cursor-pointer select-none list-none">
+                    <span className="text-[11px] font-bold text-ink-300 w-6 shrink-0 tabular-nums">{String(i + 1).padStart(2, "0")}.</span>
+                    <span className="font-heading text-[17px] md:text-[19px] font-bold text-ink-900 flex-1 leading-snug group-open:text-ink-700 transition-colors">{svc.title}</span>
+                    <span className="text-ink-400 group-open:text-ink-900 text-[18px] font-light transition-colors shrink-0 w-5 text-right">
+                      <span className="group-open:hidden">+</span>
+                      <span className="hidden group-open:block">−</span>
+                    </span>
+                  </summary>
+                  <div className="pb-6 pl-11 pr-2">
+                    <p className="text-ink-500 text-[13.5px] leading-relaxed mb-4">{svc.desc}</p>
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {svc.tags.map((tag) => (
+                        <span key={tag} className="border border-sand-200 text-ink-600 text-[11px] font-medium px-3 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <Link href={svc.href} className="text-[13px] font-semibold text-ink-900 hover:text-copper-600 transition-colors underline underline-offset-2">En savoir plus →</Link>
+                  </div>
+                </details>
+              ))}
+            </div>
+            <div className="hidden lg:block sticky top-24">
+              <div className="relative rounded-3xl overflow-hidden bg-sand-100" style={{ aspectRatio: "3/4" }}>
+                <Image src="/images/plomberie-salle-de-bain.jpg" alt="Plomberie Metz" fill className="object-cover" sizes="360px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════
+          4. SERVICES CHAUFFAGE
+      */}
+      <section className="py-20 md:py-28 bg-sand-50 border-t border-sand-100">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+          <div className="mb-12">
+            <span className="block text-[11px] font-bold uppercase tracking-[0.22em] text-ink-400 mb-3">Services</span>
+            <h2 className="font-heading font-black text-ink-900 uppercase leading-[0.9] tracking-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)" }}>
+              Chauffage
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-[1fr_360px] gap-10 lg:gap-16 items-start">
+            <div className="border-t border-sand-200">
+              {SERVICES_CHAUFFAGE.map((svc, i) => (
+                <details key={svc.title} className="group border-b border-sand-200" name="chauffage-home">
+                  <summary className="flex items-center gap-5 py-5 cursor-pointer select-none list-none">
+                    <span className="text-[11px] font-bold text-ink-300 w-6 shrink-0 tabular-nums">{String(i + 1).padStart(2, "0")}.</span>
+                    <span className="font-heading text-[17px] md:text-[19px] font-bold text-ink-900 flex-1 leading-snug group-open:text-ink-700 transition-colors">{svc.title}</span>
+                    <span className="text-ink-400 group-open:text-ink-900 text-[18px] font-light transition-colors shrink-0 w-5 text-right">
+                      <span className="group-open:hidden">+</span>
+                      <span className="hidden group-open:block">−</span>
+                    </span>
+                  </summary>
+                  <div className="pb-6 pl-11 pr-2">
+                    <p className="text-ink-500 text-[13.5px] leading-relaxed mb-4">{svc.desc}</p>
+                    <div className="flex flex-wrap gap-1.5 mb-4">
+                      {svc.tags.map((tag) => (
+                        <span key={tag} className="border border-sand-200 text-ink-600 text-[11px] font-medium px-3 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <Link href={svc.href} className="text-[13px] font-semibold text-ink-900 hover:text-copper-600 transition-colors underline underline-offset-2">En savoir plus →</Link>
+                  </div>
+                </details>
+              ))}
+            </div>
+            <div className="hidden lg:block sticky top-24">
+              <div className="relative rounded-3xl overflow-hidden bg-sand-100" style={{ aspectRatio: "3/4" }}>
+                <Image src="/images/chauffage-installation.jpg" alt="Chauffage Metz" fill className="object-cover" sizes="360px" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ════════════════════════════════════════════
+          5. RÉALISATIONS
+      */}
+      <section className="py-20 md:py-28 bg-white border-t border-sand-100">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+            <h2
+              className="font-heading font-black text-ink-900 leading-[1.05] tracking-tight max-w-sm"
+              style={{ fontSize: "clamp(1.5rem, 2.8vw, 2.4rem)" }}
+            >
+              Réalisations soignées pour chaque client.
+            </h2>
+            <p className="text-ink-400 text-[13px] leading-relaxed max-w-[220px]">
+              Chaque chantier est réalisé avec précision et méthode, pour une satisfaction totale.
             </p>
           </div>
-
-          {/* Stats banner */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-sand-200 rounded-2xl overflow-hidden mb-16 md:mb-20">
-            {[
-              { number: "<30", unit: "min", label: "Temps d'intervention" },
-              { number: "15+", unit: "ans", label: "D'expérience à Metz" },
-              { number: "4.9", unit: "/5", label: "Avis clients vérifiés" },
-              { number: "100", unit: "%", label: "Travaux garantis" },
-            ].map((stat) => (
-              <div key={stat.label} className="bg-sand-50 p-6 md:p-8 text-center">
-                <div className="flex items-baseline justify-center gap-0.5">
-                  <span className="font-heading text-3xl md:text-4xl font-black text-ink-900 tracking-tight">
-                    {stat.number}
-                  </span>
-                  <span className="font-heading text-lg md:text-xl font-bold text-copper-500">
-                    {stat.unit}
-                  </span>
+          <div className="grid md:grid-cols-3 gap-4">
+            {PROJECTS.map((proj) => (
+              <Link key={proj.title} href="/realisations" className="group relative rounded-3xl overflow-hidden block" style={{ aspectRatio: "4/5" }}>
+                <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width:768px) 100vw, 33vw" />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(12,19,28,0.78) 0%, transparent 50%)" }} />
+                <div className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/90 flex items-center justify-center shadow opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" style={{ transform: "rotate(-45deg)" }}>
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
                 </div>
-                <p className="text-ink-400 text-[13px] font-medium mt-1.5">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-
-          {/* Features grid */}
-          <div className="grid md:grid-cols-2 gap-x-12 lg:gap-x-20 gap-y-10 md:gap-y-14">
-            {[
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-                title: "Intervention Rapide",
-                desc: "Nous intervenons en moins de 30 minutes à Metz et alentours, 24h/24 et 7j/7. Urgences, dépannages, réparations — nous sommes toujours disponibles.",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                ),
-                title: "Artisans Certifiés",
-                desc: "Nos plombiers et chauffagistes sont qualifiés RGE et disposent de toutes les certifications requises. Votre installation est entre les mains d'experts.",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                ),
-                title: "Devis Gratuit & Transparent",
-                desc: "Prix clairs, sans surprises. Nous vous remettons un devis détaillé et gratuit avant chaque intervention, pour une totale transparence.",
-              },
-              {
-                icon: (
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                  </svg>
-                ),
-                title: "Garantie sur Tous les Travaux",
-                desc: "Chaque intervention est couverte par notre garantie. Nous nous engageons sur la qualité de nos travaux et votre entière satisfaction.",
-              },
-            ].map((item) => (
-              <div key={item.title} className="flex gap-5">
-                <div className="w-12 h-12 rounded-xl bg-copper-50 flex items-center justify-center shrink-0 text-copper-600">
-                  {item.icon}
+                <div className="absolute bottom-0 left-0 right-0 p-5">
+                  <p className="text-white/50 text-[11px] font-medium mb-1">{proj.location}</p>
+                  <h3 className="font-heading font-bold text-white text-[15px] leading-snug">{proj.title}</h3>
                 </div>
-                <div>
-                  <h3 className="font-heading text-lg font-extrabold text-ink-900 tracking-tight">
-                    {item.title}
-                  </h3>
-                  <p className="text-ink-400 text-[14px] leading-relaxed mt-1.5">
-                    {item.desc}
-                  </p>
-                </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ═══════════════ RÉALISATIONS ═══════════════ */}
-      <section className="py-20 md:py-28 bg-sand-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Header */}
-          <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
-            <div>
-              <span className="inline-block text-[12px] font-bold uppercase tracking-widest text-copper-500 mb-3">
-                Réalisations
-              </span>
-              <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-ink-900 leading-tight tracking-tight">
-                Nos derniers chantiers
-              </h2>
-            </div>
-            <Link
-              href="/realisations"
-              className="group inline-flex items-center gap-2 text-ink-900 hover:text-copper-600 font-bold text-[14px] transition-colors self-start sm:self-auto"
-            >
-              <span className="border-b border-ink-900/20 group-hover:border-copper-500 pb-0.5 transition-colors">
-                Tout voir
-              </span>
-              <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-
-          {/* Bento grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 auto-rows-[200px] md:auto-rows-[220px]">
-            {/* Featured — large */}
-            <Link
-              href="/realisations"
-              className="group relative rounded-2xl overflow-hidden md:col-span-2 lg:col-span-2 lg:row-span-2 transition-all hover:shadow-2xl hover:-translate-y-0.5 duration-300"
-            >
-              <Image
-                src="/images/real-sdb.jpg"
-                alt="Rénovation salle de bain Metz"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 100vw, 66vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <div className="flex items-center gap-2.5 mb-3">
-                  <span className="text-[10px] font-bold uppercase tracking-widest bg-white/90 text-brand-800 px-3 py-1 rounded-full">
-                    Plomberie
-                  </span>
-                  <span className="text-white/70 text-[12px] font-medium">Metz Centre</span>
-                </div>
-                <h3 className="font-heading text-xl md:text-2xl font-extrabold text-white tracking-tight">
-                  Rénovation complète salle de bain
-                </h3>
-                <p className="text-white/70 text-[14px] mt-2 max-w-lg leading-relaxed hidden md:block">
-                  Rénovation intégrale d&apos;une salle de bain de 8m² avec douche à l&apos;italienne, double vasque et robinetterie haut de gamme.
-                </p>
-              </div>
-            </Link>
-
-            {/* Top right */}
-            <Link
-              href="/realisations"
-              className="group relative rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-0.5 duration-300"
-            >
-              <Image
-                src="/images/real-chaudiere.jpg"
-                alt="Remplacement chaudière gaz"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-white/90 text-copper-700 px-3 py-1 rounded-full mb-2">
-                  Chauffage
-                </span>
-                <h3 className="font-heading text-[15px] font-bold text-white leading-snug">
-                  Remplacement chaudière gaz
-                </h3>
-                <p className="text-white/70 text-[12px] font-medium mt-1">Montigny-lès-Metz</p>
-              </div>
-            </Link>
-
-            {/* Bottom right */}
-            <Link
-              href="/realisations"
-              className="group relative rounded-2xl overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-0.5 duration-300"
-            >
-              <Image
-                src="/images/real-fuite.jpg"
-                alt="Dépannage fuite en urgence"
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-                sizes="(max-width: 768px) 50vw, 33vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-              <div className="absolute bottom-0 left-0 right-0 p-5">
-                <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-white/90 text-copper-700 px-3 py-1 rounded-full mb-2">
-                  Urgence
-                </span>
-                <h3 className="font-heading text-[15px] font-bold text-white leading-snug">
-                  Dépannage fuite en urgence
-                </h3>
-                <p className="text-white/70 text-[12px] font-medium mt-1">Woippy — 25 min</p>
-              </div>
-            </Link>
-          </div>
+      {/* ════════════════════════════════════════════
+          6. QUOTE
+      */}
+      <section className="py-24 md:py-32 bg-white border-t border-sand-100">
+        <div className="max-w-[860px] mx-auto px-6 lg:px-8 text-center">
+          <p className="font-heading font-black text-ink-900 leading-[1.1] tracking-tight" style={{ fontSize: "clamp(1.35rem, 2.8vw, 2.5rem)" }}>
+            Chez Trashi Plombier, chaque intervention est bien plus qu&apos;un dépannage —{" "}
+            <span className="text-ink-300">c&apos;est une promesse de qualité, de rapidité et de transparence envers nos clients.</span>
+          </p>
         </div>
       </section>
 
-      {/* ═══════════════ TESTIMONIALS ═══════════════ */}
-      <section className="py-20 md:py-28 bg-brand-950 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          {/* Header */}
+      {/* ════════════════════════════════════════════
+          7. TESTIMONIALS
+      */}
+      <section className="py-20 md:py-28 bg-ink-900">
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-20 items-end mb-14">
             <div>
-              <span className="inline-block text-[12px] font-bold uppercase tracking-widest text-copper-400 mb-3">
-                Témoignages
-              </span>
-              <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
-                Ce que disent nos clients
+              <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-copper-400 mb-4">Témoignages</span>
+              <h2
+                className="font-heading font-black text-white leading-[1.05] tracking-tight"
+                style={{ fontSize: "clamp(1.6rem, 3vw, 2.6rem)" }}
+              >
+                Ce que disent<br />nos clients
               </h2>
             </div>
             <div className="flex items-center gap-4 lg:justify-end">
-              <div className="flex items-baseline gap-1.5">
-                <span className="font-heading text-4xl md:text-5xl font-black text-white">4.9</span>
+              <div className="flex items-baseline gap-1">
+                <span className="font-heading font-black text-white text-[3.5rem] leading-none">4.9</span>
                 <span className="font-heading text-xl font-bold text-copper-400">/5</span>
               </div>
               <div>
                 <div className="flex gap-0.5 mb-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-copper-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    <svg key={i} className="w-4 h-4 fill-copper-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                     </svg>
                   ))}
                 </div>
-                <p className="text-white/30 text-[12px] font-medium">120+ avis vérifiés</p>
+                <p className="text-white/30 text-[12px]">120+ avis vérifiés</p>
               </div>
             </div>
           </div>
-
-          {/* Reviews */}
           <div className="grid md:grid-cols-3 gap-5">
-            {[
-              {
-                name: "Marie D.",
-                city: "Metz",
-                service: "Urgence",
-                text: "Intervention très rapide pour une fuite d'eau en pleine nuit. Plombier professionnel et tarif honnête. Je recommande vivement !",
-                initials: "MD",
-              },
-              {
-                name: "Pierre L.",
-                city: "Montigny-lès-Metz",
-                service: "Chauffage",
-                text: "Excellent service pour l'entretien de ma chaudière. Technicien ponctuel et compétent. Contrat annuel au top. Rien à redire.",
-                initials: "PL",
-              },
-              {
-                name: "Sophie M.",
-                city: "Woippy",
-                service: "Plomberie",
-                text: "Rénovation complète de notre salle de bain. Travail soigné, dans les délais et le budget. Merci à toute l'équipe !",
-                initials: "SM",
-              },
-            ].map((review) => (
-              <div
-                key={review.name}
-                className="bg-white/[0.04] border border-white/[0.06] rounded-2xl p-7 md:p-8 flex flex-col"
-              >
-                {/* Stars */}
+            {TESTIMONIALS.map((t) => (
+              <div key={t.name} className="bg-white/[0.05] border border-white/[0.07] rounded-2xl p-7 flex flex-col">
                 <div className="flex gap-0.5 mb-5">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <svg key={i} className="w-4 h-4 text-copper-400 fill-current" viewBox="0 0 20 20">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    <svg key={i} className="w-3.5 h-3.5 fill-copper-400" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                     </svg>
                   ))}
                 </div>
-
-                {/* Quote */}
-                <p className="text-[15px] text-white/70 leading-relaxed flex-1 mb-6">
-                  &ldquo;{review.text}&rdquo;
-                </p>
-
-                {/* Author */}
-                <div className="flex items-center gap-3 pt-5 border-t border-white/[0.06]">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-copper-500 to-copper-600 flex items-center justify-center shrink-0">
-                    <span className="text-[12px] font-bold text-white">{review.initials}</span>
+                <p className="text-[14px] text-white/65 leading-relaxed flex-1 mb-6">&ldquo;{t.text}&rdquo;</p>
+                <div className="flex items-center gap-3 pt-5 border-t border-white/[0.07]">
+                  <div className="w-9 h-9 rounded-full bg-gradient-to-br from-copper-400 to-copper-600 flex items-center justify-center shrink-0">
+                    <span className="text-[11px] font-bold text-white">{t.initials}</span>
                   </div>
                   <div>
-                    <span className="text-[14px] font-bold text-white block">{review.name}</span>
-                    <span className="text-[12px] text-white/30">{review.city} · {review.service}</span>
+                    <span className="text-[13px] font-bold text-white block">{t.name}</span>
+                    <span className="text-[11px] text-white/30">{t.city} · {t.service}</span>
                   </div>
                 </div>
               </div>
@@ -429,61 +386,33 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══════════════ CTA ═══════════════ */}
-      <section className="py-20 md:py-24 bg-copper-500 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(255,255,255,0.08),transparent_60%)]" />
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 relative text-center">
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl font-extrabold text-white leading-[1.1] tracking-tight mb-4">
-            Besoin d&apos;un plombier à Metz ?
-          </h2>
-          <p className="text-white/70 text-[16px] md:text-lg mb-10 max-w-xl mx-auto leading-relaxed">
-            Intervention rapide, devis gratuit, artisans certifiés. Appelez-nous maintenant ou demandez un devis en ligne.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href={`tel:${BUSINESS.phoneClean}`}
-              className="inline-flex items-center justify-center gap-3 bg-white text-copper-700 hover:text-copper-800 font-heading font-extrabold text-lg px-8 py-4 rounded-xl transition-colors shadow-lg shadow-black/10"
-            >
-              <PhoneIcon />
-              {BUSINESS.phone}
-            </a>
-            <Link
-              href="/contact"
-              className="inline-flex items-center justify-center bg-white/15 hover:bg-white/25 text-white font-bold text-lg px-8 py-4 rounded-xl transition-colors border border-white/20"
-            >
-              Devis en ligne gratuit
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* ═══════════════ FAQ ═══════════════ */}
+      {/* ════════════════════════════════════════════
+          8. FAQ
+      */}
       <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-[760px] mx-auto px-6 lg:px-8">
           <div className="mb-12">
-            <span className="inline-block text-[12px] font-bold uppercase tracking-widest text-copper-500 mb-3">
-              FAQ
-            </span>
-            <h2 className="font-heading text-3xl md:text-4xl font-extrabold text-ink-900 tracking-tight">
+            <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-ink-400 mb-4">FAQ</span>
+            <h2
+              className="font-heading font-black text-ink-900 tracking-tight"
+              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
+            >
               Questions fréquentes
             </h2>
           </div>
-          <div className="space-y-3">
-            {FAQ_ITEMS.map((faq, index) => (
-              <details
-                key={index}
-                className="group rounded-xl border border-sand-200 overflow-hidden"
-              >
-                <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer font-heading font-bold text-[15px] md:text-[16px] text-ink-900 hover:text-copper-600 transition-colors">
+          <div className="divide-y divide-sand-200 border-t border-sand-200">
+            {FAQ_ITEMS.map((faq, i) => (
+              <details key={i} className="group">
+                <summary className="flex items-center justify-between gap-4 py-5 cursor-pointer font-heading font-bold text-[15px] text-ink-900 hover:text-copper-600 transition-colors list-none">
                   {faq.question}
-                  <span className="w-8 h-8 rounded-full bg-sand-100 group-open:bg-copper-500 flex items-center justify-center shrink-0 transition-colors">
-                    <svg className="w-4 h-4 text-ink-400 group-open:text-white group-open:rotate-180 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                  <span className="w-7 h-7 rounded-full border border-sand-200 group-open:border-ink-900 group-open:bg-ink-900 flex items-center justify-center shrink-0 transition-all">
+                    <svg className="w-3.5 h-3.5 text-ink-400 group-open:text-white group-open:rotate-180 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7"/>
                     </svg>
                   </span>
                 </summary>
-                <div className="px-5 md:px-6 pb-5 md:pb-6 text-ink-500 text-[15px] leading-relaxed">
-                  <p>{faq.answer}</p>
+                <div className="pb-5 text-ink-500 text-[14px] leading-relaxed pr-10">
+                  {faq.answer}
                 </div>
               </details>
             ))}
@@ -495,64 +424,81 @@ export default function HomePage() {
   );
 }
 
-const MARQUEE_IMAGES = [
-  { src: "/images/urgence-plombier.jpg",      label: "Plombier urgence",          tag: "Urgence"    },
-  { src: "/images/plomberie-salle-de-bain.jpg", label: "Rénovation salle de bain", tag: "Plomberie"  },
-  { src: "/images/chauffage-installation.jpg", label: "Installation chaudière",    tag: "Chauffage"  },
-  { src: "/images/urgence-fuite.jpg",          label: "Fuite d'eau urgente",       tag: "Urgence"    },
-  { src: "/images/plomberie-douche.jpg",       label: "Pose de douche",            tag: "Plomberie"  },
-  { src: "/images/chauffage-entretien.jpg",    label: "Entretien chaudière",       tag: "Chauffage"  },
-  { src: "/images/urgence-debouchage.jpg",     label: "Débouchage canalisation",   tag: "Urgence"    },
-  { src: "/images/plomberie-robinetterie.jpg", label: "Remplacement robinetterie", tag: "Plomberie"  },
-  { src: "/images/chauffage-chauffe-eau.jpg",  label: "Pose chauffe-eau",          tag: "Chauffage"  },
-  { src: "/images/urgence-chaudiere.jpg",      label: "Dépannage chaudière",       tag: "Urgence"    },
+/* ─── DATA ─── */
+
+const SERVICES_PLOMBERIE = [
+  {
+    title: "Dépannage Urgence 24h/24",
+    desc: "Fuite d'eau, canalisation bouchée, panne de chauffage — un technicien qualifié intervient en moins de 30 minutes à Metz et en Moselle, jours, nuits et week-ends.",
+    tags: ["Fuite d'eau", "Canalisation", "Panne chaudière"],
+    href: "/plombier-urgence-metz",
+  },
+  {
+    title: "Installation & Rénovation",
+    desc: "Rénovation complète de salle de bain, pose de douche à l'italienne, robinetterie haut de gamme. Travail soigné, livré dans les délais.",
+    tags: ["Salle de bain", "Douche italienne", "Robinetterie"],
+    href: "/renovation-salle-de-bain-metz",
+  },
+  {
+    title: "Débouchage Canalisation",
+    desc: "Débouchage professionnel par haute pression ou furet électrique. WC bouchés, éviers, douches, colonnes d'immeubles.",
+    tags: ["Haute pression", "WC bouché", "Évier"],
+    href: "/debouchage-canalisation-metz",
+  },
+];
+
+const SERVICES_CHAUFFAGE = [
+  {
+    title: "Chaudière & Chauffage",
+    desc: "Installation, entretien et dépannage de chaudières gaz, fioul et électriques toutes marques. Contrat annuel avec certificat de conformité.",
+    tags: ["Chaudière gaz", "Fioul", "Entretien annuel"],
+    href: "/entretien-chaudiere-metz",
+  },
+  {
+    title: "Chauffe-eau & Ballon",
+    desc: "Remplacement et installation de chauffe-eau électrique, thermodynamique ou solaire. Aide MaPrimeRénov' disponible.",
+    tags: ["Électrique", "Thermodynamique", "MaPrimeRénov'"],
+    href: "/remplacement-chauffe-eau-metz",
+  },
+];
+
+const PROJECTS = [
+  { title: "Rénovation salle de bain",   location: "Metz Centre",        image: "/images/real-sdb.jpg"       },
+  { title: "Remplacement chaudière gaz", location: "Montigny-lès-Metz",  image: "/images/real-chaudiere.jpg" },
+  { title: "Dépannage fuite urgence",    location: "Woippy — 25 min",    image: "/images/real-fuite.jpg"     },
+];
+
+const TESTIMONIALS = [
+  { name: "Marie D.",   city: "Metz",             service: "Urgence",   initials: "MD", text: "Intervention très rapide pour une fuite d'eau en pleine nuit. Plombier professionnel et tarif honnête. Je recommande vivement !" },
+  { name: "Pierre L.", city: "Montigny-lès-Metz", service: "Chauffage", initials: "PL", text: "Excellent service pour l'entretien de ma chaudière. Technicien ponctuel et compétent. Contrat annuel au top." },
+  { name: "Sophie M.", city: "Woippy",             service: "Plomberie", initials: "SM", text: "Rénovation complète de notre salle de bain. Travail soigné, dans les délais et le budget. Merci à toute l'équipe !" },
 ];
 
 const FAQ_ITEMS = [
-  {
-    question: "Quel est le délai d'intervention pour une urgence plomberie à Metz ?",
-    answer: "Nous intervenons en moins de 30 minutes pour toute urgence plomberie à Metz et dans les communes limitrophes. Notre service est disponible 24h/24 et 7j/7.",
-  },
-  {
-    question: "Proposez-vous des devis gratuits ?",
-    answer: "Oui, tous nos devis sont gratuits et sans engagement. Nous vous fournissons une estimation détaillée avant toute intervention.",
-  },
-  {
-    question: "Intervenez-vous en dehors de Metz ?",
-    answer: "Oui, nous intervenons à Metz et dans toutes les communes environnantes : Montigny-lès-Metz, Woippy, Augny, Marly, Longeville-lès-Metz, Maizières-lès-Metz, Talange, Hagondange, Amnéville et Thionville.",
-  },
-  {
-    question: "L'entretien annuel de chaudière est-il obligatoire ?",
-    answer: "Oui, l'entretien annuel de votre chaudière est obligatoire selon la réglementation française. Nous proposons des contrats d'entretien annuel avec certificat de conformité.",
-  },
-  {
-    question: "Quels types de chaudières réparez-vous ?",
-    answer: "Nous réparons et entretenons tous les types de chaudières : gaz, fioul et électrique, toutes marques confondues.",
-  },
-  {
-    question: "Comment demander un dépannage en urgence ?",
-    answer: "Appelez-nous directement au " + BUSINESS.phone + ". Un technicien est disponible immédiatement pour prendre en charge votre urgence.",
-  },
+  { question: "Quel est le délai d'intervention pour une urgence à Metz ?",  answer: "Nous intervenons en moins de 30 minutes pour toute urgence plomberie à Metz et dans les communes limitrophes. Disponible 24h/24 et 7j/7." },
+  { question: "Proposez-vous des devis gratuits ?",                           answer: "Oui, tous nos devis sont gratuits et sans engagement. Estimation détaillée avant toute intervention." },
+  { question: "Intervenez-vous en dehors de Metz ?",                          answer: "Oui : Montigny-lès-Metz, Woippy, Augny, Marly, Longeville-lès-Metz, Maizières-lès-Metz, Talange et Thionville." },
+  { question: "L'entretien annuel de chaudière est-il obligatoire ?",         answer: "Oui, obligatoire selon la réglementation française. Nous proposons des contrats avec certificat de conformité." },
+  { question: "Quels types de chaudières réparez-vous ?",                     answer: "Toutes les chaudières : gaz, fioul et électrique, toutes marques confondues." },
+  { question: "Comment demander un dépannage en urgence ?",                   answer: `Appelez-nous au ${BUSINESS.phone}. Un technicien est disponible immédiatement.` },
 ];
 
-
+/* ─── SCHEMA ─── */
 function FAQSchema({ items }: { items: { question: string; answer: string }[] }) {
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: items.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: { "@type": "Answer", text: item.answer },
-    })),
-  };
-  return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />;
-}
-
-function PhoneIcon() {
   return (
-    <svg className="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-    </svg>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: items.map((i) => ({
+            "@type": "Question",
+            name: i.question,
+            acceptedAnswer: { "@type": "Answer", text: i.answer },
+          })),
+        }),
+      }}
+    />
   );
 }

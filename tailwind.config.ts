@@ -9,7 +9,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         heading: ["var(--font-heading)", "system-ui", "sans-serif"],
-        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        body:    ["var(--font-body)",    "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "system-ui", "sans-serif"],
       },
       colors: {
         brand: {
@@ -43,6 +44,27 @@ const config: Config = {
           400: "#a1a1aa",
           300: "#d4d4d8",
         },
+        /* New tokens matching the ARCHI design */
+        navy: {
+          950: "#0D1B2A",
+          900: "#112236",
+          800: "#1a3a5c",
+          700: "#1e4a7a",
+        },
+        accent: {
+          600: "#1457d4",
+          500: "#1A6BFF",
+          400: "#4d8eff",
+          50:  "#eff5ff",
+        },
+      },
+      borderRadius: {
+        "4xl": "2rem",
+      },
+      boxShadow: {
+        card: "0 2px 16px rgba(0,0,0,0.07)",
+        "card-hover": "0 8px 32px rgba(0,0,0,0.12)",
+        accent: "0 4px 24px rgba(26,107,255,0.25)",
       },
     },
   },
