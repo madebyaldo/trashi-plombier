@@ -26,6 +26,12 @@
   }
 }
 
+.chauffage-card:hover { background: #d4ea00 !important; border-color: transparent !important; }
+.chauffage-card:hover .card-num   { color: rgba(20,32,10,0.25) !important; }
+.chauffage-card:hover .card-title { color: #14200a !important; }
+.chauffage-card:hover .card-desc  { color: rgba(20,32,10,0.7) !important; }
+.chauffage-card:hover .card-tag   { border-color: rgba(20,32,10,0.2) !important; color: rgba(20,32,10,0.6) !important; }
+
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }

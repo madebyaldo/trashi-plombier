@@ -1,9 +1,9 @@
 export const BUSINESS = {
   name: "Trashi Plombier",
   legalName: "Trashi Plombier SARL",
-  phone: "03 XX XX XX XX",
-  phoneClean: "+33XXXXXXXXX",
-  email: "contact@trashi-plombier.fr",
+  phone: "078 720 30 23",
+  phoneClean: "+41787203023",
+  email: "plombier.trashi@gmail.com",
   url: "https://www.trashi-plombier.fr",
   address: {
     street: "XX Rue de Metz",
