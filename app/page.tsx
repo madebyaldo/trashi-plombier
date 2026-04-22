@@ -438,7 +438,7 @@ export default function HomePage() {
 
 /* ─── DATA ─── */
 
-const SERVICES_PLOMBERIE = [
+const _SERVICES_PLOMBERIE = [
   {
     title: "Dépannage Urgence 24h/24",
     desc: "Fuite d'eau, canalisation bouchée, panne de chauffage — un technicien qualifié intervient en moins de 30 minutes à Metz et en Moselle, jours, nuits et week-ends.",
@@ -495,7 +495,7 @@ const PROJECTS = [
   { title: "Débouchage canalisation",     category: "Plomberie",     location: "Augny",             image: "/images/portfolio-6.webp" },
 ];
 
-const TESTIMONIALS = [
+const _TESTIMONIALS = [
   { name: "Marie D.",   city: "Metz",             service: "Urgence",   initials: "MD", text: "Intervention très rapide pour une fuite d'eau en pleine nuit. Plombier professionnel et tarif honnête. Je recommande vivement !" },
   { name: "Pierre L.", city: "Montigny-lès-Metz", service: "Chauffage", initials: "PL", text: "Excellent service pour l'entretien de ma chaudière. Technicien ponctuel et compétent. Contrat annuel au top." },
   { name: "Sophie M.", city: "Woippy",             service: "Plomberie", initials: "SM", text: "Rénovation complète de notre salle de bain. Travail soigné, dans les délais et le budget. Merci à toute l'équipe !" },
