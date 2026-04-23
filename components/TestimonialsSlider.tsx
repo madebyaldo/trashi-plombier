@@ -23,7 +23,7 @@ export default function TestimonialsSlider() {
   const next = () => setIdx((idx + 1) % TESTIMONIALS.length);
 
   return (
-    <div className="max-w-[1100px] mx-auto px-6 lg:px-8">
+    <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
       {/* Single container — image with overlays */}
       <div className="relative rounded-2xl overflow-hidden" style={{ height: "580px" }}>

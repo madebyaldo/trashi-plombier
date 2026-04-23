@@ -3,7 +3,6 @@ import { Barlow_Semi_Condensed, Barlow, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ConstructionModal from "@/components/ConstructionModal";
 import { BUSINESS } from "@/lib/seo-data";
 
 const heading = Barlow_Semi_Condensed({
@@ -54,7 +53,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="fr">
       <body className={`${heading.variable} ${body.variable} ${display.variable} font-body antialiased bg-white text-ink-900`}>
-        <ConstructionModal />
         <Header />
         <div className="pt-[68px]">
           {children}

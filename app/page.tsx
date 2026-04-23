@@ -2,8 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import SchemaLocalBusiness from "@/components/SchemaLocalBusiness";
 import PlomberieProcess from "@/components/PlomberieProcess";
-import TestimonialsSlider from "@/components/TestimonialsSlider";
+import StaggerTestimonials from "@/components/ui/stagger-testimonials";
 import { BUSINESS } from "@/lib/seo-data";
+import AboutSection from "@/components/ui/about-section";
+import QuoteReveal from "@/components/ui/quote-reveal";
 
 export default function HomePage() {
   return (
@@ -13,7 +15,7 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           1. HERO — contained image with side margins
           ════════════════════════════════════════════ */}
-      <section className="bg-white py-3">
+      <section className="bg-white pt-3 pb-0">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
           {/* Hero image wrapper */}
           <div className="relative overflow-hidden rounded-lg" style={{ height: "82vh", minHeight: 520 }}>
@@ -95,113 +97,12 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           2. QUI SOMMES-NOUS
       */}
-      <section className="py-20 md:py-28 bg-white">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-
-            {/* ── Left: image + stats ── */}
-            <div>
-              <div className="relative">
-                <div
-                  className="absolute top-0 left-0 z-10 flex items-center gap-3 px-7 py-6 rounded-2xl"
-                  style={{ background: "#d4ea00" }}
-                >
-                  <span className="font-heading font-black text-ink-900 leading-none" style={{ fontSize: "3rem" }}>10+</span>
-                  <span className="font-semibold text-ink-800 text-[14px] leading-snug">Ans<br />d&apos;expérience</span>
-                </div>
-                <div className="relative overflow-hidden rounded-2xl mt-10" style={{ height: "680px" }}>
-                  <Image
-                    src="/images/about-1.avif"
-                    alt="Artisan Trashi Plombier"
-                    fill className="object-cover"
-                    sizes="(max-width:1024px) 100vw, 50vw"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-3 gap-4 mt-8">
-                {[
-                  { value: "120+",   label: "Clients satisfaits" },
-                  { value: "98%",    label: "Taux de satisfaction" },
-                  { value: "30 min", label: "Délai intervention" },
-                ].map((s) => (
-                  <div key={s.label} className="bg-sand-50 rounded-xl px-4 py-5 text-center">
-                    <p className="font-heading font-black text-ink-900 text-[2rem] leading-none mb-1">{s.value}</p>
-                    <p className="text-ink-400 text-[12px] leading-snug">{s.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* ── Right: text ── */}
-            <div className="lg:pt-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </div>
-                <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Qui sommes-nous</span>
-              </div>
-
-              <h2
-                className="font-heading font-black text-ink-900 leading-[1.05] tracking-tight mb-5"
-                style={{ fontSize: "clamp(1.8rem, 3.2vw, 3rem)" }}
-              >
-                L&apos;équipe derrière<br />Trashi Plombier
-              </h2>
-
-              <p className="text-ink-500 text-[15px] leading-relaxed mb-8">
-                Nous proposons des solutions complètes de plomberie, chauffage et climatisation, avec un service rapide, fiable et de qualité, pour répondre à toutes vos urgences et installations.
-              </p>
-
-              <div className="grid grid-cols-2 gap-x-6 gap-y-3 mb-10">
-                {[
-                  "Entreprise locale & certifiée",
-                  "Professionnels qualifiés",
-                  "Disponible 24h/24 – 7j/7",
-                  "Devis gratuit & sans engagement",
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-2">
-                    <div className="w-5 h-5 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                      <svg className="w-3 h-3 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.8}>
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/>
-                      </svg>
-                    </div>
-                    <span className="text-[14px] text-ink-700 font-medium">{item}</span>
-                  </div>
-                ))}
-              </div>
-
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-full transition-opacity hover:opacity-90"
-                style={{ background: "#d4ea00", color: "#14200a" }}
-              >
-                Obtenir de l&apos;aide
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </Link>
-
-              <div className="relative mt-8 rounded-2xl overflow-hidden w-full" style={{ aspectRatio: "16/9" }}>
-                <Image
-                  src="/images/portfolio-2.webp"
-                  alt="Trashi Plombier en intervention"
-                  fill className="object-cover"
-                  sizes="(max-width:1024px) 100vw, 40vw"
-                />
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </section>
+      <AboutSection />
 
       {/* ════════════════════════════════════════════
           3. SERVICES PLOMBERIE — Process
       */}
-      <section className="py-20 md:py-28 bg-white border-t border-sand-100">
+      <section className="pt-10 pb-20 md:pt-12 md:pb-28 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
@@ -296,9 +197,16 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
-              <span className="text-[12px] font-semibold uppercase tracking-widest mb-3 block text-ink-400">Nos réalisations</span>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                  </svg>
+                </div>
+                <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos réalisations</span>
+              </div>
               <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}>
                 Réalisations soignées<br />pour chaque client.
               </h2>
@@ -315,11 +223,11 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Bento grid */}
-          <div className="grid grid-cols-3 grid-rows-2 gap-3" style={{ height: "680px" }}>
+          {/* Row 1 — featured large + 2 small */}
+          <div className="grid grid-cols-3 gap-3 mb-3" style={{ height: "55vh", minHeight: 360, maxHeight: 480 }}>
 
-            {/* Featured — large left */}
-            <Link href="/realisations" className="group relative col-span-2 row-span-2 rounded-2xl overflow-hidden">
+            {/* Featured */}
+            <Link href="/realisations" className="group relative col-span-2 rounded-2xl overflow-hidden">
               <Image src={PROJECTS[0].image} alt={PROJECTS[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="66vw" />
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-7">
@@ -331,46 +239,35 @@ export default function HomePage() {
               </div>
             </Link>
 
-            {/* Small top-right */}
-            <Link href="/realisations" className="group relative rounded-2xl overflow-hidden">
-              <Image src={PROJECTS[1].image} alt={PROJECTS[1].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{PROJECTS[1].category}</span>
-                  <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{PROJECTS[1].location}</span>
-                </div>
-                <h3 className="font-heading font-bold text-white text-[1rem] leading-tight">{PROJECTS[1].title}</h3>
-              </div>
-            </Link>
-
-            {/* Small bottom-right */}
-            <Link href="/realisations" className="group relative rounded-2xl overflow-hidden">
-              <Image src={PROJECTS[2].image} alt={PROJECTS[2].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <div className="flex items-center gap-2 mb-2">
-                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{PROJECTS[2].category}</span>
-                  <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{PROJECTS[2].location}</span>
-                </div>
-                <h3 className="font-heading font-bold text-white text-[1rem] leading-tight">{PROJECTS[2].title}</h3>
-              </div>
-            </Link>
-
+            <div className="flex flex-col gap-3">
+              {PROJECTS.slice(1, 3).map((proj) => (
+                <Link key={proj.title} href="/realisations" className="group relative flex-1 rounded-2xl overflow-hidden">
+                  <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
+                  <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
+                  <div className="absolute bottom-0 left-0 right-0 p-4">
+                    <div className="flex items-center gap-2 mb-1.5">
+                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{proj.category}</span>
+                      <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
+                    </div>
+                    <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
 
-          {/* Bottom row — 3 equal cards */}
-          <div className="grid grid-cols-3 gap-3 mt-3">
-            {PROJECTS.slice(3).map((proj) => (
-              <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden" style={{ height: "260px" }}>
+          {/* Row 2 — 3 equal cards */}
+          <div className="grid grid-cols-3 gap-3" style={{ height: "26vh", minHeight: 180, maxHeight: 220 }}>
+            {PROJECTS.slice(3, 6).map((proj) => (
+              <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden">
                 <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="flex items-center gap-2 mb-2">
+                  <div className="flex items-center gap-2 mb-1.5">
                     <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{proj.category}</span>
                     <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
                   </div>
-                  <h3 className="font-heading font-bold text-white text-[1rem] leading-tight">{proj.title}</h3>
+                  <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
                 </div>
               </Link>
             ))}
@@ -382,53 +279,66 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           6. QUOTE
       */}
-      <section className="py-24 md:py-32 bg-white border-t border-sand-100">
-        <div className="max-w-[860px] mx-auto px-6 lg:px-8 text-center">
-          <p className="font-heading font-black text-ink-900 leading-[1.1] tracking-tight" style={{ fontSize: "clamp(1.35rem, 2.8vw, 2.5rem)" }}>
-            Chez Trashi Plombier, chaque intervention est bien plus qu&apos;un dépannage —{" "}
-            <span className="text-ink-300">c&apos;est une promesse de qualité, de rapidité et de transparence envers nos clients.</span>
-          </p>
-        </div>
-      </section>
+      <QuoteReveal />
 
       {/* ════════════════════════════════════════════
           7. TESTIMONIALS
       */}
-      <section className="py-16 bg-white">
-        <TestimonialsSlider />
+      <section className="py-20 md:py-28 bg-white">
+        <StaggerTestimonials />
       </section>
 
       {/* ════════════════════════════════════════════
           8. FAQ
       */}
       <section className="py-20 md:py-24 bg-white">
-        <div className="max-w-[760px] mx-auto px-6 lg:px-8">
-          <div className="mb-12">
-            <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-ink-400 mb-4">FAQ</span>
+        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+
+          {/* Header */}
+          <div className="mb-12 text-center">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+                <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </div>
+              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">FAQ</span>
+            </div>
             <h2
               className="font-heading font-black text-ink-900 tracking-tight"
-              style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)" }}
+              style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
             >
               Questions fréquentes
             </h2>
           </div>
-          <div className="divide-y divide-sand-200 border-t border-sand-200">
-            {FAQ_ITEMS.map((faq, i) => (
-              <details key={i} className="group">
-                <summary className="flex items-center justify-between gap-4 py-5 cursor-pointer font-heading font-bold text-[15px] text-ink-900 hover:text-copper-600 transition-colors list-none">
-                  {faq.question}
-                  <span className="w-7 h-7 rounded-full border border-sand-200 group-open:border-ink-900 group-open:bg-ink-900 flex items-center justify-center shrink-0 transition-all">
-                    <svg className="w-3.5 h-3.5 text-ink-400 group-open:text-white group-open:rotate-180 transition-all" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7"/>
-                    </svg>
-                  </span>
-                </summary>
-                <div className="pb-5 text-ink-500 text-[14px] leading-relaxed pr-10">
-                  {faq.answer}
-                </div>
-              </details>
-            ))}
+
+          {/* Accordion */}
+          <div className="max-w-[1000px] mx-auto">
+            <div className="divide-y divide-sand-200 border-t border-sand-200">
+              {FAQ_ITEMS.map((faq, i) => (
+                <details key={i} className="group">
+                  <summary className="flex items-center justify-between gap-4 py-6 cursor-pointer font-heading font-bold text-[17px] text-ink-900 transition-colors list-none">
+                    {faq.question}
+                    <span
+                      className="w-8 h-8 rounded-xl flex items-center justify-center shrink-0 transition-all"
+                      style={{ background: "#f5f3ef" }}
+                    >
+                      <svg
+                        className="w-4 h-4 transition-transform duration-300 group-open:rotate-180"
+                        fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.5}
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7"/>
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="pb-6 pt-1 text-ink-500 text-[15px] leading-relaxed pr-12">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
           </div>
+
         </div>
         <FAQSchema items={FAQ_ITEMS} />
       </section>
