@@ -92,6 +92,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+
       </section>
 
       {/* ════════════════════════════════════════════
@@ -102,7 +103,10 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           3. SERVICES PLOMBERIE — Process
       */}
-      <section className="pt-10 pb-20 md:pt-12 md:pb-28 bg-white">
+      <section
+        className="pb-20 md:pb-28 bg-[#0c1c35] relative"
+        style={{ clipPath: "polygon(0 80px, 100% 0, 100% calc(100% - 80px), 0 100%)", paddingTop: "calc(2.5rem + 80px)", paddingBottom: "calc(5rem + 80px)", marginTop: "-60px", zIndex: 1 }}
+      >
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
@@ -113,9 +117,9 @@ export default function HomePage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </div>
-              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos services plomberie</span>
+              <span className="text-[13px] font-semibold text-white/50 uppercase tracking-widest">Nos services plomberie</span>
             </div>
-            <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+            <h2 className="font-heading font-black text-white leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
               Tout ce dont vous avez besoin
             </h2>
           </div>
@@ -128,34 +132,22 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           4. SERVICES CHAUFFAGE
       */}
-      <section className="py-20 md:py-28 bg-ink-900">
+      <section className="pt-14 pb-20 md:pb-28 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </div>
-                <span className="text-[13px] font-semibold text-white/50 uppercase tracking-widest">Nos services</span>
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+                <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
               </div>
-              <h2 className="font-heading font-black text-white leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
-                Chauffage
-              </h2>
+              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos services chauffagiste</span>
             </div>
-            <Link
-              href="/contact"
-              className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-sm shrink-0 transition-opacity hover:opacity-90"
-              style={{ background: "#d4ea00", color: "#14200a" }}
-            >
-              Demander un devis
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
-            </Link>
+            <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
+              Chaleur et confort garantis
+            </h2>
           </div>
 
           {/* Service cards */}
@@ -164,21 +156,21 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="chauffage-card grid lg:grid-cols-[80px_1fr_1fr_160px] gap-6 items-center px-8 py-8 rounded-2xl border border-white/10 transition-all duration-300"
-                style={{ background: "rgba(255,255,255,0.04)" }}
+                className="chauffage-card grid lg:grid-cols-[80px_1fr_1fr_160px] gap-6 items-center px-8 py-8 rounded-2xl border border-sand-200 transition-all duration-300"
+                style={{ background: "#f8f9fb" }}
               >
-                <span className="card-num font-heading font-black text-white/20 text-[3rem] leading-none transition-colors">
+                <span className="card-num font-heading font-black text-ink-200 text-[3rem] leading-none transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="card-title font-heading font-black text-white text-[1.4rem] leading-tight transition-colors">
+                <h3 className="card-title font-heading font-black text-ink-900 text-[1.4rem] leading-tight transition-colors">
                   {svc.title}
                 </h3>
-                <p className="card-desc text-white/50 text-[14px] font-medium leading-relaxed transition-colors">
+                <p className="card-desc text-ink-500 text-[14px] font-medium leading-relaxed transition-colors">
                   {svc.desc}
                 </p>
                 <div className="flex flex-wrap gap-2 justify-end">
                   {svc.tags.map(tag => (
-                    <span key={tag} className="card-tag text-[11px] font-semibold px-3 py-1 rounded-full border border-white/20 text-white/60 transition-colors">
+                    <span key={tag} className="card-tag text-[11px] font-semibold px-3 py-1 rounded-full border border-sand-200 text-ink-400 transition-colors">
                       {tag}
                     </span>
                   ))}
@@ -284,7 +276,7 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           7. TESTIMONIALS
       */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-20 md:py-28 bg-[#e8f4fd]">
         <StaggerTestimonials />
       </section>
 

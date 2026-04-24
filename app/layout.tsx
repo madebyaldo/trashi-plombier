@@ -54,7 +54,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="fr">
       <body className={`${heading.variable} ${body.variable} ${display.variable} font-body antialiased bg-white text-ink-900`}>
         <Header />
-        <div className="pt-[68px]">
+        <div>
           {children}
         </div>
         <Footer />

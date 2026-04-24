@@ -40,7 +40,7 @@ export default function QuoteReveal() {
   });
 
   return (
-    <section ref={ref} className="pt-0 pb-24 md:pb-32 bg-white">
+    <section ref={ref} className="pt-0 pb-24 md:pb-32 bg-[#f8f9fb]">
       <div className="max-w-[1100px] mx-auto px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
             <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#d4ea00" }}>
