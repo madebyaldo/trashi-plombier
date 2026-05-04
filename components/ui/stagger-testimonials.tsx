@@ -61,14 +61,14 @@ const N = TESTIMONIALS.length; // 7 — odd, perfect symmetry
 
 export default function StaggerTestimonials() {
   const [offset, setOffset] = useState(0);
-  const [cardSize, setCardSize] = useState(365);
+  const [cardSize, setCardSize] = useState(280);
 
   const next = () => setOffset((o) => (o + 1) % N);
   const prev = () => setOffset((o) => (o - 1 + N) % N);
 
   useEffect(() => {
     const update = () =>
-      setCardSize(window.matchMedia("(min-width: 640px)").matches ? 365 : 290);
+      setCardSize(window.matchMedia("(min-width: 640px)").matches ? 280 : 220);
     update();
     window.addEventListener("resize", update);
     return () => window.removeEventListener("resize", update);
@@ -78,30 +78,42 @@ export default function StaggerTestimonials() {
     <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
       {/* Header */}
-      <div className="mb-16 text-center">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <div
-            className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
-            style={{ background: "#d4ea00" }}
-          >
-            <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-16">
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div
+              className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
+              style={{ background: "#EA580C" }}
+            >
+              <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </div>
+            <span className="text-[13px] font-semibold text-white/50 uppercase tracking-widest">
+              Témoignages clients
+            </span>
           </div>
-          <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">
-            Témoignages clients
-          </span>
+          <h2
+            className="font-heading font-black text-white leading-tight"
+            style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
+          >
+            Nos clients<br />parlent d&apos;eux-mêmes.
+          </h2>
         </div>
-        <h2
-          className="font-heading font-black text-ink-900 leading-tight"
-          style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
+        <a
+          href="/contact"
+          className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-sm shrink-0 transition-opacity hover:opacity-90"
+          style={{ background: "#EA580C", color: "#ffffff" }}
         >
-          Nos clients<br />parlent d&apos;eux-mêmes.
-        </h2>
+          Demander un devis
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
 
       {/* Cards — stable keys = smooth bidirectional transitions */}
-      <div className="relative w-full overflow-hidden" style={{ height: 600 }}>
+      <div className="relative w-full overflow-hidden" style={{ height: 420 }}>
         {TESTIMONIALS.map((t) => {
           // Compute circular position relative to current center
           const raw = (t.id - offset + N) % N;
@@ -119,8 +131,8 @@ export default function StaggerTestimonials() {
                 width: cardSize,
                 height: cardSize,
                 clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
-                background: isCenter ? "#14200a" : "#ffffff",
-                border: isCenter ? "2px solid #14200a" : "2px solid #e4e4e7",
+                background: isCenter ? "#0c1c35" : "#ffffff",
+                border: isCenter ? "2px solid #0c1c35" : "2px solid #e4e4e7",
                 transform: `
                   translate(-50%, -50%)
                   translateX(${(cardSize / 1.5) * pos}px)
@@ -177,15 +189,15 @@ export default function StaggerTestimonials() {
         <button
           onClick={prev}
           className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-sand-50"
-          style={{ borderColor: "#e4e4e7", color: "#18181b" }}
+          style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }}
           aria-label="Précédent"
         >
           <ChevronLeft className="w-5 h-5" />
         </button>
         <button
           onClick={next}
-          className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-sand-50"
-          style={{ borderColor: "#e4e4e7", color: "#18181b" }}
+          className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-white/10"
+          style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }}
           aria-label="Suivant"
         >
           <ChevronRight className="w-5 h-5" />

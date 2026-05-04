@@ -78,7 +78,7 @@ export default function Header() {
             <Link
               href="/contact"
               className="text-[13.5px] font-semibold px-5 py-[9px] rounded-sm hover:opacity-90 transition-opacity"
-              style={{ background: "#d4ea00", color: "#14200a" }}
+              style={{ background: "#EA580C", color: "#ffffff" }}
             >
               Devis gratuit
             </Link>
@@ -161,7 +161,7 @@ function DropdownPanel({ id }: { id: DropdownId }) {
       { label: "Plomberie", items: NAVIGATION.plomberie.slice(0, 6) },
     ] :
     id === "urgence" ? [
-      { label: "Urgence", items: NAVIGATION.urgence.slice(0, 6) },
+      { label: "Urgence", items: NAVIGATION.urgence },
     ] :
     id === "chauffage" ? [
       { label: "Installation", items: NAVIGATION.chauffage.slice(0, 3) },

@@ -40,11 +40,11 @@ export default function QuoteReveal() {
   });
 
   return (
-    <section ref={ref} className="pt-0 pb-24 md:pb-32 bg-[#f8f9fb]">
+    <section ref={ref} className="pt-0 pb-36 md:pb-48 bg-white">
       <div className="max-w-[1100px] mx-auto px-6 lg:px-8 text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#d4ea00" }}>
-              <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#EA580C" }}>
+              <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
               </svg>
             </div>

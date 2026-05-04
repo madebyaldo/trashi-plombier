@@ -18,8 +18,8 @@ export default function AboutSection() {
 
         {/* Eyebrow */}
         <div className="flex items-center justify-center gap-3 mb-6">
-          <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#d4ea00" }}>
-            <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
+          <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#EA580C" }}>
+            <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
             </svg>
           </div>
@@ -44,14 +44,14 @@ export default function AboutSection() {
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[14px] transition-opacity hover:opacity-90"
-            style={{ background: "#14200a", color: "#d4ea00" }}
+            style={{ background: "#0c1c35", color: "#ffffff" }}
           >
             Demander un devis <ArrowRight className="w-4 h-4" />
           </Link>
           <a
             href={`tel:${BUSINESS.phoneClean}`}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[14px] border-2 hover:bg-sand-50 transition-colors"
-            style={{ borderColor: "#14200a", color: "#14200a" }}
+            style={{ borderColor: "#0c1c35", color: "#0c1c35" }}
           >
             {BUSINESS.phone}
           </a>

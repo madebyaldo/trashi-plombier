@@ -39,7 +39,7 @@ export default function HomePage() {
               {/* Eyebrow */}
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.22em] mb-4"
-                style={{ color: "#d4ea00" }}
+                style={{ color: "#EA580C" }}
               >
                 Disponible 24h/24 – Expert certifié
               </span>
@@ -61,7 +61,7 @@ export default function HomePage() {
                 <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-sm transition-opacity hover:opacity-90"
-                  style={{ background: "#d4ea00", color: "#14200a" }}
+                  style={{ background: "#EA580C", color: "#ffffff" }}
                 >
                   Découvrir nos services
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
@@ -112,8 +112,8 @@ export default function HomePage() {
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </div>
@@ -132,14 +132,14 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           4. SERVICES CHAUFFAGE
       */}
-      <section className="pt-14 pb-20 md:pb-28 bg-white">
+      <section className="pt-14 pb-4 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
           <div className="text-center mb-16">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </div>
@@ -192,8 +192,8 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                  <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
+                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
                   </svg>
                 </div>
@@ -206,7 +206,7 @@ export default function HomePage() {
             <Link
               href="/realisations"
               className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-sm shrink-0 transition-opacity hover:opacity-90"
-              style={{ background: "#d4ea00", color: "#14200a" }}
+              style={{ background: "#EA580C", color: "#ffffff" }}
             >
               Voir tout
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
@@ -224,7 +224,7 @@ export default function HomePage() {
               <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
               <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[11px] font-bold px-3 py-1 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{PROJECTS[0].category}</span>
+                  <span className="text-[11px] font-bold px-3 py-1 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{PROJECTS[0].category}</span>
                   <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-white/20 text-white">{PROJECTS[0].location}</span>
                 </div>
                 <h3 className="font-heading font-black text-white text-[1.6rem] leading-tight">{PROJECTS[0].title}</h3>
@@ -238,7 +238,7 @@ export default function HomePage() {
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <div className="flex items-center gap-2 mb-1.5">
-                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{proj.category}</span>
+                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
                       <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
                     </div>
                     <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
@@ -256,7 +256,7 @@ export default function HomePage() {
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#d4ea00" }}>{proj.category}</span>
+                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
                     <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
                   </div>
                   <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
@@ -276,7 +276,10 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════
           7. TESTIMONIALS
       */}
-      <section className="py-20 md:py-28 bg-[#e8f4fd]">
+      <section
+        className="pb-20 md:pb-28 bg-[#0c1c35] relative"
+        style={{ paddingTop: "4rem", paddingBottom: "4rem" }}
+      >
         <StaggerTestimonials />
       </section>
 
@@ -289,8 +292,8 @@ export default function HomePage() {
           {/* Header */}
           <div className="mb-12 text-center">
             <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
-                <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
+                <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
               </div>

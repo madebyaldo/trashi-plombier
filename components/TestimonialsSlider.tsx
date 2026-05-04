@@ -43,7 +43,7 @@ export default function TestimonialsSlider() {
           style={{ borderTopLeftRadius: "1rem", borderBottomRightRadius: "1.5rem", maxWidth: "520px" }}
         >
           <div className="flex items-center gap-3 mb-3">
-            <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#d4ea00" }}>
+            <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
               <svg className="w-4 h-4 text-ink-900" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
@@ -88,7 +88,7 @@ export default function TestimonialsSlider() {
             <button
               onClick={prev}
               className="flex items-center justify-center gap-2 py-4 text-[14px] font-bold text-ink-900 hover:opacity-90 transition-opacity"
-              style={{ background: "#d4ea00" }}
+              style={{ background: "#EA580C" }}
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"/>

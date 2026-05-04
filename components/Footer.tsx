@@ -10,24 +10,24 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-8 pt-10">
         <div
           className="relative rounded-3xl overflow-hidden"
-          style={{ background: "#d4ea00", minHeight: 280 }}
+          style={{ background: "#0c1c35", minHeight: 280 }}
         >
           {/* Left content */}
           <div className="relative z-10 px-10 py-12 max-w-[620px]">
             {/* Eyebrow */}
             <div className="flex items-center gap-3 mb-5">
-              <div className="w-8 h-8 rounded-full bg-white/30 flex items-center justify-center">
-                <svg className="w-4 h-4" fill="none" stroke="#14200a" viewBox="0 0 24 24" strokeWidth={2.2}>
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                <svg className="w-4 h-4" fill="none" stroke="#EA580C" viewBox="0 0 24 24" strokeWidth={2.2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
-              <span className="text-[13px] font-bold text-ink-900/60 uppercase tracking-widest">
+              <span className="text-[13px] font-bold text-white/60 uppercase tracking-widest">
                 Appel d&apos;urgence
               </span>
             </div>
 
             <h2
-              className="font-heading font-black text-ink-900 leading-[1.0] tracking-tight mb-8"
+              className="font-heading font-black text-white leading-[1.0] tracking-tight mb-8"
               style={{ fontSize: "clamp(2rem, 4vw, 3.4rem)" }}
             >
               Urgence plomberie ?<br />Disponibles 24h/24.
@@ -36,7 +36,7 @@ export default function Footer() {
             <a
               href={`tel:${BUSINESS.phoneClean}`}
               className="inline-flex items-center gap-3 px-7 py-4 rounded-full font-bold text-[15px] transition-opacity hover:opacity-90"
-              style={{ background: "#14200a", color: "#d4ea00" }}
+              style={{ background: "#EA580C", color: "#ffffff" }}
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -48,7 +48,7 @@ export default function Footer() {
           {/* Plumber image — circle, pinned right */}
           <div
             className="absolute right-10 top-1/2 -translate-y-1/2 w-[240px] h-[240px] rounded-full overflow-hidden hidden lg:block"
-            style={{ background: "#c8de00" }}
+            style={{ background: "#162d52" }}
           >
             <Image
               src="/images/about-2.avif"
@@ -71,7 +71,7 @@ export default function Footer() {
             <div className="flex items-center gap-2 mb-5">
               <div
                 className="w-10 h-10 rounded-xl flex items-center justify-center font-heading font-black text-[18px]"
-                style={{ background: "#d4ea00", color: "#14200a" }}
+                style={{ background: "#EA580C", color: "#ffffff" }}
               >
                 T
               </div>
@@ -192,7 +192,7 @@ export default function Footer() {
               className="mt-6 px-4 py-3 rounded-xl flex items-center gap-3"
               style={{ background: "#14200a" }}
             >
-              <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#d4ea00" }} />
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#EA580C" }} />
               <span className="text-white text-[13px] font-semibold">Appelez-nous</span>
             </div>
           </div>

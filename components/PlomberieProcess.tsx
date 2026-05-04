@@ -18,7 +18,7 @@ export default function PlomberieProcess() {
       <div className="flex flex-col gap-6">
         {left.map(step => (
           <div key={step.num} className="relative rounded-2xl border border-sand-200 bg-white p-6 shadow-sm">
-            <div className="absolute -right-4 -top-4 w-10 h-10 rounded-full flex items-center justify-center text-[13px] font-bold text-ink-900" style={{ background: "#d4ea00" }}>
+            <div className="absolute -right-4 -top-4 w-10 h-10 rounded-full flex items-center justify-center text-[13px] font-bold text-white" style={{ background: "#EA580C" }}>
               {step.num}
             </div>
             <h3 className="font-heading font-black text-ink-900 uppercase text-[16px] mb-2">{step.title}</h3>
@@ -38,16 +38,16 @@ export default function PlomberieProcess() {
           <div
             key={step.num}
             className="relative rounded-2xl p-6"
-            style={step.highlight ? { background: "#d4ea00" } : { background: "white", border: "1px solid #ebe7e0" }}
+            style={step.highlight ? { background: "#EA580C" } : { background: "white", border: "1px solid #ebe7e0" }}
           >
             <div
               className="absolute -left-4 -top-4 w-10 h-10 rounded-full flex items-center justify-center text-[13px] font-bold"
-              style={step.highlight ? { background: "white", color: "#14200a" } : { background: "#d4ea00", color: "#14200a" }}
+              style={step.highlight ? { background: "white", color: "#14200a" } : { background: "#EA580C", color: "#ffffff" }}
             >
               {step.num}
             </div>
-            <h3 className="font-heading font-black text-ink-900 uppercase text-[16px] mb-2">{step.title}</h3>
-            <p className={`text-[13px] leading-relaxed ${step.highlight ? "text-ink-800" : "text-ink-500"}`}>{step.desc}</p>
+            <h3 className={`font-heading font-black uppercase text-[16px] mb-2 ${step.highlight ? "text-white" : "text-ink-900"}`}>{step.title}</h3>
+            <p className={`text-[13px] leading-relaxed ${step.highlight ? "text-white/80" : "text-ink-500"}`}>{step.desc}</p>
           </div>
         ))}
       </div>
