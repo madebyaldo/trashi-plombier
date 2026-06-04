@@ -158,14 +158,14 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="chauffage-card flex items-center gap-4 lg:grid lg:grid-cols-[80px_1fr_1fr_160px] lg:gap-6 px-5 lg:px-8 py-4 lg:py-8 rounded-2xl border border-sand-200 transition-all duration-300 hover:border-[#EA580C] hover:shadow-sm"
+                className="chauffage-card flex items-center gap-4 lg:grid lg:grid-cols-[80px_1fr_1fr_160px] lg:gap-6 px-5 lg:px-8 py-5 lg:py-8 rounded-2xl border border-sand-200 transition-all duration-300 hover:border-[#EA580C] hover:shadow-sm"
                 style={{ background: "#f8f9fb" }}
               >
-                <span className="card-num font-heading font-black text-[#EA580C] text-[1.1rem] lg:text-[3rem] leading-none shrink-0 w-8 lg:w-auto transition-colors">
+                <span className="card-num font-heading font-black text-[#EA580C] text-[1.3rem] lg:text-[3rem] leading-none shrink-0 w-10 lg:w-auto transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
                 <div className="flex-1 min-w-0">
-                  <h3 className="card-title font-heading font-black text-ink-900 text-[1rem] lg:text-[1.4rem] leading-tight transition-colors">
+                  <h3 className="card-title font-heading font-black text-ink-900 text-[1.1rem] lg:text-[1.4rem] leading-tight transition-colors">
                     {svc.title}
                   </h3>
                   <p className="card-desc text-ink-500 text-[13px] lg:text-[14px] font-medium leading-relaxed mt-1 line-clamp-1 lg:line-clamp-none transition-colors">
