@@ -116,14 +116,9 @@ export default function StaggerTestimonials() {
             <p className="text-[14px] leading-relaxed text-ink-800 mb-3">
               {TESTIMONIALS[offset].text}
             </p>
-            <div className="flex items-center gap-3 pt-3 border-t border-sand-100">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-black text-white shrink-0" style={{ background: "#0c1c35" }}>
-                {TESTIMONIALS[offset].by.slice(0, 2).toUpperCase()}
-              </div>
-              <div>
-                <p className="font-bold text-[14px] text-ink-900">{TESTIMONIALS[offset].by}</p>
-                <p className="text-[12px] text-ink-400">{TESTIMONIALS[offset].role}</p>
-              </div>
+            <div className="pt-3 border-t border-sand-100">
+              <p className="font-bold text-[14px] text-ink-900">{TESTIMONIALS[offset].by}</p>
+              <p className="text-[12px] text-ink-400">{TESTIMONIALS[offset].role}</p>
             </div>
           </div>
         </div>
