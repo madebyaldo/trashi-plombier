@@ -205,7 +205,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/realisations"
-              className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-sm shrink-0 transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
               style={{ background: "#EA580C", color: "#ffffff" }}
             >
               Voir tout
@@ -215,30 +215,60 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Row 1 — featured large + 2 small */}
-          <div className="grid grid-cols-3 gap-3 mb-3" style={{ height: "55vh", minHeight: 360, maxHeight: 480 }}>
-
-            {/* Featured */}
-            <Link href="/realisations" className="group relative col-span-2 rounded-2xl overflow-hidden">
-              <Image src={PROJECTS[0].image} alt={PROJECTS[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="66vw" />
-              <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
-              <div className="absolute bottom-0 left-0 right-0 p-7">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-[11px] font-bold px-3 py-1 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{PROJECTS[0].category}</span>
-                  <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-white/20 text-white">{PROJECTS[0].location}</span>
+          {/* ── Mobile: 2-column simple grid ── */}
+          <div className="grid grid-cols-2 gap-3 md:hidden">
+            {PROJECTS.slice(0, 4).map((proj) => (
+              <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden" style={{ height: 180 }}>
+                <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="50vw" />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
+                <div className="absolute bottom-0 left-0 right-0 p-3">
+                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5 inline-block" style={{ background: "#EA580C", color: "#fff" }}>{proj.category}</span>
+                  <h3 className="font-heading font-bold text-white text-[0.85rem] leading-tight">{proj.title}</h3>
                 </div>
-                <h3 className="font-heading font-black text-white text-[1.6rem] leading-tight">{PROJECTS[0].title}</h3>
-              </div>
-            </Link>
+              </Link>
+            ))}
+          </div>
 
-            <div className="flex flex-col gap-3">
-              {PROJECTS.slice(1, 3).map((proj) => (
-                <Link key={proj.title} href="/realisations" className="group relative flex-1 rounded-2xl overflow-hidden">
+          {/* ── Desktop: bento layout ── */}
+          <div className="hidden md:block">
+            {/* Row 1 — featured large + 2 small */}
+            <div className="grid grid-cols-3 gap-3 mb-3" style={{ height: "55vh", minHeight: 360, maxHeight: 480 }}>
+              <Link href="/realisations" className="group relative col-span-2 rounded-2xl overflow-hidden">
+                <Image src={PROJECTS[0].image} alt={PROJECTS[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="66vw" />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
+                <div className="absolute bottom-0 left-0 right-0 p-7">
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "#EA580C", color: "#ffffff" }}>{PROJECTS[0].category}</span>
+                    <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-white/20 text-white">{PROJECTS[0].location}</span>
+                  </div>
+                  <h3 className="font-heading font-black text-white text-[1.6rem] leading-tight">{PROJECTS[0].title}</h3>
+                </div>
+              </Link>
+              <div className="flex flex-col gap-3">
+                {PROJECTS.slice(1, 3).map((proj) => (
+                  <Link key={proj.title} href="/realisations" className="group relative flex-1 rounded-2xl overflow-hidden">
+                    <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
+                    <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
+                    <div className="absolute bottom-0 left-0 right-0 p-4">
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
+                        <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
+                      </div>
+                      <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+            {/* Row 2 — 3 equal cards */}
+            <div className="grid grid-cols-3 gap-3" style={{ height: "26vh", minHeight: 180, maxHeight: 220 }}>
+              {PROJECTS.slice(3, 6).map((proj) => (
+                <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden">
                   <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <div className="flex items-center gap-2 mb-1.5">
-                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
+                      <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
                       <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
                     </div>
                     <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
@@ -246,23 +276,6 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
-          </div>
-
-          {/* Row 2 — 3 equal cards */}
-          <div className="grid grid-cols-3 gap-3" style={{ height: "26vh", minHeight: 180, maxHeight: 220 }}>
-            {PROJECTS.slice(3, 6).map((proj) => (
-              <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden">
-                <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <div className="flex items-center gap-2 mb-1.5">
-                    <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full text-ink-900" style={{ background: "#EA580C", color: "#ffffff" }}>{proj.category}</span>
-                    <span className="text-[10px] font-medium px-2.5 py-0.5 rounded-full bg-white/20 text-white">{proj.location}</span>
-                  </div>
-                  <h3 className="font-heading font-bold text-white text-[0.95rem] leading-tight">{proj.title}</h3>
-                </div>
-              </Link>
-            ))}
           </div>
 
         </div>
