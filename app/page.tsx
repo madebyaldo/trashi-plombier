@@ -189,23 +189,48 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
-            <div>
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
-                  <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </div>
-                <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos réalisations</span>
+          <div className="mb-8">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
               </div>
+              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos réalisations</span>
+            </div>
+            <div className="flex items-end justify-between gap-4">
               <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}>
                 Réalisations soignées<br />pour chaque client.
               </h2>
+              {/* Voir tout — desktop only */}
+              <Link
+                href="/realisations"
+                className="hidden md:inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
+                style={{ background: "#EA580C", color: "#ffffff" }}
+              >
+                Voir tout
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </Link>
             </div>
+          </div>
+
+          {/* ── Mobile: 3 stacked cards + button ── */}
+          <div className="md:hidden space-y-3">
+            {PROJECTS.slice(0, 3).map((proj) => (
+              <Link key={proj.title} href="/realisations" className="group relative block rounded-2xl overflow-hidden" style={{ height: 180 }}>
+                <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="100vw" />
+                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <span className="text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-2 inline-block" style={{ background: "#EA580C", color: "#fff" }}>{proj.category}</span>
+                  <h3 className="font-heading font-bold text-white text-[1rem] leading-tight">{proj.title}</h3>
+                </div>
+              </Link>
+            ))}
             <Link
               href="/realisations"
-              className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
+              className="flex items-center justify-center gap-2 w-full py-3.5 rounded-xl text-[14px] font-semibold transition-opacity hover:opacity-90 mt-1"
               style={{ background: "#EA580C", color: "#ffffff" }}
             >
               Voir tout
@@ -213,20 +238,6 @@ export default function HomePage() {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
               </svg>
             </Link>
-          </div>
-
-          {/* ── Mobile: 2-column simple grid ── */}
-          <div className="grid grid-cols-2 gap-3 md:hidden">
-            {PROJECTS.slice(0, 4).map((proj) => (
-              <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden" style={{ height: 180 }}>
-                <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="50vw" />
-                <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
-                <div className="absolute bottom-0 left-0 right-0 p-3">
-                  <span className="text-[10px] font-bold px-2 py-0.5 rounded-full mb-1.5 inline-block" style={{ background: "#EA580C", color: "#fff" }}>{proj.category}</span>
-                  <h3 className="font-heading font-bold text-white text-[0.85rem] leading-tight">{proj.title}</h3>
-                </div>
-              </Link>
-            ))}
           </div>
 
           {/* ── Desktop: bento layout ── */}
