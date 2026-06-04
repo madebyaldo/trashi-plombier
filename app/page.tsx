@@ -158,7 +158,7 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="chauffage-card flex items-center gap-4 lg:grid lg:grid-cols-[80px_1fr_1fr_160px] lg:gap-6 px-5 lg:px-8 py-5 lg:py-8 rounded-2xl border border-sand-200 transition-all duration-300 hover:border-[#EA580C] hover:shadow-sm"
+                className="chauffage-card flex items-center gap-4 lg:grid lg:grid-cols-[80px_1fr_1fr_160px] lg:gap-6 px-5 lg:px-8 py-7 lg:py-8 rounded-2xl border border-sand-200 transition-all duration-300 hover:border-[#EA580C] hover:shadow-sm"
                 style={{ background: "#f8f9fb" }}
               >
                 <span className="card-num font-heading font-black text-[#EA580C] text-[1.3rem] lg:text-[3rem] leading-none shrink-0 w-10 lg:w-auto transition-colors">
