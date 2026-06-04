@@ -94,7 +94,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Jean"
-            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb]"
           />
         </div>
         <div>
@@ -108,7 +108,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Dupont"
-            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb]"
           />
         </div>
       </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="06 12 34 56 78"
-            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb]"
           />
         </div>
         <div>
@@ -139,7 +139,7 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             placeholder="jean@example.com"
-            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb]"
           />
         </div>
       </div>
@@ -154,7 +154,7 @@ export default function ContactForm() {
           value={form.service}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 focus:outline-none focus:border-[#EA580C] transition-colors bg-white appearance-none"
+          className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb] appearance-none"
         >
           <option value="">Choisissez…</option>
           {SERVICES.map((s) => (
@@ -176,7 +176,7 @@ export default function ContactForm() {
           onChange={handleChange}
           rows={4}
           placeholder="Décrivez votre problème ou projet…"
-          className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-[#d1d5db] text-[14px] text-ink-900 placeholder:text-ink-400 focus:outline-none focus:border-[#EA580C] transition-colors bg-[#f9fafb] resize-none"
         />
       </div>
 
