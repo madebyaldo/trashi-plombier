@@ -6,7 +6,8 @@ export interface Realisation {
   location: string;
   title: string;
   shortDescription: string;
-  image: string;
+  image: string;        // cover photo — used in the grid card
+  images?: string[];    // all gallery photos — falls back to [image] if not set
   metaTitle: string;
   metaDescription: string;
   bodyParagraphs: string[];
@@ -21,7 +22,15 @@ export const REALISATIONS: Realisation[] = [
     title: "Rénovation complète salle de bain",
     shortDescription:
       "Dépose de l'ancienne baignoire, pose d'une douche à l'italienne, remplacement de toute la robinetterie et mise aux normes de la plomberie.",
-    image: "/images/real-sdb.jpg",
+    image: "/images/realisations/renovation-salle-de-bain-metz-centre/salle-de-bain-renovee-douche-wc-vasque-robinetterie-or-metz.jpg",
+    images: [
+      "/images/realisations/renovation-salle-de-bain-metz-centre/avant-travaux-depose-ancienne-salle-de-bain-metz.jpg",
+      "/images/realisations/renovation-salle-de-bain-metz-centre/demolition-pose-cloison-plomberie-cuivre-metz.jpg",
+      "/images/realisations/renovation-salle-de-bain-metz-centre/travaux-cloison-hydrofuge-carrelage-douche-metz.jpg",
+      "/images/realisations/renovation-salle-de-bain-metz-centre/chape-beton-sol-carrelage-mural-douche-metz.jpg",
+      "/images/realisations/renovation-salle-de-bain-metz-centre/pose-receveur-douche-carrelage-mural-beige-metz.jpg",
+      "/images/realisations/renovation-salle-de-bain-metz-centre/salle-de-bain-renovee-douche-wc-vasque-robinetterie-or-metz.jpg",
+    ],
     metaTitle: "Rénovation Salle de Bain Metz – Trashi Plombier",
     metaDescription:
       "Rénovation complète d'une salle de bain à Metz Centre par Trashi Plombier : douche italienne, robinetterie, mise aux normes. Découvrez le chantier.",
@@ -46,7 +55,10 @@ export const REALISATIONS: Realisation[] = [
     title: "Remplacement chaudière gaz condensation",
     shortDescription:
       "Dépose d'une ancienne chaudière fioul et installation d'une chaudière gaz à condensation haute performance. Raccordement complet et mise en service.",
-    image: "/images/real-chaudiere.jpg",
+    image: "/images/realisations/remplacement-chaudiere-gaz-montigny/installation-chaudiere-viessmann-sol-ballon-tampon-cuivre-montigny.jpg",
+    images: [
+      "/images/realisations/remplacement-chaudiere-gaz-montigny/installation-chaudiere-viessmann-sol-ballon-tampon-cuivre-montigny.jpg",
+    ],
     metaTitle: "Remplacement Chaudière Gaz Montigny-lès-Metz – Trashi Plombier",
     metaDescription:
       "Remplacement d'une chaudière fioul par une chaudière gaz à condensation à Montigny-lès-Metz. Économies de 40%. Découvrez le chantier Trashi Plombier.",
@@ -65,38 +77,16 @@ export const REALISATIONS: Realisation[] = [
     ],
   },
   {
-    slug: "depannage-fuite-urgence-woippy",
-    category: "Urgence",
-    location: "Woippy",
-    title: "Dépannage fuite urgente sous évier",
-    shortDescription:
-      "Intervention en moins de 25 minutes pour une fuite importante sous évier. Remplacement du siphon et des flexibles, remise en état immédiate.",
-    image: "/images/real-fuite.jpg",
-    metaTitle: "Dépannage Fuite Urgence Woippy – Trashi Plombier",
-    metaDescription:
-      "Intervention d'urgence en 25 min pour une fuite sous évier à Woippy. Siphon et flexibles remplacés, remise en état immédiate. Trashi Plombier.",
-    bodyParagraphs: [
-      "Appel reçu un samedi matin pour une fuite d'eau importante sous l'évier de cuisine à Woippy. Le client signalait une flaque s'agrandissant rapidement sous le meuble. Notre technicien est arrivé sur place en 25 minutes.",
-      "Le diagnostic a rapidement identifié la source : un siphon en plastique fissuré aggravé par des flexibles d'alimentation corrodés datant de plus de 15 ans. Deux points de fuite actifs mettaient en danger le plancher en bois sous l'évier.",
-      "Nous avons procédé au remplacement complet du siphon par un modèle en polypropylène haute résistance, au changement des deux flexibles d'alimentation (eau froide et eau chaude) par des flexibles inox tressés 40 cm, et à la vérification de l'ensemble des raccords sous-meuble.",
-      "L'intervention complète a duré moins d'une heure. Avant de partir, nous avons effectué un test de pression et de tenue à l'eau pendant 15 minutes pour confirmer l'absence de toute fuite résiduelle. Le client a pu utiliser son évier normalement dès la fin de l'intervention.",
-    ],
-    details: [
-      { label: "Catégorie", value: "Urgence" },
-      { label: "Ville", value: "Woippy" },
-      { label: "Délai d'arrivée", value: "25 minutes" },
-      { label: "Durée intervention", value: "< 1 heure" },
-      { label: "Prestations", value: "Siphon, flexibles inox, vérification réseau" },
-    ],
-  },
-  {
     slug: "installation-plancher-chauffant-augny",
     category: "Chauffage",
     location: "Augny",
     title: "Installation plancher chauffant hydraulique",
     shortDescription:
       "Pose d'un plancher chauffant hydraulique sur 45 m² dans une maison neuve. Raccordement à la chaudière existante et réglage de la régulation.",
-    image: "/images/chauffage-installation.jpg",
+    image: "/images/realisations/installation-plancher-chauffant-augny/pose-tubes-per-serpentin-plancher-chauffant-hydraulique-augny.jpg",
+    images: [
+      "/images/realisations/installation-plancher-chauffant-augny/pose-tubes-per-serpentin-plancher-chauffant-hydraulique-augny.jpg",
+    ],
     metaTitle: "Installation Plancher Chauffant Augny – Trashi Plombier",
     metaDescription:
       "Pose d'un plancher chauffant hydraulique 45 m² à Augny. Raccordement chaudière et réglage régulation par Trashi Plombier. Découvrez le chantier.",
@@ -115,38 +105,16 @@ export const REALISATIONS: Realisation[] = [
     ],
   },
   {
-    slug: "debouchage-canalisation-marly",
-    category: "Plomberie",
-    location: "Marly",
-    title: "Débouchage canalisation & inspection caméra",
-    shortDescription:
-      "Débouchage mécanique et hydrocurage d'une canalisation principale obstruée par des racines. Inspection caméra et rapport complet fourni.",
-    image: "/images/urgence-debouchage.jpg",
-    metaTitle: "Débouchage Canalisation Marly – Trashi Plombier",
-    metaDescription:
-      "Débouchage et hydrocurage d'une canalisation obstruée à Marly avec inspection caméra. Rapport remis au client. Trashi Plombier.",
-    bodyParagraphs: [
-      "Un client de Marly nous a contactés pour des refoulements répétés dans ses évacuations de douche et de WC. Les déboucheurs chimiques n'avaient eu aucun effet. Nous avons diagnostiqué une obstruction profonde sur la canalisation principale DN100.",
-      "L'inspection par caméra motorisée a révélé une intrusion de racines sur 3 mètres à environ 8 mètres de la sortie du bâtiment. Les racines d'un thuya proche de la façade avaient progressivement infiltré un joint de canalisation en grès défaillant.",
-      "Nous avons d'abord procédé à un débouchage mécanique au furet électrique rotatif (tête de coupe 10 cm) pour fragmenter le bouchon de racines. Une passe d'hydrocurage haute pression (150 bars) a ensuite nettoyé la canalisation sur toute sa longueur, éliminant les dépôts résiduels.",
-      "Un second passage caméra a confirmé la canalisation totalement libre. Un rapport complet avec captures d'écran a été remis au client, identifiant le joint défaillant à réparer. Nous lui avons conseillé d'effectuer cette réparation pour éviter une récidive dans les 2 à 3 ans.",
-    ],
-    details: [
-      { label: "Catégorie", value: "Plomberie" },
-      { label: "Ville", value: "Marly" },
-      { label: "Technique", value: "Furet électrique + hydrocurage 150 bars" },
-      { label: "Diamètre canalisation", value: "DN100" },
-      { label: "Prestations", value: "Débouchage, inspection caméra, rapport" },
-    ],
-  },
-  {
     slug: "chauffe-eau-thermodynamique-metz-queuleu",
     category: "Chauffage",
     location: "Metz Queuleu",
     title: "Pose chauffe-eau thermodynamique 270 L",
     shortDescription:
       "Remplacement d'un cumulus électrique par un chauffe-eau thermodynamique de 270 L. Économies d'énergie estimées à 60 % sur l'eau chaude sanitaire.",
-    image: "/images/chauffage-chauffe-eau.jpg",
+    image: "/images/realisations/chauffe-eau-thermodynamique-metz-queuleu/installation-chaudiere-viessmann-ballon-tampon-metz-queuleu.jpg",
+    images: [
+      "/images/realisations/chauffe-eau-thermodynamique-metz-queuleu/installation-chaudiere-viessmann-ballon-tampon-metz-queuleu.jpg",
+    ],
     metaTitle: "Chauffe-eau Thermodynamique Metz Queuleu – Trashi Plombier",
     metaDescription:
       "Installation d'un chauffe-eau thermodynamique 270 L à Metz Queuleu. Économies 60% sur l'eau chaude. Trashi Plombier, devis gratuit.",
@@ -171,7 +139,10 @@ export const REALISATIONS: Realisation[] = [
     title: "Réfection réseau PER multicouche",
     shortDescription:
       "Remplacement complet du réseau de distribution d'eau en cuivre vétuste par des tuyauteries PER multicouche. Travail soigné, garantie 10 ans.",
-    image: "/images/plomberie-installation.jpg",
+    image: "/images/realisations/refection-reseau-per-longeville/raccordement-tuyauterie-per-radiateur-fonte-longeville-metz.jpg",
+    images: [
+      "/images/realisations/refection-reseau-per-longeville/raccordement-tuyauterie-per-radiateur-fonte-longeville-metz.jpg",
+    ],
     metaTitle: "Réfection Réseau Plomberie Longeville-lès-Metz – Trashi Plombier",
     metaDescription:
       "Remplacement réseau cuivre vétuste par PER multicouche à Longeville-lès-Metz. Garantie 10 ans. Trashi Plombier.",
@@ -196,7 +167,10 @@ export const REALISATIONS: Realisation[] = [
     title: "Entretien annuel chaudière gaz murale",
     shortDescription:
       "Entretien annuel réglementaire d'une chaudière gaz murale. Nettoyage du brûleur, vérification des organes de sécurité, délivrance du certificat.",
-    image: "/images/chauffage-entretien.jpg",
+    image: "/images/realisations/entretien-chaudiere-talange/installation-ballon-eau-chaude-adoucisseur-eau-talange.jpg",
+    images: [
+      "/images/realisations/entretien-chaudiere-talange/installation-ballon-eau-chaude-adoucisseur-eau-talange.jpg",
+    ],
     metaTitle: "Entretien Chaudière Gaz Talange – Trashi Plombier",
     metaDescription:
       "Entretien annuel obligatoire chaudière gaz murale à Talange par Trashi Plombier. Attestation délivrée. Prise de RDV rapide.",
@@ -221,7 +195,10 @@ export const REALISATIONS: Realisation[] = [
     title: "Pose WC suspendu & meuble vasque",
     shortDescription:
       "Dépose d'un WC au sol, installation d'un bâti-support et d'un WC suspendu. Pose d'un meuble vasque 90 cm avec mitigeur et raccordement.",
-    image: "/images/plomberie-wc.jpg",
+    image: "/images/realisations/pose-wc-suspendu-metz-sablon/wc-suspendu-bati-support-carrelage-marbre-noir-metz-sablon.jpg",
+    images: [
+      "/images/realisations/pose-wc-suspendu-metz-sablon/wc-suspendu-bati-support-carrelage-marbre-noir-metz-sablon.jpg",
+    ],
     metaTitle: "Pose WC Suspendu Metz Sablon – Trashi Plombier",
     metaDescription:
       "Installation WC suspendu sur bâti-support et meuble vasque 90 cm à Metz Sablon. Trashi Plombier, devis gratuit.",
@@ -240,38 +217,16 @@ export const REALISATIONS: Realisation[] = [
     ],
   },
   {
-    slug: "detection-fuite-encastree-metz",
-    category: "Urgence",
-    location: "Metz",
-    title: "Détection fuite tuyau encastré",
-    shortDescription:
-      "Détection précise d'une fuite sur tuyauterie encastrée par caméra thermique, sans démolition inutile. Réparation propre et rapide en 2 heures.",
-    image: "/images/plomberie-fuite.jpg",
-    metaTitle: "Détection Fuite Encastrée Metz – Trashi Plombier",
-    metaDescription:
-      "Détection par caméra thermique d'une fuite encastrée à Metz. Réparation sans démolition inutile en 2h. Trashi Plombier.",
-    bodyParagraphs: [
-      "Notre client, à Metz, constatait une tache d'humidité croissante sur le mur de son couloir sans identifier la source. Une tuyauterie d'eau chaude encastrée dans la cloison était suspectée. Nous avons utilisé notre caméra thermique pour localiser la fuite avec précision.",
-      "La thermographie infrarouge a immédiatement révélé une anomalie thermique à 1,20 m du sol sur la cloison en question : une zone chaude de 30 cm de diamètre trahissant une microfuite sur le circuit eau chaude sanitaire. Sans cet outil, il aurait fallu ouvrir 2 à 3 mètres linéaires de cloison.",
-      "Nous avons ouvert la cloison sur une surface minimale de 20 × 20 cm, exactement à l'endroit indiqué par la thermique. La fuite provenait d'un raccord à sertissage défaillant sur un coude PER, probablement suite à un défaut de pose lors de la construction.",
-      "Le raccord défaillant a été remplacé par un nouveau raccord à sertissage certifié. Après test de pression et vérification thermique confirmant l'absence de fuite résiduelle, l'ouverture a été rebouchée au plâtre par notre technicien. L'intervention totale a duré 2 heures.",
-    ],
-    details: [
-      { label: "Catégorie", value: "Urgence" },
-      { label: "Ville", value: "Metz" },
-      { label: "Outil utilisé", value: "Caméra thermique infrarouge" },
-      { label: "Durée intervention", value: "2 heures" },
-      { label: "Démolition", value: "Ouverture minimale 20 × 20 cm" },
-    ],
-  },
-  {
     slug: "installation-pac-hagondange",
     category: "Chauffage",
     location: "Hagondange",
     title: "Installation pompe à chaleur air/eau",
     shortDescription:
       "Pose d'une PAC air/eau pour une maison de 120 m². Dossier MaPrimeRénov' géré par nos soins. COP de 4,2 mesuré à la mise en service.",
-    image: "/images/chauffage-gaz.jpg",
+    image: "/images/realisations/installation-pac-hagondange/pompe-chaleur-chaffoteaux-inverter-dc-unite-exterieure-hagondange.jpg",
+    images: [
+      "/images/realisations/installation-pac-hagondange/pompe-chaleur-chaffoteaux-inverter-dc-unite-exterieure-hagondange.jpg",
+    ],
     metaTitle: "Installation Pompe à Chaleur Hagondange – Trashi Plombier",
     metaDescription:
       "Installation PAC air/eau maison 120 m² à Hagondange. COP 4,2 – dossier MaPrimeRénov' géré. Trashi Plombier.",
@@ -297,7 +252,12 @@ export const REALISATIONS: Realisation[] = [
     title: "Création douche italienne premium",
     shortDescription:
       "Création d'une douche à l'italienne avec receveur extra-plat, paroi en verre trempé et mitigeur thermostatique. Finitions carrelées au sol.",
-    image: "/images/plomberie-douche.jpg",
+    image: "/images/realisations/installation-douche-italienne-thionville/salle-de-bain-baignoire-ilot-douche-carrelage-marbre-noir-thionville.jpg",
+    images: [
+      "/images/realisations/installation-douche-italienne-thionville/pose-receveur-douche-extra-plat-cloison-hydrofuge-thionville.jpg",
+      "/images/realisations/installation-douche-italienne-thionville/pose-carrelage-marbre-noir-colonne-douche-thionville.jpg",
+      "/images/realisations/installation-douche-italienne-thionville/salle-de-bain-baignoire-ilot-douche-carrelage-marbre-noir-thionville.jpg",
+    ],
     metaTitle: "Installation Douche Italienne Thionville – Trashi Plombier",
     metaDescription:
       "Création d'une douche italienne premium à Thionville : receveur extra-plat, paroi verre trempé, mitigeur thermostatique. Trashi Plombier.",

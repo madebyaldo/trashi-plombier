@@ -5,6 +5,7 @@ import Link from "next/link";
 import { MapPin, Phone, ArrowLeft } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import CTABanner from "@/components/CTABanner";
+import RealisationGallery from "@/components/ui/realisation-gallery";
 import { REALISATIONS, getRealisationBySlug } from "@/lib/realisations-data";
 import { BUSINESS } from "@/lib/seo-data";
 
@@ -54,33 +55,27 @@ export default function RealisationPage({
         ]}
       />
 
-      {/* Hero image */}
-      <section className="relative h-[55vh] min-h-[360px] bg-ink-900">
-        <Image
-          src={r.image}
-          alt={r.title}
-          fill
-          priority
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0" style={{ background: "rgba(8,14,24,0.55)" }} />
-        <div className="absolute inset-0 flex flex-col justify-end pb-10 px-6 lg:px-8 max-w-[1200px] mx-auto">
-          <span className={`inline-block self-start text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full mb-4 ${BADGE_COLOR[r.category]}`}
-            style={{ background: "rgba(255,255,255,0.92)" }}
-          >
-            {r.category}
-          </span>
+      {/* Hero */}
+      <section style={{ background: "#0c1c35" }} className="py-12">
+        <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
+          <div className="flex flex-wrap items-center gap-3 mb-5">
+            <span
+              className={`text-[11px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full ${BADGE_COLOR[r.category]}`}
+              style={{ background: "rgba(255,255,255,0.92)" }}
+            >
+              {r.category}
+            </span>
+            <span className="flex items-center gap-1.5 text-white/50 text-[13px]">
+              <MapPin className="w-3.5 h-3.5" />
+              {r.location}
+            </span>
+          </div>
           <h1
-            className="font-heading font-black text-white leading-tight mb-3"
+            className="font-heading font-black text-white leading-tight"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
             {r.title}
           </h1>
-          <span className="flex items-center gap-1.5 text-white/60 text-[14px]">
-            <MapPin className="w-4 h-4" />
-            {r.location}
-          </span>
         </div>
       </section>
 
@@ -98,6 +93,14 @@ export default function RealisationPage({
                 <ArrowLeft className="w-3.5 h-3.5" />
                 Retour aux réalisations
               </Link>
+
+              {/* Gallery */}
+              <div className="mb-10">
+                <RealisationGallery
+                  images={r.images && r.images.length > 0 ? r.images : [r.image]}
+                  title={r.title}
+                />
+              </div>
 
               <div className="space-y-5">
                 {r.bodyParagraphs.map((para, i) => (
