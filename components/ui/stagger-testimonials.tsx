@@ -81,7 +81,7 @@ export default function StaggerTestimonials() {
           className="font-heading font-black text-white leading-tight"
           style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
         >
-          Ils nous font<br />confiance.
+          Nos clients<br />parlent d&apos;eux-mêmes.
         </h2>
         <a
           href="/contact"
