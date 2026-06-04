@@ -107,16 +107,16 @@ export default function StaggerTestimonials() {
 
       {/* ── Mobile: single card slider ── */}
       <div className="sm:hidden">
-        <div className="rounded-2xl mb-6 overflow-hidden" style={{ background: "#ffffff" }}>
+        <div className="rounded-2xl mb-4 overflow-hidden" style={{ background: "#ffffff" }}>
           {/* Orange top bar */}
           <div className="h-1 w-full" style={{ background: "#EA580C" }} />
-          <div className="p-6">
+          <div className="p-4">
             {/* Big quote mark */}
-            <span className="block font-heading font-black text-[4rem] leading-none mb-2" style={{ color: "#EA580C", opacity: 0.15 }}>&ldquo;</span>
-            <p className="text-[15px] leading-relaxed text-ink-800 mb-5">
+            <span className="block font-heading font-black text-[3rem] leading-none mb-1" style={{ color: "#EA580C", opacity: 0.15 }}>&ldquo;</span>
+            <p className="text-[14px] leading-relaxed text-ink-800 mb-3">
               {TESTIMONIALS[offset].text}
             </p>
-            <div className="flex items-center gap-3 pt-4 border-t border-sand-100">
+            <div className="flex items-center gap-3 pt-3 border-t border-sand-100">
               <div className="w-8 h-8 rounded-full flex items-center justify-center text-[11px] font-black text-white shrink-0" style={{ background: "#0c1c35" }}>
                 {TESTIMONIALS[offset].by.slice(0, 2).toUpperCase()}
               </div>
