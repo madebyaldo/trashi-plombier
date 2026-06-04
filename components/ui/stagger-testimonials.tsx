@@ -78,24 +78,11 @@ export default function StaggerTestimonials() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-16">
         <div>
-          <div className="flex items-center gap-3 mb-4">
-            <div
-              className="w-8 h-8 rounded-full flex items-center justify-center shrink-0"
-              style={{ background: "#EA580C" }}
-            >
-              <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
-            </div>
-            <span className="text-[13px] font-semibold text-white/50 uppercase tracking-widest">
-              Témoignages clients
-            </span>
-          </div>
           <h2
             className="font-heading font-black text-white leading-tight"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
-            Nos clients<br />parlent d&apos;eux-mêmes.
+            Ils nous font<br />confiance.
           </h2>
         </div>
         <a

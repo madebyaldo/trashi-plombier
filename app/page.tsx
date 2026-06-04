@@ -37,14 +37,6 @@ export default function HomePage() {
 
             {/* ── Content — pinned to bottom-left ── */}
             <div className="relative z-10 h-full flex flex-col justify-end pb-8 px-5 lg:pb-12 lg:px-14 max-w-[680px]">
-              {/* Eyebrow */}
-              <span
-                className="inline-block text-[11px] font-bold uppercase tracking-[0.22em] mb-4"
-                style={{ color: "#EA580C" }}
-              >
-                Disponible 24h/24 – Expert certifié
-              </span>
-
               {/* Heading */}
               <h1
                 className="font-heading font-black text-white uppercase leading-[0.95] tracking-tight mb-5"
@@ -71,25 +63,6 @@ export default function HomePage() {
                 </Link>
               </div>
 
-              {/* Slider arrows */}
-              <div className="flex items-center gap-3">
-                <button
-                  aria-label="Précédent"
-                  className="w-11 h-11 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 12H5M12 19l-7-7 7-7"/>
-                  </svg>
-                </button>
-                <button
-                  aria-label="Suivant"
-                  className="w-11 h-11 rounded-full border border-white/40 bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                  </svg>
-                </button>
-              </div>
             </div>
           </div>
         </div>
@@ -112,18 +85,11 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-              <span className="text-[13px] font-semibold text-white/50 uppercase tracking-widest">Nos services plomberie</span>
-            </div>
+          <div className="mb-16">
             <h2 className="font-heading font-black text-white leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
-              Tout ce dont vous avez besoin
+              Plomberie, dépannage,<br />rénovation.
             </h2>
+            <p className="text-white/50 text-[14px] mt-3">Interventions rapides sur Metz et la Moselle, 24h/24.</p>
           </div>
 
           {/* Process: left cards | circle image | right cards */}
@@ -138,18 +104,11 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="text-center mb-16">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos services chauffagiste</span>
-            </div>
+          <div className="mb-12">
             <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
-              Chaleur et confort garantis
+              Chaudière, chauffe-eau,<br />radiateurs.
             </h2>
+            <p className="text-ink-400 text-[14px] mt-3">Installation, entretien et dépannage — toutes marques.</p>
           </div>
 
           {/* Service cards */}
@@ -197,14 +156,6 @@ export default function HomePage() {
 
           {/* Header */}
           <div className="mb-8">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
-                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Nos réalisations</span>
-            </div>
             <div className="flex items-end justify-between gap-4">
               <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}>
                 Réalisations soignées<br />pour chaque client.
@@ -321,20 +272,12 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="mb-12 text-center">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <div className="w-8 h-8 rounded-full flex items-center justify-center shrink-0" style={{ background: "#EA580C" }}>
-                <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-              <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">FAQ</span>
-            </div>
+          <div className="mb-12">
             <h2
               className="font-heading font-black text-ink-900 tracking-tight"
               style={{ fontSize: "clamp(2.2rem, 4vw, 3.8rem)" }}
             >
-              Questions fréquentes
+              Vos questions,<br />nos réponses.
             </h2>
           </div>
 

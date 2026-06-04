@@ -16,17 +16,7 @@ export default function AboutSection() {
     <section className="bg-white pt-12 pb-16 md:pt-16 md:pb-20">
       <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
-        {/* Eyebrow */}
-        <div className="flex items-center justify-start md:justify-center gap-3 mb-6">
-          <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#EA580C" }}>
-            <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
-              <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </div>
-          <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Qui sommes-nous</span>
-        </div>
-
-        {/* Heading, centered */}
+        {/* Heading */}
         <div className="text-left md:text-center max-w-3xl md:mx-auto mb-6">
           <h2
             className="font-heading font-black text-ink-900 leading-[1.0] tracking-tight mb-5"
