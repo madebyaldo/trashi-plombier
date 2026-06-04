@@ -76,18 +76,16 @@ export default function StaggerTestimonials() {
     <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-16">
-        <div>
+      <div className="flex flex-col items-center text-center gap-4 mb-16">
           <h2
             className="font-heading font-black text-white leading-tight"
             style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
           >
             Ils nous font<br />confiance.
           </h2>
-        </div>
         <a
           href="/contact"
-          className="self-start inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
+          className="inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
           style={{ background: "#EA580C", color: "#ffffff" }}
         >
           Demander un devis
