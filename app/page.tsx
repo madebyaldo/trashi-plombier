@@ -60,7 +60,7 @@ export default function HomePage() {
               {/* CTA */}
               <div className="mb-10">
                 <Link
-                  href="/contact"
+                  href="#services"
                   className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-xl transition-opacity hover:opacity-90"
                   style={{ background: "#EA580C", color: "#ffffff" }}
                 >
@@ -105,6 +105,7 @@ export default function HomePage() {
           3. SERVICES PLOMBERIE — Process
       */}
       <section
+        id="services"
         className="pb-20 md:pb-28 bg-[#0c1c35] relative"
         style={{ clipPath: "polygon(0 80px, 100% 0, 100% calc(100% - 80px), 0 100%)", paddingTop: "calc(2.5rem + 80px)", paddingBottom: "calc(5rem + 80px)", marginTop: "-60px", zIndex: 1 }}
       >
