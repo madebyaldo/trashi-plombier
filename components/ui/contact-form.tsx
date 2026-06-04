@@ -58,23 +58,31 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="py-12 px-4">
-        <CheckCircle className="w-8 h-8 mb-4" style={{ color: "#EA580C" }} />
-        <h3 className="font-heading font-black text-ink-900 text-[22px] mb-2">
-          Demande envoyée.
+      <div className="rounded-2xl border border-sand-200 p-8 md:p-12">
+        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6" style={{ background: "rgba(234,88,12,0.1)" }}>
+          <CheckCircle className="w-6 h-6" style={{ color: "#EA580C" }} />
+        </div>
+        <h3 className="font-heading font-black text-ink-900 text-[26px] mb-3">
+          Message envoyé !
         </h3>
-        <p className="text-ink-500 text-[15px] leading-relaxed max-w-xs">
-          On vous recontacte rapidement. Pour une urgence, appelez-nous directement au{" "}
-          <a href={`tel:${BUSINESS.phoneClean}`} className="font-semibold" style={{ color: "#EA580C" }}>
-            {BUSINESS.phone}
-          </a>.
+        <p className="text-ink-500 text-[15px] leading-relaxed mb-6">
+          On vous rappelle dans les plus brefs délais. Pour une urgence, appelez directement.
         </p>
-        <button
-          onClick={() => setStatus("idle")}
-          className="mt-6 text-[13px] font-semibold underline underline-offset-2 text-ink-400 hover:text-ink-700 transition-colors"
+        <a
+          href={`tel:${BUSINESS.phoneClean}`}
+          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] text-white transition-opacity hover:opacity-90 mb-4"
+          style={{ background: "#EA580C" }}
         >
-          Envoyer une autre demande
-        </button>
+          {BUSINESS.phone}
+        </a>
+        <div>
+          <button
+            onClick={() => setStatus("idle")}
+            className="text-[13px] text-ink-400 hover:text-ink-700 transition-colors underline underline-offset-2"
+          >
+            Envoyer une autre demande
+          </button>
+        </div>
       </div>
     );
   }
