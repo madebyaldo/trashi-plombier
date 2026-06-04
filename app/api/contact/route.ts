@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import { BUSINESS } from "@/lib/seo-data";
 
 const TO_EMAIL = "renaldotrashi2@gmail.com";
 
