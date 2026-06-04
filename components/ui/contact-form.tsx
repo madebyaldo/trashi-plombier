@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Send, CheckCircle, AlertCircle, Loader2 } from "lucide-react";
+import { Send, AlertCircle, Loader2 } from "lucide-react";
 import { BUSINESS } from "@/lib/seo-data";
 
 const SERVICES = [
@@ -58,31 +58,23 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="rounded-2xl border border-sand-200 p-8 md:p-12">
-        <div className="w-12 h-12 rounded-full flex items-center justify-center mb-6" style={{ background: "rgba(234,88,12,0.1)" }}>
-          <CheckCircle className="w-6 h-6" style={{ color: "#EA580C" }} />
-        </div>
-        <h3 className="font-heading font-black text-ink-900 text-[26px] mb-3">
-          Message envoyé !
+      <div className="py-8">
+        <div className="w-1 h-10 mb-6 rounded-full" style={{ background: "#EA580C" }} />
+        <h3 className="font-heading font-black text-ink-900 text-[28px] mb-2">
+          Demande reçue.
         </h3>
-        <p className="text-ink-500 text-[15px] leading-relaxed mb-6">
-          On vous rappelle dans les plus brefs délais. Pour une urgence, appelez directement.
+        <p className="text-ink-500 text-[15px] leading-relaxed mb-6 max-w-sm">
+          On vous rappelle rapidement. Pour une urgence, appelez directement au{" "}
+          <a href={`tel:${BUSINESS.phoneClean}`} className="font-semibold text-ink-900 hover:underline">
+            {BUSINESS.phone}
+          </a>.
         </p>
-        <a
-          href={`tel:${BUSINESS.phoneClean}`}
-          className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] text-white transition-opacity hover:opacity-90 mb-4"
-          style={{ background: "#EA580C" }}
+        <button
+          onClick={() => setStatus("idle")}
+          className="text-[13px] text-ink-400 hover:text-ink-700 transition-colors"
         >
-          {BUSINESS.phone}
-        </a>
-        <div>
-          <button
-            onClick={() => setStatus("idle")}
-            className="text-[13px] text-ink-400 hover:text-ink-700 transition-colors underline underline-offset-2"
-          >
-            Envoyer une autre demande
-          </button>
-        </div>
+          ← Envoyer une autre demande
+        </button>
       </div>
     );
   }

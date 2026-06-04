@@ -24,63 +24,35 @@ export async function POST(req: Request) {
       html: `
 <!DOCTYPE html>
 <html lang="fr">
-<head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
-<body style="margin:0;padding:0;background:#f4f4f5;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="background:#f4f4f5;padding:40px 16px;">
-    <tr><td align="center">
-      <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;">
+<head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/></head>
+<body style="margin:0;padding:0;background:#ffffff;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;color:#18181b;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:560px;margin:0 auto;padding:40px 24px;">
+    <tr><td>
 
-        <!-- Header -->
-        <tr><td style="background:#0c1c35;border-radius:12px 12px 0 0;padding:28px 32px;">
-          <p style="margin:0;font-size:11px;font-weight:700;color:rgba(255,255,255,0.4);letter-spacing:0.15em;text-transform:uppercase;">Trashi Plombier · Metz</p>
-          <p style="margin:8px 0 0;font-size:22px;font-weight:900;color:#ffffff;">Nouvelle demande de devis</p>
-        </td></tr>
+      <!-- Top bar -->
+      <div style="width:40px;height:4px;background:#EA580C;border-radius:2px;margin-bottom:28px;"></div>
 
-        <!-- Orange bar -->
-        <tr><td style="background:#EA580C;height:4px;"></td></tr>
+      <!-- Title -->
+      <p style="margin:0 0 4px;font-size:11px;font-weight:600;color:#a1a1aa;letter-spacing:0.12em;text-transform:uppercase;">Trashi Plombier</p>
+      <p style="margin:0 0 32px;font-size:24px;font-weight:900;color:#0c1c35;">Nouvelle demande — ${service}</p>
 
-        <!-- Body -->
-        <tr><td style="background:#ffffff;padding:32px;border-radius:0 0 12px 12px;">
+      <!-- Contact info -->
+      <p style="margin:0 0 6px;font-size:18px;font-weight:700;color:#18181b;">${prenom} ${nom}</p>
+      <p style="margin:0 0 4px;font-size:15px;color:#18181b;"><a href="tel:${BUSINESS.phoneClean}" style="color:#EA580C;text-decoration:none;font-weight:600;">${telephone}</a></p>
+      ${email ? `<p style="margin:0 0 4px;font-size:14px;color:#71717a;">${email}</p>` : ""}
 
-          <!-- Service badge -->
-          <p style="margin:0 0 24px;"><span style="background:#EA580C;color:#fff;font-size:12px;font-weight:700;padding:4px 12px;border-radius:99px;">${service}</span></p>
+      <div style="margin:28px 0;border-top:1px solid #f0f0f0;"></div>
 
-          <!-- Info rows -->
-          <table width="100%" cellpadding="0" cellspacing="0">
-            ${[
-              ["Prénom", prenom],
-              ["Nom", nom],
-              ["Téléphone", telephone],
-              ["Email", email || "—"],
-            ].map(([label, value]) => `
-            <tr>
-              <td style="padding:10px 0;border-bottom:1px solid #f0f0f0;width:120px;font-size:12px;font-weight:700;color:#71717a;text-transform:uppercase;letter-spacing:0.08em;">${label}</td>
-              <td style="padding:10px 0;border-bottom:1px solid #f0f0f0;font-size:15px;color:#18181b;font-weight:500;">${value}</td>
-            </tr>`).join("")}
-          </table>
+      ${message ? `
+      <!-- Message -->
+      <p style="margin:0 0 8px;font-size:12px;font-weight:700;color:#a1a1aa;text-transform:uppercase;letter-spacing:0.1em;">Message</p>
+      <p style="margin:0 0 28px;font-size:15px;color:#18181b;line-height:1.7;white-space:pre-wrap;">${message}</p>
+      <div style="margin:28px 0;border-top:1px solid #f0f0f0;"></div>
+      ` : ""}
 
-          ${message ? `
-          <!-- Message -->
-          <div style="margin-top:24px;background:#f9fafb;border-radius:8px;padding:16px;">
-            <p style="margin:0 0 8px;font-size:11px;font-weight:700;color:#71717a;text-transform:uppercase;letter-spacing:0.1em;">Message</p>
-            <p style="margin:0;font-size:14px;color:#18181b;line-height:1.6;white-space:pre-wrap;">${message}</p>
-          </div>` : ""}
+      <!-- Footer -->
+      <p style="margin:0;font-size:12px;color:#a1a1aa;">Trashi Plombier · Metz 57000</p>
 
-          <!-- CTA -->
-          <div style="margin-top:28px;padding-top:24px;border-top:1px solid #f0f0f0;text-align:center;">
-            <a href="tel:${BUSINESS.phoneClean}" style="display:inline-block;background:#EA580C;color:#ffffff;font-size:15px;font-weight:700;text-decoration:none;padding:12px 28px;border-radius:10px;">
-              Rappeler ${prenom} →
-            </a>
-          </div>
-
-        </td></tr>
-
-        <!-- Footer -->
-        <tr><td style="padding:20px 0;text-align:center;">
-          <p style="margin:0;font-size:12px;color:#a1a1aa;">Trashi Plombier · Metz 57000 · trashi-plombier.fr</p>
-        </td></tr>
-
-      </table>
     </td></tr>
   </table>
 </body>
