@@ -158,25 +158,30 @@ export default function HomePage() {
               <Link
                 key={svc.title}
                 href={svc.href}
-                className="chauffage-card grid lg:grid-cols-[80px_1fr_1fr_160px] gap-6 items-center px-8 py-8 rounded-2xl border border-sand-200 transition-all duration-300"
+                className="chauffage-card flex items-center gap-4 lg:grid lg:grid-cols-[80px_1fr_1fr_160px] lg:gap-6 px-5 lg:px-8 py-4 lg:py-8 rounded-2xl border border-sand-200 transition-all duration-300 hover:border-[#EA580C] hover:shadow-sm"
                 style={{ background: "#f8f9fb" }}
               >
-                <span className="card-num font-heading font-black text-ink-200 text-[3rem] leading-none transition-colors">
+                <span className="card-num font-heading font-black text-[#EA580C] text-[1.1rem] lg:text-[3rem] leading-none shrink-0 w-8 lg:w-auto transition-colors">
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <h3 className="card-title font-heading font-black text-ink-900 text-[1.4rem] leading-tight transition-colors">
-                  {svc.title}
-                </h3>
-                <p className="card-desc text-ink-500 text-[14px] font-medium leading-relaxed transition-colors">
-                  {svc.desc}
-                </p>
-                <div className="flex flex-wrap gap-2 justify-end">
+                <div className="flex-1 min-w-0">
+                  <h3 className="card-title font-heading font-black text-ink-900 text-[1rem] lg:text-[1.4rem] leading-tight transition-colors">
+                    {svc.title}
+                  </h3>
+                  <p className="card-desc text-ink-500 text-[13px] lg:text-[14px] font-medium leading-relaxed mt-1 line-clamp-1 lg:line-clamp-none transition-colors">
+                    {svc.desc}
+                  </p>
+                </div>
+                <div className="hidden lg:flex flex-wrap gap-2 justify-end">
                   {svc.tags.map(tag => (
                     <span key={tag} className="card-tag text-[11px] font-semibold px-3 py-1 rounded-full border border-sand-200 text-ink-400 transition-colors">
                       {tag}
                     </span>
                   ))}
                 </div>
+                <svg className="w-4 h-4 text-ink-300 shrink-0 lg:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.5}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"/>
+                </svg>
               </Link>
             ))}
           </div>
