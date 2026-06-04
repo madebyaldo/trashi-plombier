@@ -16,7 +16,7 @@ export default function HomePage() {
           1. HERO — contained image with side margins
           ════════════════════════════════════════════ */}
       <section className="bg-white pt-3 pb-0">
-        <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
+        <div className="max-w-[1440px] mx-auto px-2 sm:px-6 lg:px-8">
           {/* Hero image wrapper */}
           <div className="relative overflow-hidden rounded-lg" style={{ height: "82vh", minHeight: 520 }}>
             {/* Background image */}
