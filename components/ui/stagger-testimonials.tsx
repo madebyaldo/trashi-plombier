@@ -105,92 +105,87 @@ export default function StaggerTestimonials() {
         </a>
       </div>
 
-      {/* Cards, stable keys = smooth bidirectional transitions */}
-      <div className="relative w-full overflow-hidden" style={{ height: 420 }}>
-        {TESTIMONIALS.map((t) => {
-          // Compute circular position relative to current center
-          const raw = (t.id - offset + N) % N;
-          const half = Math.floor(N / 2);
-          const pos = raw <= half ? raw : raw - N;
-          // pos ranges: -3 … 0 … 3
-          const isCenter = pos === 0;
-
-          return (
-            <div
-              key={t.id}
-              onClick={() => setOffset((o) => (o + pos + N) % N)}
-              className="absolute left-1/2 top-1/2 cursor-pointer transition-all duration-500 ease-in-out"
-              style={{
-                width: cardSize,
-                height: cardSize,
-                clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
-                background: isCenter ? "#0c1c35" : "#ffffff",
-                border: isCenter ? "2px solid #0c1c35" : "2px solid #e4e4e7",
-                transform: `
-                  translate(-50%, -50%)
-                  translateX(${(cardSize / 1.5) * pos}px)
-                  translateY(${isCenter ? -65 : pos % 2 ? 15 : -15}px)
-                  rotate(${isCenter ? 0 : pos % 2 ? 2.5 : -2.5}deg)
-                `,
-                zIndex: isCenter ? 10 : Math.max(0, 5 - Math.abs(pos)),
-                boxShadow: isCenter ? "0px 8px 0px 4px #e4e4e7" : "none",
-              }}
-            >
-              {/* Cut corner diagonal */}
-              <span
-                className="absolute block origin-top-right rotate-45"
-                style={{
-                  right: -2,
-                  top: 48,
-                  width: SQRT_5000,
-                  height: 2,
-                  background: isCenter ? "rgba(255,255,255,0.15)" : "#e4e4e7",
-                }}
+      {/* ── Mobile: single card slider ── */}
+      <div className="sm:hidden">
+        <div className="rounded-2xl p-6 mb-6" style={{ background: "#ffffff" }}>
+          <p className="text-[15px] font-bold mb-3" style={{ color: "#EA580C" }}>
+            {TESTIMONIALS[offset].by}
+          </p>
+          <p className="text-[15px] font-medium leading-relaxed text-ink-900 mb-4">
+            &ldquo;{TESTIMONIALS[offset].text}&rdquo;
+          </p>
+          <p className="text-[13px] italic text-ink-400">{TESTIMONIALS[offset].role}</p>
+        </div>
+        <div className="flex items-center justify-between">
+          <div className="flex gap-1.5">
+            {TESTIMONIALS.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setOffset(i)}
+                className="w-2 h-2 rounded-full transition-all"
+                style={{ background: i === offset ? "#EA580C" : "rgba(255,255,255,0.3)" }}
               />
-
-              <div className="p-8 h-full flex flex-col">
-                <p
-                  className="mb-4 text-[15px] font-bold"
-                  style={{ color: isCenter ? "rgba(255,255,255,0.7)" : "#EA580C" }}
-                >
-                  {t.by}
-                </p>
-                <p
-                  className="text-[15px] sm:text-[16px] font-medium leading-relaxed flex-1"
-                  style={{ color: isCenter ? "rgba(255,255,255,0.92)" : "#18181b" }}
-                >
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                <p
-                  className="mt-6 text-[13px] italic"
-                  style={{ color: isCenter ? "rgba(255,255,255,0.45)" : "#71717a" }}
-                >
-                  {t.role}
-                </p>
-              </div>
-            </div>
-          );
-        })}
+            ))}
+          </div>
+          <div className="flex gap-2">
+            <button onClick={prev} className="w-10 h-10 flex items-center justify-center border-2 rounded-xl transition-colors" style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }} aria-label="Précédent">
+              <ChevronLeft className="w-4 h-4" />
+            </button>
+            <button onClick={next} className="w-10 h-10 flex items-center justify-center border-2 rounded-xl transition-colors" style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }} aria-label="Suivant">
+              <ChevronRight className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
       </div>
 
-      {/* Nav, bottom center */}
-      <div className="flex justify-center gap-2 mt-4">
-        <button
-          onClick={prev}
-          className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-sand-50"
-          style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }}
-          aria-label="Précédent"
-        >
-          <ChevronLeft className="w-5 h-5" />
-        </button>
-        <button
-          onClick={next}
-          className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-white/10"
-          style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }}
-          aria-label="Suivant"
-        >
-          <ChevronRight className="w-5 h-5" />
-        </button>
+      {/* ── Desktop: stagger cards ── */}
+      <div className="hidden sm:block">
+        <div className="relative w-full overflow-hidden" style={{ height: 420 }}>
+          {TESTIMONIALS.map((t) => {
+            const raw = (t.id - offset + N) % N;
+            const half = Math.floor(N / 2);
+            const pos = raw <= half ? raw : raw - N;
+            const isCenter = pos === 0;
+
+            return (
+              <div
+                key={t.id}
+                onClick={() => setOffset((o) => (o + pos + N) % N)}
+                className="absolute left-1/2 top-1/2 cursor-pointer transition-all duration-500 ease-in-out"
+                style={{
+                  width: cardSize,
+                  height: cardSize,
+                  clipPath: `polygon(50px 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, calc(100% - 50px) 100%, 50px 100%, 0 100%, 0 0)`,
+                  background: isCenter ? "#0c1c35" : "#ffffff",
+                  border: isCenter ? "2px solid #0c1c35" : "2px solid #e4e4e7",
+                  transform: `
+                    translate(-50%, -50%)
+                    translateX(${(cardSize / 1.5) * pos}px)
+                    translateY(${isCenter ? -65 : pos % 2 ? 15 : -15}px)
+                    rotate(${isCenter ? 0 : pos % 2 ? 2.5 : -2.5}deg)
+                  `,
+                  zIndex: isCenter ? 10 : Math.max(0, 5 - Math.abs(pos)),
+                  boxShadow: isCenter ? "0px 8px 0px 4px #e4e4e7" : "none",
+                }}
+              >
+                <span className="absolute block origin-top-right rotate-45" style={{ right: -2, top: 48, width: SQRT_5000, height: 2, background: isCenter ? "rgba(255,255,255,0.15)" : "#e4e4e7" }} />
+                <div className="p-8 h-full flex flex-col">
+                  <p className="mb-4 text-[15px] font-bold" style={{ color: isCenter ? "rgba(255,255,255,0.7)" : "#EA580C" }}>{t.by}</p>
+                  <p className="text-[15px] sm:text-[16px] font-medium leading-relaxed flex-1" style={{ color: isCenter ? "rgba(255,255,255,0.92)" : "#18181b" }}>&ldquo;{t.text}&rdquo;</p>
+                  <p className="mt-6 text-[13px] italic" style={{ color: isCenter ? "rgba(255,255,255,0.45)" : "#71717a" }}>{t.role}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+        <div className="flex justify-center gap-2 mt-4">
+          <button onClick={prev} className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-sand-50" style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }} aria-label="Précédent">
+            <ChevronLeft className="w-5 h-5" />
+          </button>
+          <button onClick={next} className="w-14 h-14 flex items-center justify-center border-2 transition-colors hover:bg-white/10" style={{ borderColor: "rgba(255,255,255,0.2)", color: "white" }} aria-label="Suivant">
+            <ChevronRight className="w-5 h-5" />
+          </button>
+        </div>
       </div>
     </div>
   );
