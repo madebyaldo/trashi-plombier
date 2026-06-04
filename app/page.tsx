@@ -85,7 +85,7 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="mb-16">
+          <div className="mb-16 text-center">
             <h2 className="font-heading font-black text-white leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
               Plomberie, dépannage,<br />rénovation.
             </h2>
@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
           {/* Header */}
-          <div className="mb-12">
+          <div className="mb-12 text-center">
             <h2 className="font-heading font-black text-ink-900 leading-tight" style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)" }}>
               Chaudière, chauffe-eau,<br />radiateurs.
             </h2>
