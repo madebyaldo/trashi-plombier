@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Oswald, Barlow, DM_Sans } from "next/font/google";
+import { Oswald, Inter, DM_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -12,7 +12,7 @@ const heading = Oswald({
   weight: ["400", "500", "600", "700"],
 });
 
-const body = Barlow({
+const body = Inter({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
