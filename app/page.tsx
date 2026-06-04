@@ -35,7 +35,7 @@ export default function HomePage() {
             <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,14,24,0.5) 0%, transparent 65%)" }} />
 
             {/* ── Content — pinned to bottom-left ── */}
-            <div className="relative z-10 h-full flex flex-col justify-end pb-12 px-8 lg:px-14 max-w-[680px]">
+            <div className="relative z-10 h-full flex flex-col justify-end pb-8 px-5 lg:pb-12 lg:px-14 max-w-[680px]">
               {/* Eyebrow */}
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.22em] mb-4"
@@ -47,12 +47,12 @@ export default function HomePage() {
               {/* Heading */}
               <h1
                 className="font-heading font-black text-white uppercase leading-[0.95] tracking-tight mb-5"
-                style={{ fontSize: "clamp(2rem, 3.8vw, 3.8rem)" }}
+                style={{ fontSize: "clamp(1.5rem, 3.8vw, 3.8rem)" }}
               >
                 Votre Plombier<br />Rapide &amp; Fiable<br />24h/24
               </h1>
 
-              <p className="text-white/75 text-[15px] leading-relaxed mb-7 max-w-[480px]">
+              <p className="text-white/75 text-[13px] lg:text-[15px] leading-relaxed mb-6 max-w-[480px]">
                 Fuite d&apos;eau, panne de chauffe-eau ou urgence plomberie ? Trashi Plombier intervient rapidement avec des solutions durables, un service propre et des prix transparents.
               </p>
 

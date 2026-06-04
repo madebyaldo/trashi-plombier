@@ -88,7 +88,8 @@ export default function Header() {
           <div className="flex lg:hidden items-center gap-2 ml-auto">
             <a
               href={`tel:${BUSINESS.phoneClean}`}
-              className="text-[13px] font-semibold px-4 py-2 rounded-full bg-ink-900 text-white"
+              className="text-[13px] font-semibold px-4 py-2 rounded-full text-white"
+              style={{ background: "#EA580C" }}
             >
               Urgence
             </a>
