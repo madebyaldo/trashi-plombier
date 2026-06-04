@@ -67,6 +67,11 @@ export default function StaggerTestimonials() {
     return () => window.removeEventListener("resize", update);
   }, []);
 
+  useEffect(() => {
+    const timer = setInterval(() => setOffset((o) => (o + 1) % N), 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
