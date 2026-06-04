@@ -4,6 +4,7 @@ import SchemaLocalBusiness from "@/components/SchemaLocalBusiness";
 import PlomberieProcess from "@/components/PlomberieProcess";
 import StaggerTestimonials from "@/components/ui/stagger-testimonials";
 import { BUSINESS } from "@/lib/seo-data";
+import { REALISATIONS } from "@/lib/realisations-data";
 import AboutSection from "@/components/ui/about-section";
 import QuoteReveal from "@/components/ui/quote-reveal";
 
@@ -218,8 +219,8 @@ export default function HomePage() {
 
           {/* ── Mobile: 3 stacked cards + button ── */}
           <div className="md:hidden space-y-3">
-            {PROJECTS.slice(0, 3).map((proj) => (
-              <Link key={proj.title} href="/realisations" className="group relative block rounded-2xl overflow-hidden" style={{ height: 180 }}>
+            {REALISATIONS.slice(0, 3).map((proj) => (
+              <Link key={proj.slug} href={`/realisations/${proj.slug}`} className="group relative block rounded-2xl overflow-hidden" style={{ height: 180 }}>
                 <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="100vw" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -244,20 +245,20 @@ export default function HomePage() {
           <div className="hidden md:block">
             {/* Row 1 — featured large + 2 small */}
             <div className="grid grid-cols-3 gap-3 mb-3" style={{ height: "55vh", minHeight: 360, maxHeight: 480 }}>
-              <Link href="/realisations" className="group relative col-span-2 rounded-2xl overflow-hidden">
-                <Image src={PROJECTS[0].image} alt={PROJECTS[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="66vw" />
+              <Link href={`/realisations/${REALISATIONS[0].slug}`} className="group relative col-span-2 rounded-2xl overflow-hidden">
+                <Image src={REALISATIONS[0].image} alt={REALISATIONS[0].title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="66vw" />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 55%)" }} />
                 <div className="absolute bottom-0 left-0 right-0 p-7">
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "#EA580C", color: "#ffffff" }}>{PROJECTS[0].category}</span>
-                    <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-white/20 text-white">{PROJECTS[0].location}</span>
+                    <span className="text-[11px] font-bold px-3 py-1 rounded-full" style={{ background: "#EA580C", color: "#ffffff" }}>{REALISATIONS[0].category}</span>
+                    <span className="text-[11px] font-medium px-3 py-1 rounded-full bg-white/20 text-white">{REALISATIONS[0].location}</span>
                   </div>
-                  <h3 className="font-heading font-black text-white text-[1.6rem] leading-tight">{PROJECTS[0].title}</h3>
+                  <h3 className="font-heading font-black text-white text-[1.6rem] leading-tight">{REALISATIONS[0].title}</h3>
                 </div>
               </Link>
               <div className="flex flex-col gap-3">
-                {PROJECTS.slice(1, 3).map((proj) => (
-                  <Link key={proj.title} href="/realisations" className="group relative flex-1 rounded-2xl overflow-hidden">
+                {REALISATIONS.slice(1, 3).map((proj) => (
+                  <Link key={proj.slug} href={`/realisations/${proj.slug}`} className="group relative flex-1 rounded-2xl overflow-hidden">
                     <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
                     <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                     <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -273,8 +274,8 @@ export default function HomePage() {
             </div>
             {/* Row 2 — 3 equal cards */}
             <div className="grid grid-cols-3 gap-3" style={{ height: "26vh", minHeight: 180, maxHeight: 220 }}>
-              {PROJECTS.slice(3, 6).map((proj) => (
-                <Link key={proj.title} href="/realisations" className="group relative rounded-2xl overflow-hidden">
+              {REALISATIONS.slice(3, 6).map((proj) => (
+                <Link key={proj.slug} href={`/realisations/${proj.slug}`} className="group relative rounded-2xl overflow-hidden">
                   <Image src={proj.image} alt={proj.title} fill className="object-cover transition-transform duration-700 group-hover:scale-105" sizes="33vw" />
                   <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.72) 0%, transparent 55%)" }} />
                   <div className="absolute bottom-0 left-0 right-0 p-4">
@@ -416,14 +417,6 @@ const SERVICES_CHAUFFAGE = [
   },
 ];
 
-const PROJECTS = [
-  { title: "Rénovation salle de bain",    category: "Salle de bain", location: "Metz Centre",       image: "/images/portfolio-1.webp" },
-  { title: "Remplacement chaudière gaz",  category: "Chauffage",     location: "Montigny-lès-Metz", image: "/images/portfolio-2.webp" },
-  { title: "Dépannage fuite urgence",     category: "Urgence",       location: "Woippy",            image: "/images/portfolio-3.webp" },
-  { title: "Pose douche à l'italienne",   category: "Salle de bain", location: "Marly",             image: "/images/portfolio-4.webp" },
-  { title: "Installation chauffe-eau",    category: "Chauffage",     location: "Thionville",        image: "/images/portfolio-5.webp" },
-  { title: "Débouchage canalisation",     category: "Plomberie",     location: "Augny",             image: "/images/portfolio-6.webp" },
-];
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const TESTIMONIALS = [
