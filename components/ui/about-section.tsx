@@ -17,7 +17,7 @@ export default function AboutSection() {
       <div className="max-w-[1440px] mx-auto px-6 lg:px-8">
 
         {/* Eyebrow */}
-        <div className="flex items-center justify-center gap-3 mb-6">
+        <div className="flex items-center justify-start md:justify-center gap-3 mb-6">
           <div className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: "#EA580C" }}>
             <svg className="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" strokeWidth={2.2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M5 12h14M12 5l7 7-7 7" />
@@ -27,7 +27,7 @@ export default function AboutSection() {
         </div>
 
         {/* Heading — centered */}
-        <div className="text-center max-w-3xl mx-auto mb-6">
+        <div className="text-left md:text-center max-w-3xl md:mx-auto mb-6">
           <h2
             className="font-heading font-black text-ink-900 leading-[1.0] tracking-tight mb-5"
             style={{ fontSize: "clamp(2.4rem, 4.5vw, 4.2rem)" }}
@@ -40,7 +40,7 @@ export default function AboutSection() {
         </div>
 
         {/* CTAs — centered */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
+        <div className="flex flex-col sm:flex-row items-start md:items-center md:justify-center gap-3 mb-16">
           <Link
             href="/contact"
             className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-[14px] transition-opacity hover:opacity-90"
