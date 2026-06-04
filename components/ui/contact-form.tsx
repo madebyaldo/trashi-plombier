@@ -58,24 +58,20 @@ export default function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="flex flex-col items-center justify-center text-center py-16 px-6">
-        <div
-          className="w-16 h-16 rounded-full flex items-center justify-center mb-5"
-          style={{ background: "rgba(234,88,12,0.1)" }}
-        >
-          <CheckCircle className="w-8 h-8" style={{ color: "#EA580C" }} />
-        </div>
-        <h3 className="font-heading font-black text-ink-900 text-[22px] mb-3">
-          Demande envoyée !
+      <div className="py-12 px-4">
+        <CheckCircle className="w-8 h-8 mb-4" style={{ color: "#EA580C" }} />
+        <h3 className="font-heading font-black text-ink-900 text-[22px] mb-2">
+          Demande envoyée.
         </h3>
         <p className="text-ink-500 text-[15px] leading-relaxed max-w-xs">
-          Nous vous recontacterons dans les plus brefs délais. Pour une urgence,
-          appelez-nous directement.
+          On vous recontacte rapidement. Pour une urgence, appelez-nous directement au{" "}
+          <a href={`tel:${BUSINESS.phoneClean}`} className="font-semibold" style={{ color: "#EA580C" }}>
+            {BUSINESS.phone}
+          </a>.
         </p>
         <button
           onClick={() => setStatus("idle")}
-          className="mt-6 text-[13px] font-semibold underline underline-offset-2"
-          style={{ color: "#EA580C" }}
+          className="mt-6 text-[13px] font-semibold underline underline-offset-2 text-ink-400 hover:text-ink-700 transition-colors"
         >
           Envoyer une autre demande
         </button>
@@ -88,7 +84,7 @@ export default function ContactForm() {
       {/* Prénom + Nom */}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
+          <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
             Prénom <span style={{ color: "#EA580C" }}>*</span>
           </label>
           <input
@@ -98,11 +94,11 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Jean"
-            className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
           />
         </div>
         <div>
-          <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
+          <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
             Nom <span style={{ color: "#EA580C" }}>*</span>
           </label>
           <input
@@ -112,7 +108,7 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="Dupont"
-            className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
           />
         </div>
       </div>
@@ -120,7 +116,7 @@ export default function ContactForm() {
       {/* Téléphone + Email */}
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
+          <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
             Téléphone <span style={{ color: "#EA580C" }}>*</span>
           </label>
           <input
@@ -130,11 +126,11 @@ export default function ContactForm() {
             onChange={handleChange}
             required
             placeholder="06 12 34 56 78"
-            className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
           />
         </div>
         <div>
-          <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
+          <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
             Email
           </label>
           <input
@@ -143,24 +139,24 @@ export default function ContactForm() {
             value={form.email}
             onChange={handleChange}
             placeholder="jean@example.com"
-            className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
+            className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white"
           />
         </div>
       </div>
 
       {/* Service */}
       <div>
-        <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
-          Type de service <span style={{ color: "#EA580C" }}>*</span>
+        <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
+          Type de demande <span style={{ color: "#EA580C" }}>*</span>
         </label>
         <select
           name="service"
           value={form.service}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 focus:outline-none focus:border-[#EA580C] transition-colors bg-white appearance-none"
+          className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 focus:outline-none focus:border-[#EA580C] transition-colors bg-white appearance-none"
         >
-          <option value="">Sélectionnez un service…</option>
+          <option value="">Choisissez…</option>
           {SERVICES.map((s) => (
             <option key={s} value={s}>
               {s}
@@ -171,23 +167,23 @@ export default function ContactForm() {
 
       {/* Message */}
       <div>
-        <label className="block text-[12px] font-semibold text-ink-600 uppercase tracking-wider mb-1.5">
-          Votre message
+        <label className="block text-[13px] font-medium text-ink-700 mb-1.5">
+          Message
         </label>
         <textarea
           name="message"
           value={form.message}
           onChange={handleChange}
-          rows={5}
+          rows={4}
           placeholder="Décrivez votre problème ou projet…"
-          className="w-full px-4 py-3 rounded-sm border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white resize-none"
+          className="w-full px-4 py-3 rounded-xl border border-sand-200 text-[14px] text-ink-900 placeholder:text-ink-300 focus:outline-none focus:border-[#EA580C] transition-colors bg-white resize-none"
         />
       </div>
 
       {status === "error" && (
-        <div className="flex items-center gap-2 text-red-600 text-[13px] bg-red-50 border border-red-200 rounded-sm px-4 py-3">
+        <div className="flex items-center gap-2 text-red-600 text-[13px] bg-red-50 border border-red-200 rounded-xl px-4 py-3">
           <AlertCircle className="w-4 h-4 shrink-0" />
-          Une erreur est survenue. Veuillez réessayer ou nous appeler directement.
+          Une erreur est survenue. Réessayez ou appelez-nous directement.
         </div>
       )}
 
@@ -205,13 +201,13 @@ export default function ContactForm() {
         ) : (
           <>
             <Send className="w-4 h-4" />
-            Envoyer ma demande
+            Envoyer
           </>
         )}
       </button>
 
-      <p className="text-[11px] text-ink-400 text-center">
-        Réponse sous 24h. Pour une urgence, appelez directement le{" "}
+      <p className="text-[12px] text-ink-400 text-center">
+        Réponse sous 24h. Urgence ?{" "}
         <a
           href={`tel:${BUSINESS.phoneClean}`}
           className="font-semibold"
