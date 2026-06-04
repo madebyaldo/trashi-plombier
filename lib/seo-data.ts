@@ -34,7 +34,7 @@ export interface PageData {
   faqItems?: { q: string; a: string }[];
 }
 
-// --------------- SILO 1 — URGENCE ---------------
+// --------------- SILO 1, URGENCE ---------------
 
 export const URGENCE_PAGES: PageData[] = [
   {
@@ -49,11 +49,11 @@ export const URGENCE_PAGES: PageData[] = [
     relatedSlugs: ["depannage-plomberie-metz", "fuite-eau-urgence-metz"],
     localSlug: "plombier-metz",
     bodyParagraphs: [
-      "Quand une urgence plomberie survient à Metz — fuite d'eau soudaine, canalisation bouchée, WC hors service ou tuyau éclaté — chaque minute compte. Trashi Plombier met à votre disposition une équipe de plombiers qualifiés, disponibles 24h/24 et 7j/7, jours fériés inclus. Nos techniciens sont positionnés stratégiquement pour couvrir Metz et les communes voisines comme Montigny-lès-Metz, Woippy et Longeville-lès-Metz, garantissant une arrivée sur place en moins de 30 minutes après votre appel.",
+      "Quand une urgence plomberie survient à Metz, fuite d'eau soudaine, canalisation bouchée, WC hors service ou tuyau éclaté, chaque minute compte. Trashi Plombier met à votre disposition une équipe de plombiers qualifiés, disponibles 24h/24 et 7j/7, jours fériés inclus. Nos techniciens sont positionnés stratégiquement pour couvrir Metz et les communes voisines comme Montigny-lès-Metz, Woippy et Longeville-lès-Metz, garantissant une arrivée sur place en moins de 30 minutes après votre appel.",
       "Nos interventions d'urgence couvrent l'ensemble des pannes et sinistres plomberie : réparation de fuites sur tuyaux apparents ou encastrés, débouchage de canalisations par haute pression ou furet électrique, remplacement de joints défectueux, réparation ou remplacement de robinetterie cassée, et remise en service des installations sanitaires. Chaque technicien arrive avec un véhicule entièrement équipé en pièces de rechange courantes, pour résoudre la grande majorité des problèmes en une seule intervention.",
       "Avec plus de 10 ans d'expérience dans la plomberie d'urgence à Metz et plus de 120 clients satisfaits, Trashi Plombier affiche un taux de satisfaction de 98 %. Notre engagement : un diagnostic transparent, un devis gratuit avant toute intervention, et des tarifs clairs sans surprises. Nous intervenons aussi bien chez les particuliers que dans les commerces, immeubles et établissements professionnels sur tout le secteur de la Moselle.",
       "En cas d'urgence plomberie, voici les bons réflexes à avoir en attendant notre arrivée : coupez immédiatement l'alimentation en eau au robinet d'arrêt général (généralement situé sous l'évier ou au compteur), placez des serviettes ou des récipients pour limiter les dégâts des eaux, et prenez des photos pour votre assurance. Notre équipe vous guidera également par téléphone avant d'arriver, afin de minimiser les dommages causés par la fuite.",
-      "Trashi Plombier intervient sur l'intégralité du secteur messin : Metz intramuros, Marly, Augny, Talange, Hagondange, Amnéville, Maizières-lès-Metz et Thionville. Appelez-nous dès maintenant au 078 720 30 23 — notre équipe d'urgence décroche à toute heure et dépêche un plombier qualifié chez vous sans délai. Devis gratuit, sans engagement.",
+      "Trashi Plombier intervient sur l'intégralité du secteur messin : Metz intramuros, Marly, Augny, Talange, Hagondange, Amnéville, Maizières-lès-Metz et Thionville. Appelez-nous dès maintenant au 078 720 30 23, notre équipe d'urgence décroche à toute heure et dépêche un plombier qualifié chez vous sans délai. Devis gratuit, sans engagement.",
     ],
     faqItems: [
       {
@@ -62,7 +62,7 @@ export const URGENCE_PAGES: PageData[] = [
       },
       {
         q: "Quelles urgences plomberie prenez-vous en charge ?",
-        a: "Nous traitons toutes les urgences : fuite d'eau, tuyau éclaté, canalisation bouchée, WC hors service, robinet cassé, cumulus en panne, pression d'eau anormale. Si vous avez un doute, appelez-nous — nous évaluons la situation gratuitement par téléphone.",
+        a: "Nous traitons toutes les urgences : fuite d'eau, tuyau éclaté, canalisation bouchée, WC hors service, robinet cassé, cumulus en panne, pression d'eau anormale. Si vous avez un doute, appelez-nous, nous évaluons la situation gratuitement par téléphone.",
       },
       {
         q: "Le devis d'urgence est-il gratuit ?",
@@ -87,14 +87,14 @@ export const URGENCE_PAGES: PageData[] = [
     metaDescription:
       "Dépannage plomberie à Metz : fuite d'eau, canalisation bouchée, robinet cassé. Intervention rapide par un plombier qualifié.",
     seoParagraph:
-      "Trashi Plombier assure le dépannage plomberie à Metz en moins de 30 minutes, 24h/24 et 7j/7 : robinet cassé, fuite, canalisation bouchée ou WC défaillant — nos plombiers qualifiés diagnostiquent et réparent chaque panne au premier passage.",
+      "Trashi Plombier assure le dépannage plomberie à Metz en moins de 30 minutes, 24h/24 et 7j/7 : robinet cassé, fuite, canalisation bouchée ou WC défaillant, nos plombiers qualifiés diagnostiquent et réparent chaque panne au premier passage.",
     relatedSlugs: ["plombier-urgence-metz", "debouchage-canalisation-metz"],
     localSlug: "plombier-metz",
     bodyParagraphs: [
       "Le dépannage plomberie à Metz recouvre une large gamme de pannes qui peuvent survenir à n'importe quel moment : robinet qui fuit ou cassé, joint de siphon défaillant, tuyau percé, WC qui déborde, pression d'eau insuffisante, ou encore chasse d'eau hors service. Trashi Plombier traite chacun de ces problèmes avec réactivité et professionnalisme. Nos plombiers interviennent avec des véhicules équipés de l'outillage et des pièces détachées les plus courants, pour régler la situation en une seule visite dans la grande majorité des cas.",
-      "Notre approche du dépannage repose sur un diagnostic rigoureux avant toute intervention. Avant de réaliser quoi que ce soit, notre technicien identifie précisément l'origine du problème — qu'il soit apparent ou caché — et vous explique clairement la nature de la panne et les solutions disponibles. Vous recevez un devis gratuit et transparent avant le début des travaux, sans frais cachés. Cette démarche nous permet d'afficher un taux de satisfaction de 98 % auprès de nos 120+ clients en Moselle.",
+      "Notre approche du dépannage repose sur un diagnostic rigoureux avant toute intervention. Avant de réaliser quoi que ce soit, notre technicien identifie précisément l'origine du problème, qu'il soit apparent ou caché, et vous explique clairement la nature de la panne et les solutions disponibles. Vous recevez un devis gratuit et transparent avant le début des travaux, sans frais cachés. Cette démarche nous permet d'afficher un taux de satisfaction de 98 % auprès de nos 120+ clients en Moselle.",
       "Parmi les dépannages plomberie les plus fréquents que nous réalisons à Metz et dans les communes proches comme Woippy, Montigny-lès-Metz et Marly : remplacement de cartouche de mitigeur, réparation de fuite sous évier, changement de joint de robinet, déblocage de vanne d'arrêt grippée, réparation de siphon de douche, et remplacement de mécanisme de WC. Ces interventions courantes sont souvent résolues en 30 à 60 minutes.",
-      "Pour les dépannages plus complexes — détection de fuite encastrée, réparation de canalisation enterrée, remplacement de tronçon de tuyauterie — Trashi Plombier dispose du matériel spécialisé nécessaire : caméra d'inspection, détecteur acoustique, équipement de soudure et de coupage. Nous intervenons sur toutes les tuyauteries : cuivre, PER, multicouche, acier, PVC. Aucun dépannage n'est trop complexe pour notre équipe forte de 10 ans d'expérience.",
+      "Pour les dépannages plus complexes, détection de fuite encastrée, réparation de canalisation enterrée, remplacement de tronçon de tuyauterie, Trashi Plombier dispose du matériel spécialisé nécessaire : caméra d'inspection, détecteur acoustique, équipement de soudure et de coupage. Nous intervenons sur toutes les tuyauteries : cuivre, PER, multicouche, acier, PVC. Aucun dépannage n'est trop complexe pour notre équipe forte de 10 ans d'expérience.",
       "Disponible 24h/24, 7j/7, Trashi Plombier est le partenaire de dépannage plomberie de référence sur Metz et la Moselle. Notre numéro d'urgence 078 720 30 23 est accessible à toute heure. Que vous soyez à Metz, Thionville, Hagondange ou Amnéville, un technicien qualifié peut être chez vous en moins de 30 minutes. Contactez-nous pour un devis gratuit et sans engagement.",
     ],
     faqItems: [
@@ -134,8 +134,8 @@ export const URGENCE_PAGES: PageData[] = [
     localSlug: "plombier-metz",
     bodyParagraphs: [
       "Une fuite d'eau non traitée peut rapidement provoquer des dégâts considérables : planchers endommagés, murs humides, moisissures, court-circuit électrique et sinistres coûteux à déclarer en assurance. À Metz et dans toute la Moselle, Trashi Plombier répond aux appels d'urgence fuite d'eau 24 heures sur 24, 7 jours sur 7. Notre objectif est simple : être chez vous en moins de 30 minutes et stopper la fuite avant qu'elle ne se transforme en catastrophe.",
-      "Les fuites d'eau se présentent sous de multiples formes. Les plus visibles — robinet qui goûte, joint de siphon percé, raccord de tuyau qui suinte — sont détectées facilement. Les fuites cachées, en revanche, peuvent rester invisibles pendant des semaines : conduites encastrées dans les murs, canalisations sous dalle, joints de baignoire ou de douche dégradés. Trashi Plombier utilise des équipements de détection spécialisés (caméra thermique, corrélateur acoustique, gaz traceur) pour localiser ces fuites invisibles sans démolition inutile.",
-      "Nos plombiers prennent en charge tous les types de fuites à Metz et alentours — Montigny-lès-Metz, Longeville-lès-Metz, Augny — qu'il s'agisse d'une fuite sur robinetterie, sur joint de baignoire ou de douche, sur raccordement de lave-linge ou lave-vaisselle, sur canalisation d'alimentation ou d'évacuation, ou encore sur le circuit de chauffage. Chaque réparation est réalisée avec des matériaux de qualité et garantie dans le temps.",
+      "Les fuites d'eau se présentent sous de multiples formes. Les plus visibles, robinet qui goûte, joint de siphon percé, raccord de tuyau qui suinte, sont détectées facilement. Les fuites cachées, en revanche, peuvent rester invisibles pendant des semaines : conduites encastrées dans les murs, canalisations sous dalle, joints de baignoire ou de douche dégradés. Trashi Plombier utilise des équipements de détection spécialisés (caméra thermique, corrélateur acoustique, gaz traceur) pour localiser ces fuites invisibles sans démolition inutile.",
+      "Nos plombiers prennent en charge tous les types de fuites à Metz et alentours, Montigny-lès-Metz, Longeville-lès-Metz, Augny, qu'il s'agisse d'une fuite sur robinetterie, sur joint de baignoire ou de douche, sur raccordement de lave-linge ou lave-vaisselle, sur canalisation d'alimentation ou d'évacuation, ou encore sur le circuit de chauffage. Chaque réparation est réalisée avec des matériaux de qualité et garantie dans le temps.",
       "En cas de fuite importante, pensez à prévenir votre assurance habitation le plus tôt possible : la déclaration de dégâts des eaux doit généralement être faite dans les 5 jours ouvrés. Notre équipe peut vous fournir un rapport d'intervention détaillé pour faciliter vos démarches. Nous travaillons régulièrement avec les compagnies d'assurance sur Metz et la Moselle et connaissons leurs exigences documentaires.",
       "Pour les fuites récurrentes ou les logements anciens, une inspection préventive de votre réseau d'eau est vivement recommandée. Trashi Plombier propose un diagnostic complet de vos canalisations à Metz : vérification de la pression, contrôle des joints et raccords, détection de micro-fuites. Ce service vous permet d'anticiper les pannes futures et d'éviter des urgences coûteuses. Appelez-nous au 078 720 30 23, devis gratuit et sans engagement.",
     ],
@@ -146,7 +146,7 @@ export const URGENCE_PAGES: PageData[] = [
       },
       {
         q: "Que faire immédiatement en cas de fuite d'eau urgente ?",
-        a: "Fermez le robinet d'arrêt général de votre logement pour couper l'alimentation en eau. Si la fuite est proche d'installations électriques, coupez le disjoncteur de la zone concernée. Appelez Trashi Plombier au 078 720 30 23 — nous intervenons en moins de 30 minutes sur Metz et environs.",
+        a: "Fermez le robinet d'arrêt général de votre logement pour couper l'alimentation en eau. Si la fuite est proche d'installations électriques, coupez le disjoncteur de la zone concernée. Appelez Trashi Plombier au 078 720 30 23, nous intervenons en moins de 30 minutes sur Metz et environs.",
       },
       {
         q: "La réparation d'une fuite d'eau est-elle prise en charge par l'assurance ?",
@@ -171,7 +171,7 @@ export const URGENCE_PAGES: PageData[] = [
     metaDescription:
       "Panne de chauffage à Metz ? Chauffagiste d'urgence disponible 24h/24. Réparation chaudière, radiateur, chauffe-eau.",
     seoParagraph:
-      "Trashi Plombier met à votre disposition un chauffagiste d'urgence à Metz, disponible 24h/24 et 7j/7, pour dépanner votre chaudière, radiateur ou chauffe-eau en moins de 30 minutes — même en plein hiver, la nuit ou le week-end.",
+      "Trashi Plombier met à votre disposition un chauffagiste d'urgence à Metz, disponible 24h/24 et 7j/7, pour dépanner votre chaudière, radiateur ou chauffe-eau en moins de 30 minutes, même en plein hiver, la nuit ou le week-end.",
     relatedSlugs: ["reparation-chaudiere-metz", "depannage-chaudiere-gaz-metz"],
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
@@ -179,12 +179,12 @@ export const URGENCE_PAGES: PageData[] = [
       "Les pannes de chauffage que nous traitons en urgence sont nombreuses : chaudière gaz qui ne démarre plus, chaudière fioul avec brûleur en défaut, chauffe-eau électrique hors service, radiateurs qui ne chauffent pas ou chauffent de façon inégale, plancher chauffant défaillant, et problèmes de pression dans le circuit de chauffage. Nos chauffagistes identifient rapidement l'origine de la panne grâce à un diagnostic précis et procèdent à la réparation immédiate, dans la mesure où les pièces nécessaires sont disponibles en stock.",
       "Fort de plus de 10 ans d'expérience, Trashi Plombier intervient sur toutes les marques et tous les types de chaudières : Chaffoteaux, Vaillant, Buderus, Viessmann, De Dietrich, Atlantic, Saunier Duval, Elm Leblanc. Nos techniciens sont certifiés pour les travaux sur les installations gaz (certification PG obligatoire), garantissant une intervention conforme aux normes de sécurité en vigueur. La sécurité de votre famille est notre priorité absolue.",
       "En attendant notre arrivée pour un dépannage chauffage urgent, quelques vérifications simples peuvent vous aider : contrôlez que le disjoncteur de votre chaudière n'a pas sauté, vérifiez la pression du circuit de chauffage sur le manomètre (elle doit être entre 1 et 2 bars), et assurez-vous que le thermostat d'ambiance est correctement réglé. Si vous sentez une odeur de gaz, quittez le logement, ne touchez à aucun interrupteur, et appelez immédiatement le 0800 47 33 33 (urgence gaz GRDF).",
-      "Trashi Plombier assure également des contrats d'entretien annuel pour prévenir les pannes de chauffage — l'entretien régulier de votre chaudière réduit considérablement le risque de panne en hiver. Nous réalisons ces entretiens sur Metz et toute la Moselle avec remise d'un certificat de conformité. Contactez-nous au 078 720 30 23 pour un devis gratuit, urgence ou entretien.",
+      "Trashi Plombier assure également des contrats d'entretien annuel pour prévenir les pannes de chauffage, l'entretien régulier de votre chaudière réduit considérablement le risque de panne en hiver. Nous réalisons ces entretiens sur Metz et toute la Moselle avec remise d'un certificat de conformité. Contactez-nous au 078 720 30 23 pour un devis gratuit, urgence ou entretien.",
     ],
     faqItems: [
       {
         q: "Mon chauffage est tombé en panne la nuit, que faire ?",
-        a: "Appelez Trashi Plombier au 078 720 30 23 — notre service d'urgence chauffage est disponible 24h/24, y compris la nuit. Un chauffagiste qualifié intervient chez vous à Metz en moins de 30 minutes. En attendant, vérifiez la pression du circuit (manomètre) et que le disjoncteur de la chaudière n'a pas sauté.",
+        a: "Appelez Trashi Plombier au 078 720 30 23, notre service d'urgence chauffage est disponible 24h/24, y compris la nuit. Un chauffagiste qualifié intervient chez vous à Metz en moins de 30 minutes. En attendant, vérifiez la pression du circuit (manomètre) et que le disjoncteur de la chaudière n'a pas sauté.",
       },
       {
         q: "Intervenez-vous sur toutes les marques de chaudières ?",
@@ -200,7 +200,7 @@ export const URGENCE_PAGES: PageData[] = [
       },
       {
         q: "Le dépannage chauffage d'urgence est-il plus cher ?",
-        a: "Une majoration tarifaire s'applique pour les interventions nocturnes, les week-ends et jours fériés — c'est une pratique standard. Nos tarifs d'urgence vous sont communiqués de manière transparente avant l'intervention. Le devis reste gratuit et sans engagement.",
+        a: "Une majoration tarifaire s'applique pour les interventions nocturnes, les week-ends et jours fériés, c'est une pratique standard. Nos tarifs d'urgence vous sont communiqués de manière transparente avant l'intervention. Le devis reste gratuit et sans engagement.",
       },
     ],
   },
@@ -212,14 +212,14 @@ export const URGENCE_PAGES: PageData[] = [
     metaDescription:
       "Réparation de chaudière à Metz : gaz, fioul, électrique. Diagnostic rapide et intervention par un chauffagiste certifié.",
     seoParagraph:
-      "Votre chaudière est en panne à Metz ? Trashi Plombier diagnostique et répare tous types de chaudières — gaz, fioul et électrique — avec une intervention rapide, des techniciens certifiés et un devis gratuit avant chaque réparation.",
+      "Votre chaudière est en panne à Metz ? Trashi Plombier diagnostique et répare tous types de chaudières, gaz, fioul et électrique, avec une intervention rapide, des techniciens certifiés et un devis gratuit avant chaque réparation.",
     relatedSlugs: [
       "chauffagiste-urgence-metz",
       "depannage-chaudiere-gaz-metz",
     ],
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
-      "La réparation de chaudière à Metz est l'une des interventions les plus fréquentes de notre équipe, surtout lors des mois d'hiver où les équipements sont mis à rude épreuve. Trashi Plombier intervient sur tous les types de chaudières — à condensation gaz, fioul à basse température, chaudières électriques et à micro-cogénération — sur Metz et l'ensemble de la Moselle, y compris Hagondange, Talange et Amnéville. Nos chauffagistes disposent d'une expérience de plus de 10 ans sur toutes les marques du marché.",
+      "La réparation de chaudière à Metz est l'une des interventions les plus fréquentes de notre équipe, surtout lors des mois d'hiver où les équipements sont mis à rude épreuve. Trashi Plombier intervient sur tous les types de chaudières, à condensation gaz, fioul à basse température, chaudières électriques et à micro-cogénération, sur Metz et l'ensemble de la Moselle, y compris Hagondange, Talange et Amnéville. Nos chauffagistes disposent d'une expérience de plus de 10 ans sur toutes les marques du marché.",
       "Le diagnostic est la première étape indispensable d'une bonne réparation de chaudière. Notre technicien commence toujours par une analyse complète de votre installation : lecture des codes d'erreur affichés, contrôle de la pression, vérification de l'allumeur et des électrodes, test du brûleur, inspection de l'échangeur thermique, et mesure du rendement de combustion. Ce diagnostic approfondi nous permet d'identifier précisément la pièce défaillante et d'éviter les réparations inutiles.",
       "Nous réparons l'ensemble des composants d'une chaudière : échangeur de chaleur, brûleur, corps de chauffe, électronique de régulation, pompe de circulation, vase d'expansion, soupape de sécurité, résistances électriques, et tous les joints et raccords. Nos véhicules d'intervention sont équipés de pièces détachées pour les pannes les plus courantes, nous permettant de réaliser la grande majorité des réparations de chaudière en une seule visite.",
       "Toutes nos réparations de chaudières à Metz sont réalisées dans le strict respect des normes en vigueur (DTU, NF, CE). Nos techniciens sont certifiés pour les travaux sur installations gaz (certification PG), une habilitation obligatoire que tout particulier doit exiger de son chauffagiste. À l'issue de chaque intervention, nous effectuons un test complet de bon fonctionnement et vous remettons un rapport d'intervention détaillé.",
@@ -265,7 +265,7 @@ export const URGENCE_PAGES: PageData[] = [
       "Nous proposons le remplacement de tous types de chauffe-eaux à Metz et dans les communes proches comme Marly, Augny et Woippy. Le chauffe-eau électrique à résistance est le plus répandu et le moins coûteux à l'achat. Le chauffe-eau thermodynamique (pompe à chaleur sur air) offre des économies d'énergie de 60 à 70 % et est éligible à MaPrimeRénov'. Le chauffe-eau solaire individuel (CESI) est la solution la plus écologique pour les maisons avec toiture bien exposée.",
       "L'aide MaPrimeRénov' peut financer une partie significative du remplacement de votre chauffe-eau par un modèle thermodynamique ou solaire. Trashi Plombier vous aide dans ces démarches administratives : nous vérifions votre éligibilité, vous conseillons sur le choix du matériel, et nous nous assurons que l'installation respecte les critères techniques exigés pour l'obtention de l'aide. Notre équipe connaît parfaitement ces dispositifs et accompagne régulièrement des clients messinois dans leurs demandes.",
       "Chaque remplacement de chauffe-eau réalisé par Trashi Plombier à Metz comprend : la dépose et l'évacuation de l'ancien appareil, la vérification et l'adaptation des raccordements existants, la pose et la fixation murale du nouvel équipement, le raccordement hydraulique (eau froide/eau chaude) et électrique, la mise en service avec réglage de la température, et un test de fonctionnement complet avant de quitter les lieux.",
-      "Trashi Plombier travaille avec les meilleures marques du marché — Atlantic, Thermor, Chaffoteaux, Ariston, Bosch, Viessmann — et vous conseille sur le choix de la capacité adaptée à votre foyer (50 à 300 litres selon le nombre d'occupants). Nous intervenons sur Metz, Thionville, Hagondange, Amnéville et tout le secteur de la Moselle. Devis gratuit et sans engagement au 078 720 30 23.",
+      "Trashi Plombier travaille avec les meilleures marques du marché, Atlantic, Thermor, Chaffoteaux, Ariston, Bosch, Viessmann, et vous conseille sur le choix de la capacité adaptée à votre foyer (50 à 300 litres selon le nombre d'occupants). Nous intervenons sur Metz, Thionville, Hagondange, Amnéville et tout le secteur de la Moselle. Devis gratuit et sans engagement au 078 720 30 23.",
     ],
     faqItems: [
       {
@@ -299,15 +299,15 @@ export const URGENCE_PAGES: PageData[] = [
     metaDescription:
       "Canalisation bouchée à Metz ? Débouchage professionnel rapide : évier, WC, douche, égout. Devis gratuit.",
     seoParagraph:
-      "Canalisation bouchée à Metz ? Trashi Plombier intervient en moins de 30 minutes, 24h/24 et 7j/7. Débouchage professionnel par haute pression ou furet électrique — WC, évier, douche, colonnes d'immeuble.",
+      "Canalisation bouchée à Metz ? Trashi Plombier intervient en moins de 30 minutes, 24h/24 et 7j/7. Débouchage professionnel par haute pression ou furet électrique, WC, évier, douche, colonnes d'immeuble.",
     relatedSlugs: ["depannage-plomberie-metz", "recherche-de-fuite-metz"],
     localSlug: "plombier-metz",
     bodyParagraphs: [
       "Un débouchage de canalisation à Metz, c'est notre spécialité depuis plus de 10 ans. Qu'il s'agisse d'un WC bouché, d'un évier qui ne s'écoule plus ou d'une colonne d'immeuble obstruée, nos techniciens interviennent rapidement avec le matériel adapté pour résoudre le problème durablement.",
       "Nous utilisons deux techniques principales selon la nature et la gravité du bouchon : le débouchage à haute pression (hydrocurage), qui nettoie en profondeur les canalisations à l'aide d'un jet d'eau puissant, et le furet électrique, idéal pour les bouchons solides résistants. Dans les cas complexes, une caméra d'inspection nous permet de localiser précisément l'obstruction avant toute intervention.",
       "Les causes les plus fréquentes de canalisations bouchées à Metz sont l'accumulation de graisses dans les conduites de cuisine, les dépôts calcaires (l'eau de Metz est particulièrement calcaire), les lingettes et produits non dégradables dans les WC, ainsi que les racines d'arbres qui infiltrent les canalisations enterrées. Un bouchon non traité peut provoquer des refoulements, des mauvaises odeurs et des dégâts des eaux coûteux.",
-      "Nous intervenons sur tout type de canalisation : PVC, fonte, grès, acier. Nos prestations couvrent les particuliers, les copropriétés et les professionnels sur Metz et toute la Moselle — Montigny-lès-Metz, Woippy, Thionville, Hagondange et environs. Le déplacement et le devis sont gratuits.",
-      "Pour éviter les bouchons récurrents, nous proposons également un contrat d'entretien préventif avec hydrocurage annuel de vos canalisations — une solution économique qui évite les interventions d'urgence et prolonge la durée de vie de votre réseau.",
+      "Nous intervenons sur tout type de canalisation : PVC, fonte, grès, acier. Nos prestations couvrent les particuliers, les copropriétés et les professionnels sur Metz et toute la Moselle, Montigny-lès-Metz, Woippy, Thionville, Hagondange et environs. Le déplacement et le devis sont gratuits.",
+      "Pour éviter les bouchons récurrents, nous proposons également un contrat d'entretien préventif avec hydrocurage annuel de vos canalisations, une solution économique qui évite les interventions d'urgence et prolonge la durée de vie de votre réseau.",
     ],
     faqItems: [
       {
@@ -334,7 +334,7 @@ export const URGENCE_PAGES: PageData[] = [
   },
 ];
 
-// --------------- SILO 2 — PLOMBERIE ---------------
+// --------------- SILO 2, PLOMBERIE ---------------
 
 export const PLOMBERIE_PAGES: PageData[] = [
   {
@@ -346,7 +346,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Installation de plomberie à Metz pour construction neuve et rénovation. Plombier qualifié, devis gratuit.",
     seoParagraph:
-      "Trashi Plombier réalise l'installation complète de votre plomberie à Metz, que ce soit pour une construction neuve ou une rénovation : tuyauterie, sanitaires, alimentation eau chaude/froide, évacuations — dans le respect des normes DTU et avec un devis gratuit.",
+      "Trashi Plombier réalise l'installation complète de votre plomberie à Metz, que ce soit pour une construction neuve ou une rénovation : tuyauterie, sanitaires, alimentation eau chaude/froide, évacuations, dans le respect des normes DTU et avec un devis gratuit.",
     relatedSlugs: [
       "renovation-salle-de-bain-metz",
       "remplacement-robinetterie-metz",
@@ -354,7 +354,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
     localSlug: "plombier-metz",
     bodyParagraphs: [
       "L'installation de plomberie à Metz est une étape cruciale dans tout projet de construction ou de rénovation. Que vous construisiez une maison neuve, rénoviez un appartement haussmannien en centre-ville de Metz, ou transformiez un local en logement, Trashi Plombier vous accompagne de la conception jusqu'à la mise en service de votre réseau d'eau. Nos plombiers qualifiés maîtrisent l'ensemble des techniques d'installation : soudure cuivre, raccords à compression, tuyauterie PER, multicouche et PVC.",
-      "Une installation plomberie de qualité commence par une étude rigoureuse du projet. Notre équipe réalise un plan de l'installation tenant compte de la configuration des lieux, des points d'eau à créer (cuisine, salle de bains, WC, buanderie), des contraintes structurelles du bâtiment, et des normes en vigueur (DTU 60.1, NF EN 806). Ce travail préparatoire garantit une installation pérenne, étanche et facile à entretenir — évitant les problèmes futurs de fuites ou de mauvaise pression.",
+      "Une installation plomberie de qualité commence par une étude rigoureuse du projet. Notre équipe réalise un plan de l'installation tenant compte de la configuration des lieux, des points d'eau à créer (cuisine, salle de bains, WC, buanderie), des contraintes structurelles du bâtiment, et des normes en vigueur (DTU 60.1, NF EN 806). Ce travail préparatoire garantit une installation pérenne, étanche et facile à entretenir, évitant les problèmes futurs de fuites ou de mauvaise pression.",
       "Nos installations plomberie à Metz et dans les communes proches comme Montigny-lès-Metz et Longeville-lès-Metz couvrent tous les aspects : pose des canalisations d'alimentation en eau froide et chaude, installation du réseau d'évacuation et de ventilation (VMC), raccordement des équipements sanitaires (WC, lavabo, douche, baignoire, évier), installation du chauffe-eau ou du ballon d'eau chaude, et mise en place de la robinetterie et des accessoires.",
       "Dans le cadre d'une rénovation, nous intervenons également pour la reprise et la mise aux normes d'installations existantes : remplacement de vieilles canalisations en plomb (interdites depuis 1995 dans les constructions neuves), modernisation des évacuations, augmentation des points d'eau, et adaptation du réseau à une nouvelle configuration de pièces. Ces travaux de réhabilitation améliorent la qualité de l'eau et la performance globale de l'installation.",
       "Trashi Plombier travaille en coordination avec les autres corps de métier sur vos chantiers de construction ou rénovation à Metz : maçons, carreleurs, électriciens, menuisiers. Nous respectons scrupuleusement les délais convenus et assurons un chantier propre et bien organisé. À l'issue des travaux, vous recevez les schémas de l'installation et toutes les informations nécessaires à l'entretien futur de votre réseau. Devis gratuit au 078 720 30 23.",
@@ -378,7 +378,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
       },
       {
         q: "Pouvez-vous remplacer les vieilles canalisations en plomb ?",
-        a: "Absolument. Le remplacement des canalisations en plomb est une priorité de santé publique — le plomb est interdit dans les nouvelles installations depuis 1995 et nocif pour la santé. Trashi Plombier réalise la dépose des canalisations en plomb et leur remplacement par des matériaux modernes sur Metz et toute la Moselle.",
+        a: "Absolument. Le remplacement des canalisations en plomb est une priorité de santé publique, le plomb est interdit dans les nouvelles installations depuis 1995 et nocif pour la santé. Trashi Plombier réalise la dépose des canalisations en plomb et leur remplacement par des matériaux modernes sur Metz et toute la Moselle.",
       },
     ],
   },
@@ -391,18 +391,18 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Remplacement de robinetterie à Metz : robinet, mitigeur, mélangeur. Installation par un plombier professionnel.",
     seoParagraph:
-      "Trashi Plombier remplace votre robinetterie à Metz avec rapidité et précision : mitigeur de cuisine, robinet de salle de bain, mitigeur thermostatique, mélangeur — toutes marques, tous modèles, avec un devis gratuit et une intervention le jour même.",
+      "Trashi Plombier remplace votre robinetterie à Metz avec rapidité et précision : mitigeur de cuisine, robinet de salle de bain, mitigeur thermostatique, mélangeur, toutes marques, tous modèles, avec un devis gratuit et une intervention le jour même.",
     relatedSlugs: [
       "installation-plomberie-metz",
       "renovation-salle-de-bain-metz",
     ],
     localSlug: "plombier-metz",
     bodyParagraphs: [
-      "Le remplacement de robinetterie à Metz est une intervention en apparence simple, mais qui requiert le savoir-faire d'un plombier qualifié pour garantir une installation étanche et durable. Un robinet mal posé peut entraîner des fuites, des dégâts des eaux ou une pression insuffisante. Trashi Plombier intervient sur tous les types de robinetterie — mitigeur de cuisine, robinet de lavabo, mitigeur de douche, robinet de baignoire, et robinets extérieurs — avec plus de 10 ans d'expérience dans la pose et le remplacement.",
+      "Le remplacement de robinetterie à Metz est une intervention en apparence simple, mais qui requiert le savoir-faire d'un plombier qualifié pour garantir une installation étanche et durable. Un robinet mal posé peut entraîner des fuites, des dégâts des eaux ou une pression insuffisante. Trashi Plombier intervient sur tous les types de robinetterie, mitigeur de cuisine, robinet de lavabo, mitigeur de douche, robinet de baignoire, et robinets extérieurs, avec plus de 10 ans d'expérience dans la pose et le remplacement.",
       "Nous installons des robinetteries de toutes gammes et de toutes marques : Grohe, Hansgrohe, Vitra, Jacob Delafon, Ideal Standard, Roca, Delabie, et bien d'autres. Que vous souhaitiez simplement remplacer un robinet défectueux par un modèle équivalent, ou en profiter pour moderniser votre salle de bain ou cuisine avec une robinetterie design haut de gamme, nos plombiers vous conseillent sur le choix et réalisent l'installation dans les règles de l'art.",
-      "Le mitigeur thermostatique est de plus en plus prisé à Metz et dans les communes environnantes comme Marly et Augny. Ce type de robinetterie maintient automatiquement la température réglée, indépendamment des variations de pression — idéal pour les foyers avec enfants. Il réduit également la consommation d'eau chaude, donc les coûts énergétiques. Trashi Plombier est spécialisé dans l'installation de mitigeurs thermostatiques pour douches et baignoires.",
+      "Le mitigeur thermostatique est de plus en plus prisé à Metz et dans les communes environnantes comme Marly et Augny. Ce type de robinetterie maintient automatiquement la température réglée, indépendamment des variations de pression, idéal pour les foyers avec enfants. Il réduit également la consommation d'eau chaude, donc les coûts énergétiques. Trashi Plombier est spécialisé dans l'installation de mitigeurs thermostatiques pour douches et baignoires.",
       "Les robinets présentent des signes annonciateurs de défaillance bien avant de lâcher complètement : fuite au niveau du bec, goutte-à-goutte persistant malgré le remplacement du joint, manette qui force, tartre visible sur l'aérateur. À Metz, l'eau est relativement calcaire, ce qui accélère l'usure des cartouches et des joints. Un remplacement préventif de robinetterie vous évite des dégâts des eaux et vous permet de choisir sereinement votre nouveau modèle.",
-      "Trashi Plombier intervient pour le remplacement de robinetterie à Metz et dans tout le secteur de la Moselle — Woippy, Maizières-lès-Metz, Talange, Hagondange. Nos techniciens se déplacent rapidement, avec le matériel nécessaire pour la plupart des configurations de raccordement. La durée d'intervention est généralement de 30 à 60 minutes. Appelez-nous au 078 720 30 23 pour un devis gratuit et une intervention rapide.",
+      "Trashi Plombier intervient pour le remplacement de robinetterie à Metz et dans tout le secteur de la Moselle, Woippy, Maizières-lès-Metz, Talange, Hagondange. Nos techniciens se déplacent rapidement, avec le matériel nécessaire pour la plupart des configurations de raccordement. La durée d'intervention est généralement de 30 à 60 minutes. Appelez-nous au 078 720 30 23 pour un devis gratuit et une intervention rapide.",
     ],
     faqItems: [
       {
@@ -436,13 +436,13 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Rénovation complète de salle de bain à Metz. Plomberie, carrelage, douche italienne. Devis gratuit.",
     seoParagraph:
-      "Trashi Plombier transforme votre salle de bain à Metz en espace moderne et fonctionnel : rénovation complète ou partielle, douche italienne, remplacement de baignoire, nouvelle robinetterie haut de gamme — devis gratuit, délais respectés, 98 % de clients satisfaits.",
+      "Trashi Plombier transforme votre salle de bain à Metz en espace moderne et fonctionnel : rénovation complète ou partielle, douche italienne, remplacement de baignoire, nouvelle robinetterie haut de gamme, devis gratuit, délais respectés, 98 % de clients satisfaits.",
     relatedSlugs: ["installation-douche-metz", "installation-plomberie-metz"],
     localSlug: "plombier-metz",
     bodyParagraphs: [
-      "La rénovation de salle de bain à Metz est l'un de nos projets phares chez Trashi Plombier. Que vous souhaitiez rénover entièrement votre salle de bain — démolition, carrelage, plomberie, robinetterie, meubles — ou simplement moderniser certains éléments, notre équipe vous propose un accompagnement complet. Avec plus de 10 ans d'expérience dans la rénovation sanitaire sur Metz et la Moselle, nous avons transformé de nombreuses salles de bains vieillissantes en espaces modernes et confortables.",
+      "La rénovation de salle de bain à Metz est l'un de nos projets phares chez Trashi Plombier. Que vous souhaitiez rénover entièrement votre salle de bain, démolition, carrelage, plomberie, robinetterie, meubles, ou simplement moderniser certains éléments, notre équipe vous propose un accompagnement complet. Avec plus de 10 ans d'expérience dans la rénovation sanitaire sur Metz et la Moselle, nous avons transformé de nombreuses salles de bains vieillissantes en espaces modernes et confortables.",
       "Nos rénovations de salle de bain à Metz incluent l'ensemble des corps de métier plomberie : dépose des équipements existants (ancienne baignoire, douche bac à l'ancienne, vieux lavabo), réfection complète de l'étanchéité, pose de la nouvelle robinetterie, installation de la douche (italienne, à receveur, ou cabine), pose du nouveau WC suspendu ou à poser, installation du meuble vasque et miroir, et raccordement de tous les équipements. Nous intervenons également en coordination avec les carreleurs pour une rénovation clé en main.",
-      "La douche italienne — aussi appelée douche à l'italienne ou douche de plain-pied — est l'une des demandes les plus fréquentes dans nos projets de rénovation salle de bain à Metz. Ce type d'installation sans receveur ni porte offre un espace plus ouvert, plus facile à nettoyer, et convient aux personnes à mobilité réduite. Sa réalisation nécessite une attention particulière à l'étanchéité (système d'imperméabilisation sous carrelage) et une bonne création de pente d'écoulement — deux points que nos plombiers maîtrisent parfaitement.",
+      "La douche italienne, aussi appelée douche à l'italienne ou douche de plain-pied, est l'une des demandes les plus fréquentes dans nos projets de rénovation salle de bain à Metz. Ce type d'installation sans receveur ni porte offre un espace plus ouvert, plus facile à nettoyer, et convient aux personnes à mobilité réduite. Sa réalisation nécessite une attention particulière à l'étanchéité (système d'imperméabilisation sous carrelage) et une bonne création de pente d'écoulement, deux points que nos plombiers maîtrisent parfaitement.",
       "Côté budget, une rénovation de salle de bain à Metz varie selon l'ampleur des travaux et les matériaux choisis. Une rénovation légère (remplacement robinetterie, nouveau lavabo, faïence) peut être réalisée pour 2 000 à 4 000 €. Une rénovation complète avec douche italienne, carrelage grand format et robinetterie haut de gamme peut atteindre 8 000 à 15 000 €. Trashi Plombier établit un devis détaillé et gratuit, avec différentes options pour s'adapter à votre budget.",
       "Notre zone d'intervention pour la rénovation de salle de bain couvre Metz et les communes limitrophes : Montigny-lès-Metz, Longeville-lès-Metz, Marly, Augny. Nos équipes s'engagent sur des délais précis et respectent les plannings de chantier. Chaque rénovation est réalisée avec soin, dans un souci du détail et de la finition qui explique notre taux de satisfaction de 98 %. Contactez-nous au 078 720 30 23 pour discuter de votre projet.",
     ],
@@ -477,7 +477,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Pose et remplacement de WC à Metz. WC suspendu, WC à poser, broyeur. Installation professionnelle.",
     seoParagraph:
-      "Trashi Plombier assure la pose et le remplacement de WC à Metz pour toutes configurations : WC suspendu, WC à poser, WC broyeur — installation soignée, raccordements étanches, devis gratuit et intervention rapide sur Metz et la Moselle.",
+      "Trashi Plombier assure la pose et le remplacement de WC à Metz pour toutes configurations : WC suspendu, WC à poser, WC broyeur, installation soignée, raccordements étanches, devis gratuit et intervention rapide sur Metz et la Moselle.",
     relatedSlugs: [
       "installation-plomberie-metz",
       "renovation-salle-de-bain-metz",
@@ -486,18 +486,18 @@ export const PLOMBERIE_PAGES: PageData[] = [
     bodyParagraphs: [
       "La pose de WC à Metz est une intervention qui requiert précision et savoir-faire pour garantir un raccordement étanche et un fonctionnement optimal. Trashi Plombier réalise l'installation et le remplacement de WC pour toutes configurations : WC à poser (classique au sol), WC suspendu avec bâti-support, et WC broyeur pour les pièces sans évacuation gravitaire. Avec 10 ans d'expérience et plus de 120 clients satisfaits en Moselle, nous maîtrisons chaque type de montage.",
       "Le WC suspendu est aujourd'hui très demandé à Metz pour sa modernité, sa facilité de nettoyage (le sol sous la cuvette est entièrement accessible) et la possibilité d'intégrer le réservoir dans le mur ou dans un bâti encastré. Son installation nécessite la mise en place d'un cadre de fixation (bâti-support) qui doit être ancré solidement dans la structure du bâtiment. Trashi Plombier réalise ces installations dans les règles de l'art, avec des bâtis de marques reconnues comme Geberit, Grohe ou Jacob Delafon.",
-      "Le WC broyeur est la solution idéale lorsqu'on souhaite créer des toilettes dans un endroit sans accès direct à une évacuation gravitaire — sous-sol, chambre convertie, pièce éloignée de la colonne d'évacuation. Ce type d'appareil broie les matières avant de les évacuer par une tuyauterie de petit diamètre (22 mm), pouvant remonter sur plusieurs mètres. Nos plombiers installent des WC broyeurs de toutes marques à Metz et dans les communes proches comme Woippy, Marly et Augny.",
+      "Le WC broyeur est la solution idéale lorsqu'on souhaite créer des toilettes dans un endroit sans accès direct à une évacuation gravitaire, sous-sol, chambre convertie, pièce éloignée de la colonne d'évacuation. Ce type d'appareil broie les matières avant de les évacuer par une tuyauterie de petit diamètre (22 mm), pouvant remonter sur plusieurs mètres. Nos plombiers installent des WC broyeurs de toutes marques à Metz et dans les communes proches comme Woippy, Marly et Augny.",
       "Lors du remplacement d'un WC, nous prenons soin de vérifier l'état de la bride d'évacuation, du raccordement à la chasse d'eau et du joint de cuvette. Ces vérifications systématiques permettent d'éviter les fuites après installation. Nous fixons solidement la cuvette, réglons le mécanisme de chasse d'eau pour un rinçage efficace, et testons l'étanchéité complète avant de quitter les lieux. La zone de travail est laissée propre.",
       "Trashi Plombier propose également l'installation de WC à double chasse d'eau (pour économiser l'eau) et de WC lavants (Washlets) qui intègrent un bidet électronique. Ces équipements innovants gagnent en popularité à Metz. Nos techniciens vous conseillent sur les meilleures options selon votre budget et vos préférences. Contactez-nous au 078 720 30 23 pour un devis gratuit et sans engagement.",
     ],
     faqItems: [
       {
         q: "Combien coûte la pose d'un WC suspendu à Metz ?",
-        a: "La pose d'un WC suspendu avec bâti-support (hors fourniture) est généralement entre 150 et 300 € de main-d'œuvre. Si vous fournissez votre WC et votre bâti, nous nous chargeons de l'installation. Trashi Plombier peut également fournir et poser l'ensemble — devis gratuit sur demande.",
+        a: "La pose d'un WC suspendu avec bâti-support (hors fourniture) est généralement entre 150 et 300 € de main-d'œuvre. Si vous fournissez votre WC et votre bâti, nous nous chargeons de l'installation. Trashi Plombier peut également fournir et poser l'ensemble, devis gratuit sur demande.",
       },
       {
         q: "Peut-on installer un WC suspendu dans un mur en placo ?",
-        a: "Oui, à condition que le bâti-support soit correctement ancré — soit dans la dalle ou dans le mur porteur, soit via un bâti autoportant fixé au sol et au plafond. Nos plombiers évaluent la faisabilité lors du devis et choisissent la solution de fixation adaptée à votre configuration.",
+        a: "Oui, à condition que le bâti-support soit correctement ancré, soit dans la dalle ou dans le mur porteur, soit via un bâti autoportant fixé au sol et au plafond. Nos plombiers évaluent la faisabilité lors du devis et choisissent la solution de fixation adaptée à votre configuration.",
       },
       {
         q: "Quelle est la différence entre un WC à poser et un WC suspendu ?",
@@ -522,7 +522,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Installation de douche à Metz : douche italienne, cabine de douche, receveur. Plombier qualifié.",
     seoParagraph:
-      "Trashi Plombier réalise l'installation de votre douche à Metz dans les règles de l'art : douche italienne à l'italienne, cabine de douche, receveur extra-plat, colonnes de douche thermostatiques — étanchéité parfaite, finitions soignées et devis gratuit.",
+      "Trashi Plombier réalise l'installation de votre douche à Metz dans les règles de l'art : douche italienne à l'italienne, cabine de douche, receveur extra-plat, colonnes de douche thermostatiques, étanchéité parfaite, finitions soignées et devis gratuit.",
     relatedSlugs: [
       "renovation-salle-de-bain-metz",
       "remplacement-robinetterie-metz",
@@ -532,7 +532,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
       "L'installation d'une douche à Metz est une intervention qui demande expertise et rigueur, particulièrement pour les douches à l'italienne dont l'étanchéité est cruciale. Trashi Plombier réalise tous types d'installations de douche dans les logements du secteur messin : douche italienne (plain-pied), douche à receveur (acrylique, résine, céramique), cabine de douche intégrale, et douche balnéo avec jets de massage. Nos plombiers qualifiés s'adaptent à toutes les configurations de salle de bain.",
       "La douche italienne est devenue la référence en matière de rénovation de salle de bain à Metz et dans les communes proches comme Montigny-lès-Metz et Longeville-lès-Metz. Sans receveur ni bord à enjamber, elle offre un espace ouvert et accessible, idéal pour tous les âges. Sa réalisation nécessite plusieurs étapes techniques indispensables : création de la pente d'écoulement, mise en place d'un système d'imperméabilisation sous carrelage (membrane d'étanchéité), installation d'un caniveau ou d'une bonde de sol design, et pose de la robinetterie encastrée.",
       "Pour les douches à receveur, nous proposons l'installation de receveurs extra-plats (8 à 12 cm) qui offrent un aspect proche de la douche italienne tout en facilitant la pose. Ces receveurs existent dans toutes les dimensions et formes (rectangulaires, carrés, pentagonaux) et en différents matériaux (acrylique renforcé, résine de synthèse, céramique). Le raccordement hydraulique est réalisé avec des siphons à faible encombrement permettant leur installation sur dalles béton comme sur planchers bois.",
-      "La robinetterie de douche est un élément déterminant du confort et de l'esthétique. Trashi Plombier propose l'installation de colonnes de douche thermostatiques (maintien automatique de la température), de robinetteries encastrées pour un rendu épuré, et de têtes de douche à économie d'eau. Nous travaillons avec des marques premium comme Grohe, Hansgrohe, Dornbracht et des gammes accessible comme Ideal Standard ou Roca — selon votre budget.",
+      "La robinetterie de douche est un élément déterminant du confort et de l'esthétique. Trashi Plombier propose l'installation de colonnes de douche thermostatiques (maintien automatique de la température), de robinetteries encastrées pour un rendu épuré, et de têtes de douche à économie d'eau. Nous travaillons avec des marques premium comme Grohe, Hansgrohe, Dornbracht et des gammes accessible comme Ideal Standard ou Roca, selon votre budget.",
       "Une installation de douche réussie à Metz repose avant tout sur la qualité de l'étanchéité. Trashi Plombier utilise des membranes d'étanchéité certifiées et des mastics silicone professionnels pour assurer une protection durable contre les infiltrations. Chaque installation est testée à l'eau avant la pose du carrelage. Nous proposons un délai d'intervention rapide sur Metz et toute la Moselle. Contactez-nous au 078 720 30 23 pour un devis gratuit.",
     ],
     faqItems: [
@@ -567,15 +567,15 @@ export const PLOMBERIE_PAGES: PageData[] = [
     metaDescription:
       "Recherche de fuite d'eau à Metz par détection professionnelle. Caméra thermique, gaz traceur. Devis gratuit.",
     seoParagraph:
-      "Trashi Plombier réalise la recherche de fuite à Metz avec des technologies non destructives de pointe — caméra thermique, corrélateur acoustique, gaz traceur — pour localiser précisément toute fuite cachée dans vos murs, dalles ou canalisations enterrées, sans démolition inutile.",
+      "Trashi Plombier réalise la recherche de fuite à Metz avec des technologies non destructives de pointe, caméra thermique, corrélateur acoustique, gaz traceur, pour localiser précisément toute fuite cachée dans vos murs, dalles ou canalisations enterrées, sans démolition inutile.",
     relatedSlugs: ["fuite-eau-urgence-metz", "depannage-plomberie-metz"],
     localSlug: "plombier-metz",
     bodyParagraphs: [
-      "La recherche de fuite à Metz est une prestation hautement spécialisée qui requiert des équipements professionnels et un savoir-faire technique éprouvé. Contrairement à une fuite visible (joint qui goutte, robinet qui fuit), les fuites cachées — dans les murs, sous les dalles, dans les canalisations enterrées — sont difficiles à détecter sans les bons outils. Chez Trashi Plombier, nous utilisons des technologies de détection non destructives qui permettent de localiser précisément l'origine d'une fuite sans casser les murs ni ouvrir les dalles, minimisant les dégâts et les coûts de remise en état.",
+      "La recherche de fuite à Metz est une prestation hautement spécialisée qui requiert des équipements professionnels et un savoir-faire technique éprouvé. Contrairement à une fuite visible (joint qui goutte, robinet qui fuit), les fuites cachées, dans les murs, sous les dalles, dans les canalisations enterrées, sont difficiles à détecter sans les bons outils. Chez Trashi Plombier, nous utilisons des technologies de détection non destructives qui permettent de localiser précisément l'origine d'une fuite sans casser les murs ni ouvrir les dalles, minimisant les dégâts et les coûts de remise en état.",
       "Notre arsenal de détection comprend plusieurs méthodes complémentaires. La caméra thermique permet de visualiser les différences de température provoquées par une fuite d'eau dans une paroi. Le corrélateur acoustique détecte les vibrations sonores générées par l'écoulement d'eau sous pression dans une canalisation percée. Le gaz traceur (mélange d'azote et d'hydrogène inoffensif) est injecté dans la canalisation suspecte et remonte à travers le sol ou la paroi jusqu'à la fissure, où notre détecteur le capte avec précision.",
       "Les situations nécessitant une recherche de fuite professionnelle à Metz sont nombreuses : compteur d'eau qui tourne en l'absence de toute consommation (test du compteur à faire la nuit), taches d'humidité sur les murs sans cause apparente, facture d'eau anormalement élevée, plancher qui sonne creux ou qui gondole, moisissures inexpliquées dans une pièce. Trashi Plombier intervient rapidement sur Metz, Amnéville, Thionville et tout le secteur de la Moselle pour ces diagnostics.",
-      "Une fois la fuite localisée, notre équipe procède à la réparation dans les meilleurs délais. Selon l'accessibilité et l'étendue des dégâts, la réparation peut nécessiter une ouverture chirurgicale dans la paroi ou le plancher — la plus petite possible grâce à la précision de notre localisation. Nous réalisons la réparation, effectuons un test d'étanchéité complet, puis vous accompagnons pour les démarches avec votre assurance habitation si nécessaire.",
-      "Le rapport de recherche de fuite établi par Trashi Plombier est un document reconnu par les compagnies d'assurance pour la déclaration de sinistre dégâts des eaux. Il détaille la localisation de la fuite, les méthodes utilisées pour la détecter, et les travaux nécessaires à la réparation. Ce rapport facilite considérablement vos démarches auprès de votre assureur. Devis gratuit pour toute recherche de fuite à Metz — appelez le 078 720 30 23.",
+      "Une fois la fuite localisée, notre équipe procède à la réparation dans les meilleurs délais. Selon l'accessibilité et l'étendue des dégâts, la réparation peut nécessiter une ouverture chirurgicale dans la paroi ou le plancher, la plus petite possible grâce à la précision de notre localisation. Nous réalisons la réparation, effectuons un test d'étanchéité complet, puis vous accompagnons pour les démarches avec votre assurance habitation si nécessaire.",
+      "Le rapport de recherche de fuite établi par Trashi Plombier est un document reconnu par les compagnies d'assurance pour la déclaration de sinistre dégâts des eaux. Il détaille la localisation de la fuite, les méthodes utilisées pour la détecter, et les travaux nécessaires à la réparation. Ce rapport facilite considérablement vos démarches auprès de votre assureur. Devis gratuit pour toute recherche de fuite à Metz, appelez le 078 720 30 23.",
     ],
     faqItems: [
       {
@@ -584,7 +584,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
       },
       {
         q: "La recherche de fuite nécessite-t-elle de casser les murs ?",
-        a: "Grâce à nos technologies de détection non destructives (caméra thermique, corrélateur acoustique, gaz traceur), nous localisons la fuite avec une grande précision sans ouvrir les murs. Si une ouverture est nécessaire pour la réparation, elle est aussi petite que possible — beaucoup moins invasive qu'une recherche à l'aveugle.",
+        a: "Grâce à nos technologies de détection non destructives (caméra thermique, corrélateur acoustique, gaz traceur), nous localisons la fuite avec une grande précision sans ouvrir les murs. Si une ouverture est nécessaire pour la réparation, elle est aussi petite que possible, beaucoup moins invasive qu'une recherche à l'aveugle.",
       },
       {
         q: "Qui paye la recherche de fuite : moi ou l'assurance ?",
@@ -602,7 +602,7 @@ export const PLOMBERIE_PAGES: PageData[] = [
   },
 ];
 
-// --------------- SILO 3 — CHAUFFAGE ---------------
+// --------------- SILO 3, CHAUFFAGE ---------------
 
 export const CHAUFFAGE_PAGES: PageData[] = [
   {
@@ -614,13 +614,13 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     metaDescription:
       "Installation de chauffage à Metz : chaudière gaz, pompe à chaleur, plancher chauffant. Chauffagiste certifié.",
     seoParagraph:
-      "Trashi Plombier installe tous types de systèmes de chauffage à Metz : chaudière à condensation gaz, pompe à chaleur air/eau, plancher chauffant hydraulique — nos chauffagistes certifiés vous conseillent sur la solution la plus adaptée à votre logement et à votre budget, avec devis gratuit.",
+      "Trashi Plombier installe tous types de systèmes de chauffage à Metz : chaudière à condensation gaz, pompe à chaleur air/eau, plancher chauffant hydraulique, nos chauffagistes certifiés vous conseillent sur la solution la plus adaptée à votre logement et à votre budget, avec devis gratuit.",
     relatedSlugs: ["entretien-chaudiere-metz", "pose-chauffe-eau-metz"],
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
       "L'installation d'un système de chauffage à Metz est un investissement important qui engage votre confort thermique et vos dépenses énergétiques pour 15 à 20 ans. Trashi Plombier vous accompagne dans le choix et l'installation de la solution la plus adaptée à votre logement, à votre budget et à vos habitudes de consommation. Avec plus de 10 ans d'expérience en installation chauffage sur Metz et la Moselle, nous avons mis en service des centaines de systèmes de chauffage chez des particuliers, professionnels et copropriétés.",
       "Les systèmes de chauffage que nous installons à Metz couvrent toutes les technologies : chaudière à condensation gaz (la plus répandue, rendement > 109 %), chaudière fioul basse température, pompe à chaleur air/eau (économies d'énergie jusqu'à 75 %, éligible MaPrimeRénov'), pompe à chaleur géothermique, plancher chauffant hydraulique (confort thermique optimal), et radiateurs à eau basse température. Chaque installation est dimensionnée selon une étude thermique de votre logement.",
-      "Le remplacement d'une ancienne chaudière gaz ou fioul par une pompe à chaleur air/eau est aujourd'hui l'une des rénovations énergétiques les plus populaires à Metz, notamment grâce aux aides financières disponibles. MaPrimeRénov', la prime énergie CEE et l'éco-prêt à taux zéro permettent de financer une grande partie du remplacement. Trashi Plombier vous aide à estimer vos droits aux aides et à constituer votre dossier — un service que nous proposons gratuitement à nos clients.",
+      "Le remplacement d'une ancienne chaudière gaz ou fioul par une pompe à chaleur air/eau est aujourd'hui l'une des rénovations énergétiques les plus populaires à Metz, notamment grâce aux aides financières disponibles. MaPrimeRénov', la prime énergie CEE et l'éco-prêt à taux zéro permettent de financer une grande partie du remplacement. Trashi Plombier vous aide à estimer vos droits aux aides et à constituer votre dossier, un service que nous proposons gratuitement à nos clients.",
       "Toutes nos installations de chauffage à Metz respectent les normes en vigueur : DTU 65.11 et DTU 65.14 pour les chaudières et circuits de chauffage, réglementation thermique RE2020 pour les constructions neuves, et réglementation PG (qualification gaz) pour les raccordements gaz. Nos techniciens sont certifiés pour les travaux gaz et PAC, et réalisent la mise en service avec un test de rendement pour s'assurer du bon fonctionnement de l'installation.",
       "Trashi Plombier couvre tout le bassin messin pour l'installation de chauffage : Metz, Montigny-lès-Metz, Marly, Longeville-lès-Metz, Maizières-lès-Metz, Talange, Hagondange et Amnéville. Notre équipe coordonne les travaux de génie civil si nécessaires (tranchées pour PAC géothermique, percement pour cheminée de chaudière). Contactez-nous au 078 720 30 23 pour un devis gratuit, avec étude thermique de votre logement incluse.",
     ],
@@ -664,9 +664,9 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     bodyParagraphs: [
       "L'entretien annuel de chaudière à Metz est obligatoire depuis le décret du 9 octobre 2009 (modifié en 2023). Cette visite annuelle est obligatoire pour toutes les chaudières gaz et fioul dont la puissance est comprise entre 4 et 400 kW. Son non-respect peut entraîner des sanctions, mais surtout des risques pour la sécurité : intoxication au monoxyde de carbone (CO), incendie, explosion. Trashi Plombier réalise ces entretiens annuels sur Metz et toute la Moselle avec remise d'un certificat de conformité.",
       "Une visite d'entretien chaudière réalisée par Trashi Plombier à Metz comprend toutes les opérations réglementaires : nettoyage du corps de chauffe et de l'échangeur, vérification et nettoyage du brûleur, contrôle et réglage de la combustion (mesure du taux de CO₂, O₂, CO et de la température des fumées), vérification du tirage et de l'évacuation des gaz brûlés, contrôle de la pression du circuit, vérification des dispositifs de sécurité, et test du thermostat. À l'issue, nous remettons un certificat signé conforme aux exigences légales.",
-      "Au-delà de l'obligation légale, l'entretien régulier de votre chaudière à Metz présente de nombreux avantages concrets. Une chaudière bien entretenue consomme jusqu'à 15 % d'énergie en moins qu'une chaudière encrassée. Elle tombe moins souvent en panne — évitant les dépannages d'urgence coûteux, surtout en hiver. Sa durée de vie est prolongée de plusieurs années. Et votre assurance habitation ne peut pas refuser une indemnisation liée à un sinistre chaudière si vous justifiez d'un entretien annuel régulier.",
+      "Au-delà de l'obligation légale, l'entretien régulier de votre chaudière à Metz présente de nombreux avantages concrets. Une chaudière bien entretenue consomme jusqu'à 15 % d'énergie en moins qu'une chaudière encrassée. Elle tombe moins souvent en panne, évitant les dépannages d'urgence coûteux, surtout en hiver. Sa durée de vie est prolongée de plusieurs années. Et votre assurance habitation ne peut pas refuser une indemnisation liée à un sinistre chaudière si vous justifiez d'un entretien annuel régulier.",
       "Trashi Plombier entretient toutes les marques de chaudières sur Metz et les communes avoisinantes comme Woippy, Marly et Augny : Vaillant, Viessmann, De Dietrich, Chaffoteaux, Buderus, Atlantic, Saunier Duval, Elm Leblanc, Bosch, Frisquet. Nos techniciens sont certifiés pour les travaux sur chaudières gaz et maîtrisent aussi bien les anciennes chaudières atmosphériques que les modernes chaudières à condensation avec régulation électronique avancée.",
-      "Pour simplifier votre gestion, Trashi Plombier propose des contrats d'entretien annuel avec rappel automatique par SMS ou email lorsque la date de votre prochain entretien approche. Ces contrats peuvent inclure une couverture panne avec intervention prioritaire en cas de défaillance. Appelez-nous au 078 720 30 23 pour réserver votre entretien de chaudière à Metz — devis gratuit, intervention rapide, 98 % de clients satisfaits.",
+      "Pour simplifier votre gestion, Trashi Plombier propose des contrats d'entretien annuel avec rappel automatique par SMS ou email lorsque la date de votre prochain entretien approche. Ces contrats peuvent inclure une couverture panne avec intervention prioritaire en cas de défaillance. Appelez-nous au 078 720 30 23 pour réserver votre entretien de chaudière à Metz, devis gratuit, intervention rapide, 98 % de clients satisfaits.",
     ],
     faqItems: [
       {
@@ -700,7 +700,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     metaDescription:
       "Pose de chauffe-eau à Metz : électrique, thermodynamique, solaire. Installation par un chauffagiste qualifié.",
     seoParagraph:
-      "Trashi Plombier réalise la pose de votre chauffe-eau à Metz dans les règles de l'art : chauffe-eau électrique, thermodynamique ou solaire — raccordement hydraulique et électrique conforme aux normes, devis gratuit, et accompagnement pour MaPrimeRénov' sur les modèles éligibles.",
+      "Trashi Plombier réalise la pose de votre chauffe-eau à Metz dans les règles de l'art : chauffe-eau électrique, thermodynamique ou solaire, raccordement hydraulique et électrique conforme aux normes, devis gratuit, et accompagnement pour MaPrimeRénov' sur les modèles éligibles.",
     relatedSlugs: [
       "remplacement-chauffe-eau-metz",
       "entretien-ballon-eau-chaude-metz",
@@ -708,7 +708,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
       "La pose d'un chauffe-eau à Metz est une opération technique qui va bien au-delà d'un simple raccordement. Elle exige une connaissance approfondie des normes d'installation (NF C 15-100 pour la partie électrique, DTU 60.1 pour la partie hydraulique), des règles de sécurité, et une bonne maîtrise des différentes technologies de production d'eau chaude sanitaire. Trashi Plombier réalise ces installations sur Metz et dans toute la Moselle depuis plus de 10 ans, avec un savoir-faire reconnu par 98 % de clients satisfaits.",
-      "La pose d'un chauffe-eau électrique à accumulation est l'installation la plus courante. Elle implique : la fixation murale de l'appareil (généralement 50 à 300 litres), le raccordement sur le réseau d'eau froide avec groupe de sécurité, le raccordement sur le réseau d'eau chaude, et le branchement électrique sur un circuit dédié avec disjoncteur adapté. Le groupe de sécurité — pièce essentielle qui protège le ballon contre la surpression — est obligatoire et doit être posé correctement pour éviter tout risque.",
+      "La pose d'un chauffe-eau électrique à accumulation est l'installation la plus courante. Elle implique : la fixation murale de l'appareil (généralement 50 à 300 litres), le raccordement sur le réseau d'eau froide avec groupe de sécurité, le raccordement sur le réseau d'eau chaude, et le branchement électrique sur un circuit dédié avec disjoncteur adapté. Le groupe de sécurité, pièce essentielle qui protège le ballon contre la surpression, est obligatoire et doit être posé correctement pour éviter tout risque.",
       "Le chauffe-eau thermodynamique représente aujourd'hui la solution de prédilection pour les maisons individuelles à Metz grâce à ses économies d'énergie spectaculaires (jusqu'à 70 % d'économies par rapport à un chauffe-eau électrique classique) et son éligibilité à MaPrimeRénov'. Son installation est plus complexe : l'appareil intègre une pompe à chaleur qui capte les calories de l'air ambiant, ce qui nécessite une implantation dans un local suffisamment grand (minimum 20 m³) et bien ventilé, ou avec une connexion à l'air extérieur.",
       "Pour les maisons avec toiture bien exposée au sud, le chauffe-eau solaire individuel (CESI) est la solution la plus économe et la plus écologique. Il combine des capteurs solaires thermiques posés en toiture avec un ballon de stockage, complété par un appoint électrique ou gaz pour les jours sans ensoleillement. Trashi Plombier réalise l'installation complète des CESI à Metz et sur les communes proches comme Amnéville et Hagondange, en coordination avec les couvreurs pour la pose des capteurs.",
       "À l'issue de chaque pose de chauffe-eau à Metz, Trashi Plombier réalise une mise en service complète : vérification de l'étanchéité hydraulique, test du groupe de sécurité, réglage de la température (conseillée à 55-60 °C pour tuer la légionelle), et vérification électrique. Nous vous expliquons le fonctionnement de votre nouvel appareil et les bons réglages à adopter pour maximiser les économies d'énergie. Appelez le 078 720 30 23 pour un devis gratuit.",
@@ -745,20 +745,20 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     metaDescription:
       "Entretien et maintenance de ballon d'eau chaude à Metz. Détartrage, remplacement anode, vidange. Devis gratuit.",
     seoParagraph:
-      "Trashi Plombier assure l'entretien complet de votre ballon d'eau chaude à Metz : détartrage, remplacement de l'anode magnésium, vidange et vérification du groupe de sécurité — pour doubler la durée de vie de votre chauffe-eau et maintenir une eau saine.",
+      "Trashi Plombier assure l'entretien complet de votre ballon d'eau chaude à Metz : détartrage, remplacement de l'anode magnésium, vidange et vérification du groupe de sécurité, pour doubler la durée de vie de votre chauffe-eau et maintenir une eau saine.",
     relatedSlugs: ["pose-chauffe-eau-metz", "remplacement-chauffe-eau-metz"],
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
-      "L'entretien du ballon d'eau chaude à Metz est une opération souvent négligée par les propriétaires, alors qu'elle peut doubler la durée de vie de l'appareil et éviter des problèmes sérieux. Un ballon d'eau chaude non entretenu accumule du tartre (l'eau de Metz est assez calcaire, avec un titre hydrotimétrique élevé), voit son anode magnésium se consommer jusqu'à épuisement, et finit par se corroder de l'intérieur — ce qui entraîne une eau rouillée et une fuite inéluctable. Trashi Plombier réalise ces entretiens sur Metz et toute la Moselle.",
+      "L'entretien du ballon d'eau chaude à Metz est une opération souvent négligée par les propriétaires, alors qu'elle peut doubler la durée de vie de l'appareil et éviter des problèmes sérieux. Un ballon d'eau chaude non entretenu accumule du tartre (l'eau de Metz est assez calcaire, avec un titre hydrotimétrique élevé), voit son anode magnésium se consommer jusqu'à épuisement, et finit par se corroder de l'intérieur, ce qui entraîne une eau rouillée et une fuite inéluctable. Trashi Plombier réalise ces entretiens sur Metz et toute la Moselle.",
       "L'anode magnésium est la pièce la plus importante à surveiller dans l'entretien d'un ballon d'eau chaude. Cette tige de métal actif se sacrifie par électrolyse pour protéger la cuve en acier de la corrosion. Elle doit être vérifiée tous les 2 à 3 ans et remplacée lorsqu'elle est consommée à plus de 50 %. Un ballon sans anode fonctionnelle se corrode rapidement, développe des bactéries (dont la légionelle), et doit être remplacé bien avant sa durée de vie théorique de 10 à 15 ans.",
-      "Le détartrage du ballon d'eau chaude est nécessaire dans les régions à eau dure comme la Moselle. Le tartre (calcaire) s'accumule sur la résistance électrique et le fond du ballon, créant une isolation thermique qui oblige la résistance à chauffer plus longtemps — consommant davantage d'électricité. Un ballon fortement entartré consomme de 15 à 30 % d'énergie supplémentaire. Trashi Plombier réalise la vidange et le détartrage de votre ballon à Metz, avec un nettoyage complet de la résistance si nécessaire.",
+      "Le détartrage du ballon d'eau chaude est nécessaire dans les régions à eau dure comme la Moselle. Le tartre (calcaire) s'accumule sur la résistance électrique et le fond du ballon, créant une isolation thermique qui oblige la résistance à chauffer plus longtemps, consommant davantage d'électricité. Un ballon fortement entartré consomme de 15 à 30 % d'énergie supplémentaire. Trashi Plombier réalise la vidange et le détartrage de votre ballon à Metz, avec un nettoyage complet de la résistance si nécessaire.",
       "La vidange annuelle du ballon est recommandée pour les régions calcaires. Cette opération permet d'éliminer les dépôts sédimentaires qui s'accumulent au fond de la cuve, d'inspecter l'intérieur de la cuve et la résistance, et de vérifier l'état du groupe de sécurité. Le groupe de sécurité doit lui-même être vérifié et remplacé tous les 5 ans environ, car ses joints peuvent se durcir et l'empêcher de jouer son rôle protecteur contre la surpression.",
       "Trashi Plombier propose un contrat d'entretien ballon d'eau chaude sur Metz et les communes proches (Montigny-lès-Metz, Woippy, Marly, Talange) incluant la visite annuelle avec vérification de l'anode, vidange partielle, test du groupe de sécurité et diagnostic de l'état général. Cet entretien préventif vous évite les pannes inopinées et les remplacements prématurés. Contactez-nous au 078 720 30 23 pour un devis gratuit.",
     ],
     faqItems: [
       {
         q: "À quelle fréquence faut-il entretenir son ballon d'eau chaude ?",
-        a: "Il est recommandé de vérifier le groupe de sécurité chaque année et de faire un entretien complet (anode, vidange, détartrage) tous les 2 à 3 ans. L'anode magnésium se consomme plus rapidement dans les régions à eau dure comme la Moselle — elle peut nécessiter un remplacement tous les 2 ans.",
+        a: "Il est recommandé de vérifier le groupe de sécurité chaque année et de faire un entretien complet (anode, vidange, détartrage) tous les 2 à 3 ans. L'anode magnésium se consomme plus rapidement dans les régions à eau dure comme la Moselle, elle peut nécessiter un remplacement tous les 2 ans.",
       },
       {
         q: "Comment savoir si l'anode de mon ballon est à remplacer ?",
@@ -787,15 +787,15 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     metaDescription:
       "Dépannage de chaudière gaz à Metz. Diagnostic, réparation, mise en service. Chauffagiste certifié PG.",
     seoParagraph:
-      "Trashi Plombier assure le dépannage de chaudière gaz à Metz avec une intervention rapide en moins de 30 minutes : nos chauffagistes certifiés PG diagnostiquent et réparent tous codes d'erreur, toutes marques — 24h/24, 7j/7, devis gratuit.",
+      "Trashi Plombier assure le dépannage de chaudière gaz à Metz avec une intervention rapide en moins de 30 minutes : nos chauffagistes certifiés PG diagnostiquent et réparent tous codes d'erreur, toutes marques, 24h/24, 7j/7, devis gratuit.",
     relatedSlugs: [
       "reparation-chaudiere-metz",
       "depannage-chaudiere-fioul-metz",
     ],
     localSlug: "chauffagiste-metz",
     bodyParagraphs: [
-      "La chaudière gaz est le système de chauffage le plus répandu dans les logements de Metz et de la Moselle. Lorsqu'elle tombe en panne — surtout en hiver — l'inconfort est immédiat. Trashi Plombier met à votre disposition des chauffagistes certifiés PG (qualification obligatoire pour tout travail sur les installations gaz) disponibles 24h/24, 7j/7, pour dépanner votre chaudière gaz à Metz et dans les communes proches comme Hagondange, Maizières-lès-Metz et Amnéville. Intervention garantie en moins de 30 minutes.",
-      "Nos techniciens sont formés sur toutes les technologies de chaudières gaz modernes : chaudières à condensation (les plus performantes et les plus répandues dans les constructions récentes), chaudières à ventouse, chaudières atmosphériques, chaudières sol, et micro-cogénération. Quel que soit le fabricant — Vaillant, Viessmann, Chaffoteaux, De Dietrich, Saunier Duval, Buderus, Atlantic, Frisquet, Elm Leblanc, Bosch — nos chauffagistes connaissent les codes d'erreur et les points de défaillance courants.",
+      "La chaudière gaz est le système de chauffage le plus répandu dans les logements de Metz et de la Moselle. Lorsqu'elle tombe en panne, surtout en hiver, l'inconfort est immédiat. Trashi Plombier met à votre disposition des chauffagistes certifiés PG (qualification obligatoire pour tout travail sur les installations gaz) disponibles 24h/24, 7j/7, pour dépanner votre chaudière gaz à Metz et dans les communes proches comme Hagondange, Maizières-lès-Metz et Amnéville. Intervention garantie en moins de 30 minutes.",
+      "Nos techniciens sont formés sur toutes les technologies de chaudières gaz modernes : chaudières à condensation (les plus performantes et les plus répandues dans les constructions récentes), chaudières à ventouse, chaudières atmosphériques, chaudières sol, et micro-cogénération. Quel que soit le fabricant, Vaillant, Viessmann, Chaffoteaux, De Dietrich, Saunier Duval, Buderus, Atlantic, Frisquet, Elm Leblanc, Bosch, nos chauffagistes connaissent les codes d'erreur et les points de défaillance courants.",
       "Les pannes de chaudière gaz les plus fréquentes à Metz sont : le manque d'allumage (problème d'électrode, de vanne gaz ou d'électronique d'allumage), le code d'erreur pression basse (circuit de chauffage à regonfler), le blocage de la pompe de circulation (roulement grippé après l'été), la défaillance de la sonde de température (NTC), le givrage du condenseur en hiver, et la défaillance du circulateur. Nos techniciens identifient rapidement la cause et procèdent à la réparation.",
       "La sécurité gaz est notre priorité absolue lors de tout dépannage de chaudière gaz à Metz. Si vous sentez une odeur de gaz, evacuez immédiatement le logement, n'actionnez aucun interrupteur électrique, et appelez le 0800 47 33 33 (urgence gaz GRDF, gratuit) avant de nous contacter. Nos techniciens certifiés PG vérifient systématiquement l'étanchéité des raccords gaz lors de chaque intervention et s'assurent de l'absence de fuite avant la remise en service de la chaudière.",
       "Après chaque dépannage de chaudière gaz, Trashi Plombier réalise un test complet de bon fonctionnement : vérification de la combustion, mesure du CO, test de la régulation et du thermostat, et contrôle de la pression du circuit. Un rapport d'intervention vous est remis. Si votre chaudière est vieillissante et nécessite des réparations fréquentes, nous vous présentons objectivement les avantages d'un remplacement et les aides MaPrimeRénov' disponibles. Devis gratuit au 078 720 30 23.",
@@ -843,12 +843,12 @@ export const CHAUFFAGE_PAGES: PageData[] = [
       "Les pannes les plus courantes sur une chaudière fioul concernent principalement le brûleur : encrassement de la gicleur, électrode d'allumage usée, résistance de préchauffage défaillante, photorésistance (cellule de détection de flamme) colmatée, ou pompe à fioul grippée. Le dépannage d'un brûleur fioul nécessite une expertise spécifique que nos techniciens possèdent. Nous intervenons sur tous les brûleurs des grandes marques : Riello, Bentone, Cuenod, Weishaupt, Herrmann.",
       "Les problèmes liés à la cuve et au circuit d'alimentation en fioul sont également fréquents : cuve vide ou presque (panne sèche), fioul contaminé par de l'eau (condensation), filtre à fioul colmaté, ou gicleur encrassé. Trashi Plombier vérifie systématiquement l'état de l'alimentation en fioul lors de chaque intervention de dépannage à Metz et dans les communes avoisinantes. Nous pouvons également conseiller sur l'entretien et le remplacement des cuves à fioul.",
       "Dans le contexte de la transition énergétique, de nombreux propriétaires de chaudières fioul à Metz s'interrogent sur la conversion vers une solution plus économique et écologique. L'interdiction de vente de chaudières fioul neuves (effective depuis 2022) et la hausse du prix du fioul domestique rendent le remplacement de plus en plus pertinent. Trashi Plombier vous conseille objectivement sur les solutions alternatives : pompe à chaleur air/eau, chaudière gaz à condensation, et vous informe sur les aides disponibles (MaPrimeRénov').",
-      "Trashi Plombier assure le dépannage de chaudières fioul sur tout le secteur de Metz et la Moselle — Woippy, Maizières-lès-Metz, Talange, Amnéville, Thionville. Notre service est disponible 24h/24, 7j/7, pour les urgences chauffage en plein hiver. Chaque intervention se termine par un test de rendement de combustion, vous garantissant une chaudière fioul réparée et optimisée. Devis gratuit — appelez le 078 720 30 23.",
+      "Trashi Plombier assure le dépannage de chaudières fioul sur tout le secteur de Metz et la Moselle, Woippy, Maizières-lès-Metz, Talange, Amnéville, Thionville. Notre service est disponible 24h/24, 7j/7, pour les urgences chauffage en plein hiver. Chaque intervention se termine par un test de rendement de combustion, vous garantissant une chaudière fioul réparée et optimisée. Devis gratuit, appelez le 078 720 30 23.",
     ],
     faqItems: [
       {
         q: "Ma chaudière fioul ne s'allume plus, que faire ?",
-        a: "Vérifiez d'abord votre jauge de fioul — une panne sèche (cuve vide) est la cause n°1 de panne de chaudière fioul. Si la cuve a du fioul, appuyez une fois sur le bouton de reset du brûleur (bouton rouge ou jaune). Si la chaudière ne repart pas, appelez Trashi Plombier au 078 720 30 23.",
+        a: "Vérifiez d'abord votre jauge de fioul, une panne sèche (cuve vide) est la cause n°1 de panne de chaudière fioul. Si la cuve a du fioul, appuyez une fois sur le bouton de reset du brûleur (bouton rouge ou jaune). Si la chaudière ne repart pas, appelez Trashi Plombier au 078 720 30 23.",
       },
       {
         q: "Doit-on faire entretenir une chaudière fioul chaque année ?",
@@ -860,7 +860,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
       },
       {
         q: "Conseillez-vous de remplacer une vieille chaudière fioul par une pompe à chaleur ?",
-        a: "Dans la plupart des cas, oui — surtout pour les maisons bien isolées. Une pompe à chaleur air/eau réduit les coûts de chauffage de 50 à 70 % par rapport au fioul, et des aides comme MaPrimeRénov' peuvent financer une partie significative du remplacement. Trashi Plombier réalise une étude comparative gratuite.",
+        a: "Dans la plupart des cas, oui, surtout pour les maisons bien isolées. Une pompe à chaleur air/eau réduit les coûts de chauffage de 50 à 70 % par rapport au fioul, et des aides comme MaPrimeRénov' peuvent financer une partie significative du remplacement. Trashi Plombier réalise une étude comparative gratuite.",
       },
       {
         q: "Intervenez-vous sur les chaudières fioul de toutes marques à Metz ?",
@@ -877,7 +877,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
     metaDescription:
       "Dépannage de chaudière électrique à Metz. Diagnostic et réparation rapide. Devis gratuit.",
     seoParagraph:
-      "Trashi Plombier assure le dépannage de votre chaudière électrique à Metz avec un diagnostic précis et une réparation rapide : résistance, thermostat, sécurité thermique, carte électronique — tous composants réparés ou remplacés, devis gratuit, intervention 24h/24.",
+      "Trashi Plombier assure le dépannage de votre chaudière électrique à Metz avec un diagnostic précis et une réparation rapide : résistance, thermostat, sécurité thermique, carte électronique, tous composants réparés ou remplacés, devis gratuit, intervention 24h/24.",
     relatedSlugs: [
       "depannage-chaudiere-fioul-metz",
       "entretien-chaudiere-metz",
@@ -897,7 +897,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
       },
       {
         q: "Le thermostat de sécurité de ma chaudière s'est déclenché, que faire ?",
-        a: "Laissez la chaudière refroidir 15 à 20 minutes, puis appuyez sur le bouton de réarmement (thermostat de sécurité). Si la chaudière redémarre normalement, surveillez si elle déclenche à nouveau. Un déclenchement répété indique un problème à diagnostiquer — appelez Trashi Plombier.",
+        a: "Laissez la chaudière refroidir 15 à 20 minutes, puis appuyez sur le bouton de réarmement (thermostat de sécurité). Si la chaudière redémarre normalement, surveillez si elle déclenche à nouveau. Un déclenchement répété indique un problème à diagnostiquer, appelez Trashi Plombier.",
       },
       {
         q: "Peut-on entretenir une chaudière électrique soi-même ?",
@@ -915,7 +915,7 @@ export const CHAUFFAGE_PAGES: PageData[] = [
   },
 ];
 
-// --------------- SILO 4 — ZONES D'INTERVENTION ---------------
+// --------------- SILO 4, ZONES D'INTERVENTION ---------------
 
 export interface ZonePageData {
   slug: string;
@@ -946,7 +946,7 @@ export const ZONE_PAGES: ZonePageData[] = [
       "Trashi Plombier, votre plombier à Metz depuis plus de 10 ans : urgence 24h/24, dépannage rapide, installation et rénovation salle de bain. Intervention en moins de 30 minutes sur Metz (57000) et toute la Moselle, devis gratuit.",
     relatedZoneSlugs: ["plombier-montigny-les-metz", "plombier-woippy"],
     bodyParagraphs: [
-      "Trashi Plombier est votre plombier de référence à Metz depuis plus de 10 ans. Basés en Moselle, nous intervenons sur l'ensemble de la ville de Metz — centre-ville, Queuleu, Borny, Bellecroix, Sablon, Ban-Saint-Martin et tous les quartiers — pour tous vos travaux de plomberie, du dépannage d'urgence à la rénovation complète de salle de bain.",
+      "Trashi Plombier est votre plombier de référence à Metz depuis plus de 10 ans. Basés en Moselle, nous intervenons sur l'ensemble de la ville de Metz, centre-ville, Queuleu, Borny, Bellecroix, Sablon, Ban-Saint-Martin et tous les quartiers, pour tous vos travaux de plomberie, du dépannage d'urgence à la rénovation complète de salle de bain.",
       "Notre service de dépannage plomberie à Metz fonctionne 24h/24 et 7j/7. Fuite d'eau, canalisation bouchée, WC hors service, chauffe-eau en panne : un technicien qualifié est chez vous en moins de 30 minutes. Avec plus de 120 clients satisfaits et un taux de satisfaction de 98 %, nous sommes l'un des plombiers les plus recommandés de Metz.",
       "Nous prenons en charge l'intégralité de vos travaux de plomberie à Metz : installation de tuyauterie neuve, remplacement de robinetterie, pose de WC et douche à l'italienne, rénovation complète de salle de bain, recherche de fuite par caméra thermique, débouchage par haute pression. Chaque intervention est réalisée dans les règles de l'art avec des matériaux de qualité et une finition soignée.",
       "Trashi Plombier intervient également dans toutes les communes de l'agglomération messine : Montigny-lès-Metz, Woippy, Marly, Augny, Longeville-lès-Metz, Maizières-lès-Metz, Talange, Hagondange, Amnéville et Thionville. Quel que soit l'endroit où vous vous trouvez en Moselle (57), nous pouvons être là en moins de 30 minutes.",
@@ -971,14 +971,14 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Montigny-lès-Metz pour dépannage, installation et rénovation. Intervention rapide.",
     seoParagraph:
-      "Besoin d'un plombier à Montigny-lès-Metz (57158) ? Trashi Plombier intervient en moins de 30 minutes pour tout dépannage, installation ou rénovation — disponible 24h/24 et 7j/7.",
+      "Besoin d'un plombier à Montigny-lès-Metz (57158) ? Trashi Plombier intervient en moins de 30 minutes pour tout dépannage, installation ou rénovation, disponible 24h/24 et 7j/7.",
     relatedZoneSlugs: ["plombier-metz", "plombier-longeville-les-metz"],
     bodyParagraphs: [
       "Montigny-lès-Metz est une commune résidentielle de la banlieue sud de Metz, comptant plus de 20 000 habitants. Trashi Plombier y intervient régulièrement pour des missions de dépannage plomberie, d'installation sanitaire et de rénovation de salle de bain. Notre base à Metz nous permet d'atteindre Montigny-lès-Metz (57158) en moins de 15 minutes.",
       "Pour toute urgence plomberie à Montigny-lès-Metz, appelez-nous au 078 720 30 23. Que ce soit une fuite sous l'évier, un WC bouché en pleine nuit ou un chauffe-eau qui lâche un dimanche matin, un technicien qualifié est disponible 24h/24 et 7j/7 pour intervenir rapidement à votre domicile ou dans votre entreprise.",
       "Nous réalisons l'ensemble des travaux de plomberie à Montigny-lès-Metz : remplacement de robinetterie (mitigeurs, thermostatiques), pose de douche à l'italienne ou de baignoire, installation de WC suspendu, recherche et réparation de fuite d'eau, débouchage de canalisation par haute pression. Nos plombiers sont certifiés et travaillent avec des matériaux conformes aux normes en vigueur.",
       "Les habitants de Montigny-lès-Metz font confiance à Trashi Plombier depuis plus de 10 ans. Avec 98 % de clients satisfaits et plus de 120 interventions réalisées dans la région messine, nous sommes le plombier de proximité recommandé à Montigny-lès-Metz et dans les communes voisines de Metz, Longeville-lès-Metz et Augny.",
-      "Devis gratuit et sans engagement pour toute intervention à Montigny-lès-Metz. Nous vous communiquons le prix avant de commencer — pas de surprise sur la facture. Pour un dépannage urgent ou pour planifier vos travaux de plomberie à Montigny-lès-Metz (57158), contactez-nous dès maintenant.",
+      "Devis gratuit et sans engagement pour toute intervention à Montigny-lès-Metz. Nous vous communiquons le prix avant de commencer, pas de surprise sur la facture. Pour un dépannage urgent ou pour planifier vos travaux de plomberie à Montigny-lès-Metz (57158), contactez-nous dès maintenant.",
     ],
     faqItems: [
       { q: "Y a-t-il un plombier disponible en urgence à Montigny-lès-Metz ?", a: "Oui, Trashi Plombier intervient en urgence à Montigny-lès-Metz 24h/24 et 7j/7. Depuis Metz, nous atteignons Montigny-lès-Metz en moins de 15 minutes." },
@@ -998,7 +998,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Woippy : dépannage urgent, installation, entretien. Service rapide et professionnel.",
     seoParagraph:
-      "Trashi Plombier intervient à Woippy (57140) pour tous vos besoins en plomberie — urgence 24h/24, débouchage, installation et rénovation. Moins de 20 minutes depuis Metz, devis gratuit.",
+      "Trashi Plombier intervient à Woippy (57140) pour tous vos besoins en plomberie, urgence 24h/24, débouchage, installation et rénovation. Moins de 20 minutes depuis Metz, devis gratuit.",
     relatedZoneSlugs: ["plombier-metz", "plombier-maizieres-les-metz"],
     bodyParagraphs: [
       "Woippy est une commune de la banlieue nord de Metz, avec un tissu mixte de logements résidentiels et d'activités industrielles. Trashi Plombier y assure des interventions de plomberie rapides et fiables, que vous soyez un particulier, un bailleur social ou un professionnel. Depuis notre base messine, nous sommes à Woippy (57140) en moins de 20 minutes.",
@@ -1025,7 +1025,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Augny pour dépannage, installation et rénovation plomberie. Devis gratuit.",
     seoParagraph:
-      "Plombier à Augny (57685) — Trashi Plombier prend en charge tous vos travaux de plomberie à Augny et ses environs. Dépannage 24h/24, devis gratuit, intervention express depuis Metz.",
+      "Plombier à Augny (57685), Trashi Plombier prend en charge tous vos travaux de plomberie à Augny et ses environs. Dépannage 24h/24, devis gratuit, intervention express depuis Metz.",
     relatedZoneSlugs: ["plombier-metz", "plombier-marly-moselle"],
     bodyParagraphs: [
       "Augny est une petite commune de la banlieue sud-ouest de Metz, proche de l'aéroport Metz-Nancy-Lorraine. Trashi Plombier dessert Augny (57685) pour l'ensemble des besoins en plomberie : dépannage d'urgence, installation de sanitaires, rénovation de salle de bain et débouchage de canalisation. Notre temps d'intervention depuis Metz est inférieur à 25 minutes.",
@@ -1052,7 +1052,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Marly en Moselle : dépannage plomberie, installation, rénovation. Devis gratuit.",
     seoParagraph:
-      "Votre plombier à Marly en Moselle (57155) — Trashi Plombier intervient pour dépannage urgence, installation et rénovation à Marly, 24h/24 et 7j/7, moins de 20 minutes de Metz.",
+      "Votre plombier à Marly en Moselle (57155), Trashi Plombier intervient pour dépannage urgence, installation et rénovation à Marly, 24h/24 et 7j/7, moins de 20 minutes de Metz.",
     relatedZoneSlugs: ["plombier-metz", "plombier-augny"],
     bodyParagraphs: [
       "Marly est une commune résidentielle du sud de Metz, fortement peuplée et dotée d'un parc immobilier varié. Trashi Plombier est votre plombier de proximité à Marly (57155), spécialisé dans le dépannage toutes heures, l'installation sanitaire et la rénovation de salle de bain. Nous atteignons Marly depuis notre base messine en moins de 20 minutes.",
@@ -1080,7 +1080,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Longeville-lès-Metz pour vos urgences et travaux de plomberie. Intervention rapide.",
     seoParagraph:
-      "Plombier à Longeville-lès-Metz (57050) — Trashi Plombier assure dépannage urgence 24h/24, installation et rénovation. Intervention rapide depuis Metz, devis gratuit.",
+      "Plombier à Longeville-lès-Metz (57050), Trashi Plombier assure dépannage urgence 24h/24, installation et rénovation. Intervention rapide depuis Metz, devis gratuit.",
     relatedZoneSlugs: ["plombier-metz", "plombier-montigny-les-metz"],
     bodyParagraphs: [
       "Longeville-lès-Metz est une commune de l'agglomération messine, située à l'ouest de Metz, avec un parc résidentiel dense. Trashi Plombier intervient à Longeville-lès-Metz (57050) pour tous vos besoins en plomberie : urgences, travaux d'installation, rénovation de salle de bain et débouchage. Temps de trajet depuis Metz : moins de 15 minutes.",
@@ -1135,7 +1135,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Talange pour dépannage, installation et entretien. Intervention rapide et devis gratuit.",
     seoParagraph:
-      "Plombier à Talange (57525) — Trashi Plombier, spécialiste du dépannage et de l'installation plomberie en Moselle. Urgence 24h/24, intervention rapide, devis gratuit.",
+      "Plombier à Talange (57525), Trashi Plombier, spécialiste du dépannage et de l'installation plomberie en Moselle. Urgence 24h/24, intervention rapide, devis gratuit.",
     relatedZoneSlugs: ["plombier-hagondange", "plombier-maizieres-les-metz"],
     bodyParagraphs: [
       "Talange est une petite commune de la vallée de la Moselle, entre Maizières-lès-Metz et Hagondange. Trashi Plombier dessert Talange (57525) pour toutes vos urgences et travaux de plomberie. Depuis notre base à Metz, nous sommes présents à Talange en moins de 30 minutes.",
@@ -1189,7 +1189,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Plombier à Amnéville pour dépannage, installation et entretien plomberie. Devis gratuit.",
     seoParagraph:
-      "Plombier à Amnéville (57360) — Trashi Plombier, votre expert plomberie en Moselle. Dépannage urgence 24h/24, installation, rénovation salle de bain. Devis gratuit, intervention rapide.",
+      "Plombier à Amnéville (57360), Trashi Plombier, votre expert plomberie en Moselle. Dépannage urgence 24h/24, installation, rénovation salle de bain. Devis gratuit, intervention rapide.",
     relatedZoneSlugs: ["plombier-hagondange", "plombier-metz"],
     bodyParagraphs: [
       "Amnéville est une commune de la Moselle connue pour son complexe de loisirs, son zoo et ses thermes. Elle accueille de nombreux résidents et professionnels qui ont besoin d'un plombier fiable et réactif. Trashi Plombier intervient à Amnéville (57360) pour tous vos besoins en plomberie, en moins de 30 minutes depuis Metz.",
@@ -1277,7 +1277,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Chauffagiste à Montigny-lès-Metz : installation, entretien et dépannage chauffage. Devis gratuit.",
     seoParagraph:
-      "Votre chauffagiste à Montigny-lès-Metz (57158) — Trashi Plombier assure entretien chaudière, dépannage chauffage 24h/24 et installation. Moins de 15 minutes depuis Metz, devis gratuit.",
+      "Votre chauffagiste à Montigny-lès-Metz (57158), Trashi Plombier assure entretien chaudière, dépannage chauffage 24h/24 et installation. Moins de 15 minutes depuis Metz, devis gratuit.",
     relatedZoneSlugs: ["chauffagiste-metz", "chauffagiste-augny"],
     bodyParagraphs: [
       "Trashi Plombier est votre chauffagiste de confiance à Montigny-lès-Metz (57158). Depuis notre base à Metz, nous intervenons rapidement sur Montigny-lès-Metz pour l'entretien annuel de chaudière, le dépannage d'urgence et l'installation de nouveaux équipements de chauffage. Délai d'intervention : moins de 15 minutes.",
@@ -1304,7 +1304,7 @@ export const ZONE_PAGES: ZonePageData[] = [
     metaDescription:
       "Chauffagiste à Woippy pour installation, entretien chaudière et dépannage chauffage.",
     seoParagraph:
-      "Chauffagiste à Woippy (57140) — Trashi Plombier : entretien chaudière, dépannage urgence chauffage 24h/24, installation. Intervention en moins de 20 minutes depuis Metz, devis gratuit.",
+      "Chauffagiste à Woippy (57140), Trashi Plombier : entretien chaudière, dépannage urgence chauffage 24h/24, installation. Intervention en moins de 20 minutes depuis Metz, devis gratuit.",
     relatedZoneSlugs: ["chauffagiste-metz", "chauffagiste-montigny-les-metz"],
     bodyParagraphs: [
       "Trashi Plombier dessert Woippy (57140) pour tous vos besoins en chauffage : entretien annuel de chaudière, dépannage d'urgence, installation de nouveaux équipements. Notre proximité avec Metz nous permet d'intervenir à Woippy en moins de 20 minutes.",

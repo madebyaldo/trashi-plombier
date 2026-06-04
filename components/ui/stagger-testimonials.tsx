@@ -50,7 +50,7 @@ const TESTIMONIALS = [
   },
 ];
 
-const N = TESTIMONIALS.length; // 7 — odd, perfect symmetry
+const N = TESTIMONIALS.length; // 7, odd, perfect symmetry
 
 export default function StaggerTestimonials() {
   const [offset, setOffset] = useState(0);
@@ -105,7 +105,7 @@ export default function StaggerTestimonials() {
         </a>
       </div>
 
-      {/* Cards — stable keys = smooth bidirectional transitions */}
+      {/* Cards, stable keys = smooth bidirectional transitions */}
       <div className="relative w-full overflow-hidden" style={{ height: 420 }}>
         {TESTIMONIALS.map((t) => {
           // Compute circular position relative to current center
@@ -173,7 +173,7 @@ export default function StaggerTestimonials() {
         })}
       </div>
 
-      {/* Nav — bottom center */}
+      {/* Nav, bottom center */}
       <div className="flex justify-center gap-2 mt-4">
         <button
           onClick={prev}

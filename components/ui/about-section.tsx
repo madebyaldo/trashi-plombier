@@ -26,7 +26,7 @@ export default function AboutSection() {
           <span className="text-[13px] font-semibold text-ink-500 uppercase tracking-widest">Qui sommes-nous</span>
         </div>
 
-        {/* Heading — centered */}
+        {/* Heading, centered */}
         <div className="text-left md:text-center max-w-3xl md:mx-auto mb-6">
           <h2
             className="font-heading font-black text-ink-900 leading-[1.0] tracking-tight mb-5"
@@ -35,11 +35,11 @@ export default function AboutSection() {
             Votre plombier de confiance<br />à Metz depuis 10 ans.
           </h2>
           <p className="text-ink-500 text-[15px] leading-relaxed">
-            Trashi Plombier intervient sur Metz et la Moselle pour tous vos besoins en plomberie et chauffage. Urgences, rénovations, entretien — disponible 24h/24, 7j/7.
+            Trashi Plombier intervient sur Metz et la Moselle pour tous vos besoins en plomberie et chauffage. Urgences, rénovations, entretien, disponible 24h/24, 7j/7.
           </p>
         </div>
 
-        {/* CTAs — centered */}
+        {/* CTAs, centered */}
         <div className="flex flex-col sm:flex-row items-start md:items-center md:justify-center gap-3 mb-16">
           <Link
             href="/contact"

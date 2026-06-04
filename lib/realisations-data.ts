@@ -6,8 +6,8 @@ export interface Realisation {
   location: string;
   title: string;
   shortDescription: string;
-  image: string;        // cover photo — used in the grid card
-  images?: string[];    // all gallery photos — falls back to [image] if not set
+  image: string;        // cover photo, used in the grid card
+  images?: string[];    // all gallery photos, falls back to [image] if not set
   metaTitle: string;
   metaDescription: string;
   bodyParagraphs: string[];
@@ -37,7 +37,7 @@ export const REALISATIONS: Realisation[] = [
     bodyParagraphs: [
       "Notre client, situé en plein cœur de Metz Centre, souhaitait transformer une salle de bain vieillissante en espace moderne et fonctionnel. Après un diagnostic complet de l'installation existante, nous avons proposé un projet de rénovation intégrale sur 3 jours.",
       "La première étape consistait à déposer l'ancienne baignoire encastrée et l'ensemble du carrelage de sol sur 8 m². Nous avons ensuite réalisé l'étanchéité du receveur pour la future douche à l'italienne, avant de procéder à la reprise complète des évacuations et des arrivées d'eau.",
-      "La douche à l'italienne a été créée avec un receveur extra-plat à carreler, une paroi en verre trempé 8 mm et un mitigeur thermostatique encastré. L'ensemble de la robinetterie — lavabo, WC et douche — a été remplacé par des modèles chromés de qualité professionnelle.",
+      "La douche à l'italienne a été créée avec un receveur extra-plat à carreler, une paroi en verre trempé 8 mm et un mitigeur thermostatique encastré. L'ensemble de la robinetterie, lavabo, WC et douche, a été remplacé par des modèles chromés de qualité professionnelle.",
       "La mise aux normes électriques de la salle de bain (zones de sécurité, protection différentielle) a été coordonnée avec un électricien partenaire. Le résultat final : une salle de bain neuve, étanche, et conforme aux normes NF C 15-100.",
     ],
     details: [
@@ -234,7 +234,7 @@ export const REALISATIONS: Realisation[] = [
       "Cette réalisation à Hagondange concernait le remplacement d'une ancienne chaudière gaz par une pompe à chaleur air/eau pour une maison individuelle de 120 m² bien isolée (RT 2005). L'objectif : réduire drastiquement la facture de chauffage et valoriser le bien immobilier.",
       "Nous avons réalisé une étude thermique complète du bâtiment avant de dimensionner la PAC à 9 kW monobloc. Le réseau de chauffage existant (radiateurs basse température) a été vérifié et adapté pour fonctionner à 45 °C, température compatible avec le fonctionnement optimal d'une PAC.",
       "L'installation comprenait : pose de l'unité extérieure sur plots anti-vibratoires, raccordement hydraulique au circuit de chauffage avec disconnecteur et vase d'expansion, installation d'un ballon tampon de 100 L, et mise en place de la régulation connectée avec sonde extérieure.",
-      "Nous avons intégralement géré le dossier MaPrimeRénov' et les certificats d'économie d'énergie (CEE), permettant à notre client d'obtenir une subvention couvrant 35 % du coût de l'installation. Le COP mesuré à la mise en service était de 4,2 — la PAC produit 4,2 fois plus d'énergie qu'elle n'en consomme.",
+      "Nous avons intégralement géré le dossier MaPrimeRénov' et les certificats d'économie d'énergie (CEE), permettant à notre client d'obtenir une subvention couvrant 35 % du coût de l'installation. Le COP mesuré à la mise en service était de 4,2, la PAC produit 4,2 fois plus d'énergie qu'elle n'en consomme.",
     ],
     details: [
       { label: "Catégorie", value: "Chauffage" },
