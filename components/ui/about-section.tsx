@@ -40,17 +40,17 @@ export default function AboutSection() {
         </div>
 
         {/* CTAs — centered */}
-        <div className="flex items-center justify-center gap-3 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-16">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[14px] transition-opacity hover:opacity-90"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-[14px] transition-opacity hover:opacity-90"
             style={{ background: "#0c1c35", color: "#ffffff" }}
           >
             Demander un devis <ArrowRight className="w-4 h-4" />
           </Link>
           <a
             href={`tel:${BUSINESS.phoneClean}`}
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[14px] border-2 hover:bg-sand-50 transition-colors"
+            className="inline-flex items-center justify-center gap-2 w-full sm:w-auto px-6 py-3 rounded-xl font-bold text-[14px] border-2 hover:bg-sand-50 transition-colors"
             style={{ borderColor: "#0c1c35", color: "#0c1c35" }}
           >
             {BUSINESS.phone}

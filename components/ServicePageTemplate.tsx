@@ -89,7 +89,7 @@ export default function ServicePageTemplate({ page }: { page: PageData }) {
             <p className="text-white/70 text-[18px] leading-relaxed mb-8">
               {page.seoParagraph}
             </p>
-            <div className="flex flex-wrap gap-3 mb-10">
+            <div className="flex flex-col sm:flex-row gap-3 mb-10">
               <a
                 href={`tel:${BUSINESS.phoneClean}`}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] transition-opacity hover:opacity-90"

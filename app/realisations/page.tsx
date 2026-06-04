@@ -53,7 +53,7 @@ export default function RealisationsPage() {
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href={`tel:${BUSINESS.phoneClean}`}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] transition-opacity hover:opacity-90"
