@@ -11,49 +11,42 @@ const TESTIMONIALS = [
     text: "J'ai contacté Trashi pour remplacer mon chauffe-eau. Intervention rapide, soignée et efficace. Je recommande vivement et referai appel à lui sans hésiter.",
     by: "Tiffany",
     role: "Cliente satisfaite",
-    imgSrc: "https://i.pravatar.cc/150?img=47",
   },
   {
     id: 1,
     text: "M. Trashi a su diagnostiquer mon problème de chauffage avec clarté. Sérieux, ponctuel et passionné, c'est un artisan de confiance que je recommande.",
     by: "Christine",
     role: "Cliente fidèle",
-    imgSrc: "https://i.pravatar.cc/150?img=32",
   },
   {
     id: 2,
     text: "Très satisfaits du travail de M. Trashi : délais respectés, finition impeccable et relation agréable. Un professionnel que nous recommandons sans réserve.",
     by: "Mathilde",
     role: "Cliente satisfaite",
-    imgSrc: "https://i.pravatar.cc/150?img=25",
   },
   {
     id: 3,
     text: "Très satisfait de la prestation effectuée, tout s'est passé nickel de la prise de contact jusqu'à la réalisation. Je referai appel à ses services sans hésiter.",
     by: "Olivier P.",
     role: "Client satisfait",
-    imgSrc: "https://i.pravatar.cc/150?img=12",
   },
   {
     id: 4,
     text: "Urgence un dimanche soir, Trashi était là en moins de 30 minutes. Problème réglé rapidement, tarif honnête. Un vrai professionnel de confiance.",
     by: "Marc D.",
     role: "Client satisfait",
-    imgSrc: "https://i.pravatar.cc/150?img=67",
   },
   {
     id: 5,
     text: "Rénovation complète de notre salle de bain réalisée dans les délais et le budget. Travail soigné, équipe propre et sérieuse. Merci à toute l'équipe !",
     by: "Sophie M.",
     role: "Cliente satisfaite",
-    imgSrc: "https://i.pravatar.cc/150?img=44",
   },
   {
     id: 6,
     text: "Dépannage rapide pour une fuite sous l'évier. Artisan sérieux, propre et efficace. Je n'hésiterai pas à faire appel à Trashi Plombier à nouveau.",
     by: "Jean-Luc B.",
     role: "Client satisfait",
-    imgSrc: "https://i.pravatar.cc/150?img=53",
   },
 ];
 
@@ -156,16 +149,12 @@ export default function StaggerTestimonials() {
               />
 
               <div className="p-8 h-full flex flex-col">
-                <img
-                  src={t.imgSrc}
-                  alt={t.by}
-                  className="mb-4 h-14 w-12 object-cover object-top"
-                  style={{
-                    boxShadow: isCenter
-                      ? "3px 3px 0px rgba(255,255,255,0.1)"
-                      : "3px 3px 0px #f4f4f5",
-                  }}
-                />
+                <p
+                  className="mb-4 text-[15px] font-bold"
+                  style={{ color: isCenter ? "rgba(255,255,255,0.7)" : "#EA580C" }}
+                >
+                  {t.by}
+                </p>
                 <p
                   className="text-[15px] sm:text-[16px] font-medium leading-relaxed flex-1"
                   style={{ color: isCenter ? "rgba(255,255,255,0.92)" : "#18181b" }}
@@ -173,10 +162,10 @@ export default function StaggerTestimonials() {
                   &ldquo;{t.text}&rdquo;
                 </p>
                 <p
-                  className="mt-6 text-[14px] italic"
+                  className="mt-6 text-[13px] italic"
                   style={{ color: isCenter ? "rgba(255,255,255,0.45)" : "#71717a" }}
                 >
-                  — {t.by}, {t.role}
+                  {t.role}
                 </p>
               </div>
             </div>
