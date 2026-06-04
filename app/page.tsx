@@ -60,7 +60,7 @@ export default function HomePage() {
               <div className="mb-10">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-sm transition-opacity hover:opacity-90"
+                  className="inline-flex items-center gap-2 text-[15px] font-semibold px-7 py-3.5 rounded-xl transition-opacity hover:opacity-90"
                   style={{ background: "#EA580C", color: "#ffffff" }}
                 >
                   Découvrir nos services

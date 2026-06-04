@@ -146,7 +146,7 @@ export default function RealisationPage({
                   </a>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 w-full py-3 rounded-sm font-semibold text-[14px] border border-white/20 text-white hover:border-white/40 transition-colors"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-[14px] border border-white/20 text-white hover:border-white/40 transition-colors"
                   >
                     Demander un devis gratuit
                   </Link>

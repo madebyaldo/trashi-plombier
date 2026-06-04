@@ -77,7 +77,7 @@ export default function Header() {
             <div className="w-px h-5 bg-white/20" />
             <Link
               href="/contact"
-              className="text-[13.5px] font-semibold px-5 py-[9px] rounded-sm hover:opacity-90 transition-opacity"
+              className="text-[13.5px] font-semibold px-5 py-[9px] rounded-xl hover:opacity-90 transition-opacity"
               style={{ background: "#EA580C", color: "#ffffff" }}
             >
               Devis gratuit
@@ -140,10 +140,10 @@ export default function Header() {
             <Link href="/realisations" onClick={() => setMobileOpen(false)} className="block py-3.5 text-[15px] font-medium text-white border-b border-white/10">Réalisations</Link>
             <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-3.5 text-[15px] font-medium text-white">Contact</Link>
             <div className="pt-4 pb-2 flex flex-col gap-2">
-              <a href={`tel:${BUSINESS.phoneClean}`} className="block text-center bg-ink-900 text-white text-[14px] font-semibold py-3 rounded-full">
+              <a href={`tel:${BUSINESS.phoneClean}`} className="block text-center bg-ink-900 text-white text-[14px] font-semibold py-3 rounded-xl">
                 Appeler – {BUSINESS.phone}
               </a>
-              <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-center border border-white/20 text-white text-[14px] py-2.5 rounded-full">
+              <Link href="/contact" onClick={() => setMobileOpen(false)} className="block text-center border border-white/20 text-white text-[14px] py-2.5 rounded-xl">
                 Devis gratuit
               </Link>
             </div>

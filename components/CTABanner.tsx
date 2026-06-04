@@ -12,7 +12,7 @@ export default function CTABanner() {
         </p>
         <a
           href={`tel:${BUSINESS.phoneClean}`}
-          className="inline-block font-bold text-xl px-8 py-4 rounded-sm hover:opacity-90 transition-opacity"
+          className="inline-block font-bold text-xl px-8 py-4 rounded-xl hover:opacity-90 transition-opacity"
           style={{ background: "#EA580C", color: "#ffffff" }}
         >
           Appeler maintenant : {BUSINESS.phone}

@@ -92,7 +92,7 @@ export default function ServicePageTemplate({ page }: { page: PageData }) {
             <div className="flex flex-wrap gap-3 mb-10">
               <a
                 href={`tel:${BUSINESS.phoneClean}`}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-[15px] transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] transition-opacity hover:opacity-90"
                 style={{ background: "#EA580C", color: "#ffffff" }}
               >
                 <Phone className="w-4 h-4" />
@@ -100,7 +100,7 @@ export default function ServicePageTemplate({ page }: { page: PageData }) {
               </a>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-sm font-bold text-[15px] border-2 border-white/30 text-white hover:border-white/60 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-[15px] border-2 border-white/30 text-white hover:border-white/60 transition-colors"
               >
                 Devis gratuit
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2.2}>
@@ -166,7 +166,7 @@ export default function ServicePageTemplate({ page }: { page: PageData }) {
                   </a>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-2 w-full py-3 rounded-sm font-semibold text-[14px] border border-white/20 text-white hover:border-white/40 transition-colors"
+                    className="flex items-center justify-center gap-2 w-full py-3 rounded-xl font-semibold text-[14px] border border-white/20 text-white hover:border-white/40 transition-colors"
                   >
                     Demander un devis gratuit
                   </Link>

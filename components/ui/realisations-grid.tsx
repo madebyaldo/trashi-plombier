@@ -38,7 +38,7 @@ export default function RealisationsGrid() {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className={`inline-flex items-center gap-2 px-5 py-2 rounded-sm text-[13px] font-bold uppercase tracking-wider transition-all duration-150 ${
+                className={`inline-flex items-center gap-2 px-5 py-2 rounded-xl text-[13px] font-bold uppercase tracking-wider transition-all duration-150 ${
                   isActive
                     ? "text-white shadow-sm"
                     : "bg-white text-ink-600 border border-sand-200 hover:border-[#EA580C] hover:text-[#EA580C]"

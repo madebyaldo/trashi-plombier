@@ -58,7 +58,7 @@ export default function ContactPage() {
             {/* Big phone CTA */}
             <a
               href={`tel:${BUSINESS.phoneClean}`}
-              className="inline-flex items-center gap-3 px-7 py-4 rounded-sm font-black text-[20px] transition-opacity hover:opacity-90"
+              className="inline-flex items-center gap-3 px-7 py-4 rounded-xl font-black text-[20px] transition-opacity hover:opacity-90"
               style={{ background: "#EA580C", color: "#ffffff" }}
             >
               <Phone className="w-6 h-6" />
