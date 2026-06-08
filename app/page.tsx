@@ -22,7 +22,7 @@ export default function HomePage() {
           <div className="relative overflow-hidden rounded-lg" style={{ height: "82vh", minHeight: 520 }}>
             {/* Background image */}
             <Image
-              src="/images/hero-real.avif"
+              src="/images/hero.webp"
               alt="Trashi Plombier Metz"
               fill priority
               className="object-cover object-center"
@@ -31,12 +31,12 @@ export default function HomePage() {
             />
 
             {/* Dark overlay */}
-            <div className="absolute inset-0" style={{ background: "rgba(8,14,24,0.55)" }} />
+            <div className="absolute inset-0" style={{ background: "rgba(8,14,24,0.20)" }} />
             {/* Extra left-side gradient for text legibility */}
-            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,14,24,0.5) 0%, transparent 65%)" }} />
+            <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(8,14,24,0.25) 0%, transparent 65%)" }} />
 
             {/* ── Content — pinned to bottom-left ── */}
-            <div className="relative z-10 h-full flex flex-col justify-end pb-8 px-5 lg:pb-12 lg:px-14 max-w-[680px]">
+            <div className="relative z-10 h-full flex flex-col justify-end pb-16 px-5 lg:pb-24 lg:px-14 max-w-[680px]">
               {/* Eyebrow */}
               <span
                 className="inline-block text-[11px] font-bold uppercase tracking-[0.22em] mb-4"
@@ -54,7 +54,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-white/75 text-[13px] lg:text-[15px] leading-relaxed mb-6 max-w-[480px]">
-                Fuite d&apos;eau, panne de chauffe-eau ou urgence plomberie ? Trashi Plombier intervient rapidement avec des solutions durables, un service propre et des prix transparents.
+                Fuite d&apos;eau, urgence plomberie ou panne de chauffe-eau ?<br />Intervention rapide, service soigné, prix transparents.
               </p>
 
               {/* CTA */}
