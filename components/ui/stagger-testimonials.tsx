@@ -8,45 +8,45 @@ const SQRT_5000 = Math.sqrt(5000);
 const TESTIMONIALS = [
   {
     id: 0,
-    text: "J'ai contacté Trashi pour remplacer mon chauffe-eau. Intervention rapide, soignée et efficace. Je recommande vivement et referai appel à lui sans hésiter.",
-    by: "Tiffany",
-    role: "Cliente satisfaite",
+    text: "J'ai fais appel à Trashi pour changer mon chauffe eau, il est intervenu rapidement. L'intervention était rapide et soignée. Je recommande et ferais appel à lui en cas de besoin. Merci !",
+    by: "Tiffany G.",
+    role: "Cliente satisfaite · ⭐⭐⭐⭐⭐",
   },
   {
     id: 1,
-    text: "M. Trashi a su diagnostiquer mon problème de chauffage avec clarté. Sérieux, ponctuel et passionné, c'est un artisan de confiance que je recommande.",
-    by: "Christine",
-    role: "Cliente fidèle",
+    text: "Très satisfait de la prestation effectuée, tout s'est passé nickel de la prise de contact jusqu'à la réalisation. Je referai appel à ses services sans hésiter.",
+    by: "Olivier P.",
+    role: "Client satisfait · ⭐⭐⭐⭐⭐",
   },
   {
     id: 2,
-    text: "Très satisfaits du travail de M. Trashi : délais respectés, finition impeccable et relation agréable. Un professionnel que nous recommandons sans réserve.",
-    by: "Mathilde",
-    role: "Cliente satisfaite",
+    text: "Personne très sympathique et très professionnel il m'a fait un travail nickel je le recommande fortement et referez appel à lui très vite.",
+    by: "Axel V.",
+    role: "Client satisfait · ⭐⭐⭐⭐⭐",
   },
   {
     id: 3,
-    text: "Très satisfait de la prestation effectuée, tout s'est passé nickel de la prise de contact jusqu'à la réalisation. Je referai appel à ses services sans hésiter.",
-    by: "Olivier P.",
-    role: "Client satisfait",
+    text: "Très réactif. Professionnel, poli et courtois. Envie de bosser qui se ressent.",
+    by: "Karen C.",
+    role: "Cliente satisfaite · ⭐⭐⭐⭐⭐",
   },
   {
     id: 4,
-    text: "Urgence un dimanche soir, Trashi était là en moins de 30 minutes. Problème réglé rapidement, tarif honnête. Un vrai professionnel de confiance.",
-    by: "Marc D.",
-    role: "Client satisfait",
+    text: "Intervenu en moins de 30min ! La fuite a été trouvée de manière efficace et raisonnée.",
+    by: "Jean-Edouard S.",
+    role: "Client satisfait · ⭐⭐⭐⭐⭐",
   },
   {
     id: 5,
-    text: "Rénovation complète de notre salle de bain réalisée dans les délais et le budget. Travail soigné, équipe propre et sérieuse. Merci à toute l'équipe !",
-    by: "Sophie M.",
-    role: "Cliente satisfaite",
+    text: "Rapide, disponible et travail super bien !",
+    by: "Jeffrey D.",
+    role: "Client satisfait · ⭐⭐⭐⭐⭐",
   },
   {
     id: 6,
-    text: "Dépannage rapide pour une fuite sous l'évier. Artisan sérieux, propre et efficace. Je n'hésiterai pas à faire appel à Trashi Plombier à nouveau.",
-    by: "Jean-Luc B.",
-    role: "Client satisfait",
+    text: "Rapide et efficace.",
+    by: "Alain M.",
+    role: "Client satisfait · ⭐⭐⭐⭐⭐",
   },
 ];
 
@@ -77,12 +77,27 @@ export default function StaggerTestimonials() {
 
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-16">
-        <h2
-          className="font-heading font-black text-white leading-tight"
-          style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
-        >
-          Nos clients<br />parlent d&apos;eux-mêmes.
-        </h2>
+        <div>
+          <h2
+            className="font-heading font-black text-white leading-tight"
+            style={{ fontSize: "clamp(1.8rem, 3.5vw, 3rem)" }}
+          >
+            Nos clients<br />parlent d&apos;eux-mêmes.
+          </h2>
+          <a
+            href="https://www.allovoisins.com/p/trashi#avis"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-3 text-[13px] font-medium px-3 py-1.5 rounded-lg transition-opacity hover:opacity-80"
+            style={{ background: "rgba(255,255,255,0.08)", color: "rgba(255,255,255,0.7)" }}
+          >
+            <span className="text-yellow-400">★ 4.9/5</span>
+            <span>· 100 avis vérifiés sur AlloVoisins</span>
+            <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+            </svg>
+          </a>
+        </div>
         <a
           href="/contact"
           className="self-start inline-flex items-center gap-2 text-[14px] font-semibold px-6 py-3 rounded-xl shrink-0 transition-opacity hover:opacity-90"
